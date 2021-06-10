@@ -1,0 +1,316 @@
+/*
+Colors used:
+Text Color (Dark Gray): #2b2b2b;
+Primary Color (dark green): #357b70; > links, buttons
+Secondary Color (Orange): #e0b354; > Visited link, 2ndary button
+(dark green-blue): #05676e;
+Active link (lighter green): #489c79;
+ */
+ :root {
+   --dark-grey: #2b2b2b;
+   --primary-color: #357b70;
+   --secondary-color: #e0b354;
+   --light-green: #489c79;
+   --font-weight: 400;
+   --font-size: 16px;
+   --line-height: 1.6;
+   --text-color: #fff;
+   --spacing: 15px;
+   --heading-font-weight: 700;
+ }
+
+ * {
+   box-sizing: border-box; /* force the padding and border to be included in the final specified width rather than being added on top, with the width of the item itself changing to accommodate the padding and border */
+   font-family: 'Libre Baskerville', sans-serif;
+ }
+
+/* copied from a CodePen. Seems like a good code.
+header, footer
+{
+  font-family: Raleway;
+  margin: 0 auto;
+  padding: 5em 3em;
+  text-align: center;
+  background: #555;
+} */
+
+body {
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+/*  background-color: lightgray; */
+  color: var(--dark-grey);
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: var(--heading-font-weight);
+  font-variant: small-caps;
+}
+h2 {
+  font-size: 24px;
+  font-weight: var(--heading-font-weight);
+}
+h3 {
+  font-size: 18px;
+  font-weight: var(--heading-font-weight);
+}
+
+a {
+  color: var(--primary-color); /* (dark green) */
+}
+a:visited {
+  color: var(--secondary-color); /* (Orange) */
+}
+a:hover, a:focus {
+  /* focus is relevant when navigating the page by keyboard */
+  text-decoration: none;
+}
+a:active {
+  color: var(--light-green);
+}
+
+button,
+.button { /* that class is necessary to create links that look like buttons */
+  border: none; /* overwrites browser defaults and resets the border */
+  display: inline-block;
+  font-family: inherit; /* takes the font from the outer container */
+  background-color: var(--primary-color); /* (dark green) */
+  color: var(--text-color);
+  text-decoration: none;
+  padding: var(--spacing);
+  border-radius: 5px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2); /* last number is opacity. 0=transparent, 1=complete opacity */
+  border-right: 2px solid rgba(0, 0, 0, 0.2);
+  transition: 0.5s opacity;
+}
+button:hover, button:focus,
+.button:hover, .button:focus {
+  cursor: pointer; /* lets the mouse appear as a hand when hovering over the button */
+  opacity: 0.8;
+}
+.buttons {
+/*  display: block; */
+  clear: both; /* Why is this not placing the buttons UNDER the profile pic? */
+  margin-top: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+.button__secondary {
+  background-color: var(--secondary-color);
+  color: var(--dark-grey);
+}
+
+.page-header {
+  display: flex; /* alternatives: https://replit.com/@CFCurriculum/CSS3-grids-and-flexbox-demo-1 */
+  width: 100%;
+  padding: var(--spacing);
+}
+.page-header__item {
+  flex: 0 1 20px;
+}
+.page-header__item:first-child {
+  max-width: 50px;
+  height: 100%;
+}
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+.navigation-list__item--active {
+  text-decoration: none;
+}
+.navigation-list li {
+  display: inline-block;
+  margin-left: var(--spacing);
+}
+
+/* --- Transform circle behind top nav on hover --- */
+/* div.container
+{
+  margin: 0 auto;
+	padding: 10em 3em;
+	text-align: center;
+}
+div.container a
+{
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+} */
+
+.circleBehind a:before, .circleBehind a:after
+{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border: 4px solid #0277bd;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    border-radius: 50%;
+    background: transparent;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: -1;
+}
+.circleBehind a:after
+{
+    border-width: 2px;
+    transition: all 0.4s;
+}
+.circleBehind a:hover:before
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+.circleBehind a:hover:after
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+}
+
+
+.profile, .about {
+  clear: both;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.profile h1, .about h1 {
+  text-align:center;
+}
+.profile__portrait {
+  float: left;
+  width: 250px;
+  max-width: 100%; /* to make sure it is fully visible on a small screen */
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.project-grid__item { /* Grid fallback */
+ display: inline-block;
+ width: 33%;
+}
+@supports (display: grid) {
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: var(--spacing);
+    margin: 0;
+  }
+  .project-grid__item {
+    background-color: lightblue;
+    width: auto; /* just failsafes to make sure it looks good on every browser */
+    min-height:auto; /* just failsafes to make sure it looks good on every browser */
+    padding: var(--spacing);
+  }
+  .project-grid__item:last-child {
+    grid-column: 3 / 3;
+    grid-row: 1 / 3;
+  }
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+/*
+  max-width: 200px;
+  margin: 30px auto; /* the 30px top&bottom margin do not seem to have any effect because they are relating to the buttons instead of the closest element, which would be the profile pic */
+  /* margin-top: 200px;
+*/
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 20px);
+  }
+}
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 28px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+
+.aligncenter {
+  text-align: center;
+  margin: 0 auto;
+}
+.cleared {
+  /* display: block; */
+  clear: both;
+}
+
+
+@media all and (max-width: 750px){ /* shared code for all smaller screens */
+  :root {
+    --spacing: 10px;
+  }
+  .project-grid {
+    grid-gap: 10px;
+  }
+  .project-grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+@media all and (max-width: 500px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  body {
+    padding: var(--spacing); /* 10px */
+  }
+  .profile__portrait {
+    display: static;
+    float: none;
+  }
+  .mobile-clear {
+    clear: both;
+    padding-top: var(--spacing); /* 10px */
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
