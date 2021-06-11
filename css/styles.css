@@ -175,6 +175,7 @@ div.container a
 }
 
 
+
 .profile, .about {
   clear: both;
   max-width: 700px;
@@ -298,7 +299,7 @@ div.container a
     padding: var(--spacing); /* 10px */
   }
   .profile__portrait {
-    display: static;
+/*    display: static; */
     float: none;
   }
   .mobile-clear {
