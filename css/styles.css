@@ -109,6 +109,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 .page-header__item:first-child {
   max-width: 50px;
+  max-height: 50px;
   height: 100%;
 }
 .page-header__item:last-child {
