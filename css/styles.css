@@ -108,7 +108,9 @@ button:hover, button:focus, .button:hover, .button:focus {
   flex: 0 1 20px;
 }
 .page-header__item:first-child {
+  /* = logo */
   max-width: 50px;
+  max-height: 50px;
   height: 100%;
 }
 .page-header__item:last-child {
