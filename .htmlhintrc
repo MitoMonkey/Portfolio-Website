@@ -5,5 +5,5 @@
     "attr-value-not-empty": true,
     "attr-no-duplication": true,
     "id-unique": true,
-    "space-tab-mixed-disabled": "space4"
+    "space-tab-mixed-disabled": "space2"
 }
