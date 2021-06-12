@@ -252,7 +252,7 @@ div.container a
 .contact-details {
   text-align: center;
   margin: 0 auto;
-  line-height: var(--line-height);
+  line-height: 1.8;
 }
 
 /* ----- Footer ----- */
