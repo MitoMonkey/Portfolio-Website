@@ -219,7 +219,7 @@ th, td {
     padding: var(--spacing);
   }
   .project-grid__item {
-    background-color: lightblue;
+    background-color: #F4F3ED;
     width: auto; /* just failsafes to make sure it looks good on every browser */
     min-height: auto; /* just failsafes to make sure it looks good on every browser */
     padding: var(--spacing);
