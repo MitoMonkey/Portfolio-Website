@@ -105,15 +105,15 @@ button { /* that class is necessary to create links that look like buttons */
 }
 
 @media all and (max-width: 750px) {
- .button {
-  padding: 10px;
- }
+  .button {
+    padding: 10px;
+  }
 }
 button:hover, button:focus, .button:hover, .button:focus {
   cursor: pointer;
   opacity: 0.8;
 }
-a:visited.button {
+button.a:visited {
   color: #fff;
 }
 .buttons {
@@ -312,17 +312,17 @@ td {
     padding: 15px;
   }
   @media all and (max-width: 750px) {
-  .project-grid {
-    padding: 10px;
+    .project-grid {
+      padding: 10px;
+    }
   }
- }
   @media all and (max-width: 750px) {
-  .project-grid {
-    grid-gap: 10px;
+    .project-grid {
+      grid-gap: 10px;
+    }
   }
- }
   .project-grid__item {
-    background-color: #F4F3ED;
+    background-color: #f4f3ed;
     width: auto; /* just failsafes to make sure it looks good on every browser */
     min-height: auto; /* just failsafes to make sure it looks good on every browser */
     padding: 15px;
@@ -332,10 +332,10 @@ td {
             box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.1);
   }
   @media all and (max-width: 750px) {
-  .project-grid__item {
-    padding: 10px;
+    .project-grid__item {
+      padding: 10px;
+    }
   }
- }
   .project-grid__item:last-child {
     -ms-grid-column: 3;
     grid-column: 3 / 3;
