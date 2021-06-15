@@ -185,6 +185,26 @@ div.container a
   border-radius: 50%;
 }
 
+/* ----- About page ----- */
+.experience__heading {
+  clear: both;
+  text-align: center;
+  margin-top: 30px;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px var(--spacing) 5px var(--spacing);
+  border: 1px solid;
+}
+@media (max-width: 500px) {
+  .experience__heading {
+    margin-top: 0;
+  }
+}
+
 /* ----- Work page ----- */
 .project-grid__item { /* Grid fallback */
   display: inline-block;
