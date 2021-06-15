@@ -185,44 +185,6 @@ div.container a
   border-radius: 50%;
 }
 
-/* animations on about page */
-@keyframes color-change {
-  0% {
-    fill: #edc655;
-  }
-  50% {
-    fill: #fcffad;
-  }
-  100% {
-    fill: #f76414;
-  }
-}
-.sun {
-  animation: 4s color-change infinite alternate linear;
-}
-@keyframes cloud-move {
-  from {
-    transform: translate(0, 50px);
-  }
-  to {
-    transform: translate(200px, 20px);
-  }
-}
-.cloud-front {
-  animation: 30s cloud-move infinite alternate linear;
-}
-@keyframes cloud-move-reverse {
-  from {
-    transform: translate(446px, 28px);
-  }
-  to {
-    transform: translate(100px, 48px);
-  }
-}
-.cloud-back {
-  animation: 34s cloud-move-reverse infinite alternate linear;
-}
-
 /* ----- Work page ----- */
 .project-grid__item { /* Grid fallback */
   display: inline-block;
@@ -335,7 +297,7 @@ form button {
   clear: both;
 }
 
-/* ----- Responsiveness ----- */
+/* ----- Adaptations for small screens ----- */
 @media all and (max-width: 750px){ /* shared code for all smaller screens */
   :root {
     --spacing: 10px;
