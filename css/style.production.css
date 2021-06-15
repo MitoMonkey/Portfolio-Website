@@ -1,6 +1,5 @@
 /* first https://madlittlemods.github.io/postcss-css-variables/playground/
 then http://autoprefixer.github.io/ */
-
 /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v7.0.29,
@@ -10,12 +9,10 @@ then http://autoprefixer.github.io/ */
 
 /*
 Colors used:
-Text Color (Dark Gray): #2b2b2b;
-Primary Color (dark green): #357b70; > links, buttons
-Secondary Color (Orange): #e0b354; > Visited link, 2ndary button
 (dark green-blue): #05676e;
-Active link (lighter green): #489c79;
  */
+:root { /* text color */ /* dark green ; links, buttons */ /* Orange ; Visited link, 2ndary button */ /* active link */
+}
 
 * {
   -webkit-box-sizing: border-box;
@@ -86,10 +83,9 @@ button { /* that class is necessary to create links that look like buttons */
 }
 
 @media all and (max-width: 750px) {
-
-  button {
+ button {
   padding: 10px;
-  }
+ }
 }
 
 .button { /* that class is necessary to create links that look like buttons */
@@ -109,32 +105,31 @@ button { /* that class is necessary to create links that look like buttons */
 }
 
 @media all and (max-width: 750px) {
-
-  .button {
+ .button {
   padding: 10px;
-  }
+ }
 }
 button:hover, button:focus, .button:hover, .button:focus {
-  cursor: pointer; /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
   opacity: 0.8;
 }
+a:visited.button {
+  color: #fff;
+}
 .buttons {
-  /* display: block; */
   clear: both; /* Why is this not placing the buttons UNDER the profile pic? */
   margin-top: 15px;
   margin-bottom: 15px;
 }
 @media all and (max-width: 750px) {
-
-  .buttons {
+ .buttons {
   margin-bottom: 10px;
-  }
+ }
 }
 @media all and (max-width: 750px) {
-
-  .buttons {
+ .buttons {
   margin-top: 10px;
-  }
+ }
 }
 .button__secondary {
   background-color: #e0b354;
@@ -150,17 +145,17 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 @media all and (max-width: 750px) {
-
-  .page-header {
+ .page-header {
   padding: 10px;
-  }
+ }
 }
 .page-header__item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 20px;
-          flex: 0 1 20px;
+      -ms-flex: 0 1 50px;
+          flex: 0 1 50px;
 }
 .page-header__item:first-child {
+  /* = logo */
   max-width: 50px;
   max-height: 50px;
   height: 100%;
@@ -183,10 +178,9 @@ button:hover, button:focus, .button:hover, .button:focus {
   margin-left: 15px;
 }
 @media all and (max-width: 750px) {
-
-  .navigation-list li {
+ .navigation-list li {
   margin-left: 10px;
-  }
+ }
 }
 
 /* --- Transform circle behind top nav on hover --- */
@@ -246,6 +240,9 @@ div.container a
   max-width: 700px;
   margin: 0 auto;
 }
+ul {
+  overflow: hidden;
+}
 .profile h1, .about h1 {
   text-align: center;
 }
@@ -257,87 +254,52 @@ div.container a
   border-radius: 50%;
 }
 
-/* animations on about page */
-@-webkit-keyframes color-change {
-  0% {
-    fill: #edc655;
-  }
-  50% {
-    fill: #fcffad;
-  }
-  100% {
-    fill: #f76414;
+/* ----- About page ----- */
+.experience__heading {
+  clear: both;
+  text-align: center;
+  margin-top: 30px;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+th {
+  padding: 5px 15px 5px 15px;
+  border: 1px solid;
+}
+@media all and (max-width: 750px) {
+ th {
+  padding: 5px 10px 5px 10px;
+ }
+}
+td {
+  padding: 5px 15px 5px 15px;
+  border: 1px solid;
+}
+@media all and (max-width: 750px) {
+ td {
+  padding: 5px 10px 5px 10px;
+ }
+}
+@media (max-width: 500px) {
+  .experience__heading {
+    margin-top: 0;
   }
 }
-@keyframes color-change {
-  0% {
-    fill: #edc655;
-  }
-  50% {
-    fill: #fcffad;
-  }
-  100% {
-    fill: #f76414;
-  }
-}
-.sun {
-  -webkit-animation: 4s color-change infinite alternate linear;
-          animation: 4s color-change infinite alternate linear;
-}
-@-webkit-keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
-  }
-  to {
-    -webkit-transform: translate(200px, 20px);
-            transform: translate(200px, 20px);
-  }
-}
-@keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-            transform: translate(0, 50px);
-  }
-  to {
-    -webkit-transform: translate(200px, 20px);
-            transform: translate(200px, 20px);
-  }
-}
-.cloud-front {
-  -webkit-animation: 30s cloud-move infinite alternate linear;
-          animation: 30s cloud-move infinite alternate linear;
-}
-@-webkit-keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 28px);
-            transform: translate(446px, 28px);
-  }
-  to {
-    -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
-  }
-}
-@keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 28px);
-            transform: translate(446px, 28px);
-  }
-  to {
-    -webkit-transform: translate(100px, 48px);
-            transform: translate(100px, 48px);
-  }
-}
-.cloud-back {
-  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-          animation: 34s cloud-move-reverse infinite alternate linear;
-}
-
 
 /* ----- Work page ----- */
+.project-grid { /* Grid fallback */
+  text-align: center;
+  margin: auto;
+}
 .project-grid__item { /* Grid fallback */
   display: inline-block;
   width: 33%;
+  padding: 15px;
+  margin: 10px;
+  background-color: #f4f3ed;
+  border: 1px solid;
 }
 @supports (display: grid) {
   .project-grid {
@@ -347,25 +309,32 @@ div.container a
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px;
     margin: 0;
-  }
-  @media all and (max-width: 750px) {
-
-    .project-grid {
-    grid-gap: 10px;
-    }
-  }
-  .project-grid__item {
-    background-color: lightblue;
-    width: auto; /* just failsafes to make sure it looks good on every browser */
-    min-height: auto; /* just failsafes to make sure it looks good on every browser */
     padding: 15px;
   }
   @media all and (max-width: 750px) {
-
-    .project-grid__item {
+  .project-grid {
     padding: 10px;
-    }
   }
+ }
+  @media all and (max-width: 750px) {
+  .project-grid {
+    grid-gap: 10px;
+  }
+ }
+  .project-grid__item {
+    background-color: #F4F3ED;
+    width: auto; /* just failsafes to make sure it looks good on every browser */
+    min-height: auto; /* just failsafes to make sure it looks good on every browser */
+    padding: 15px;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    -webkit-box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.1);
+            box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.1);
+  }
+  @media all and (max-width: 750px) {
+  .project-grid__item {
+    padding: 10px;
+  }
+ }
   .project-grid__item:last-child {
     -ms-grid-column: 3;
     grid-column: 3 / 3;
@@ -375,11 +344,72 @@ div.container a
   }
 }
 
-/* ----- contact page ----- */
+/* ----- contact page
+designed MOBILE FIRST ----- */
 .contact-details {
   text-align: center;
   margin: 0 auto;
   line-height: 1.8;
+}
+.contact-details h3 {
+  margin-bottom: 10px;
+}
+
+form {
+  padding: 1em;
+  background: #f9f9f9;
+  border: 1px solid #c1c1c1;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+form input {
+  background: #fff;
+  border: 1px solid #9c9c9c;
+  width: 100%;
+  padding: 0.7em;
+  margin-bottom: 0.5rem;
+}
+form textarea {
+  background: #fff;
+  border: 1px solid #9c9c9c;
+  width: 100%;
+  padding: 0.7em;
+  margin-bottom: 0.5rem;
+}
+form label {
+  text-align: left;
+  display: block;
+  width: 100%;
+  padding: 0.5em 1.5em 0.5em 0;
+}
+form button {
+  margin-top: 15px;
+}
+@media all and (max-width: 750px) {
+ form button {
+  margin-top: 10px;
+ }
+}
+
+@media (min-width: 400px) {
+  form {
+    overflow: hidden;
+  }
+  form label {
+    float: left;
+    width: 150px;
+    text-align: right;
+  }
+  form input {
+    float: left;
+    width: calc(100% - 150px);
+  }
+  form textarea {
+    float: left;
+    width: calc(100% - 150px);
+  }
 }
 
 /* ----- Footer ----- */
@@ -409,7 +439,7 @@ div.container a
   clear: both;
 }
 
-/* ----- Responsiveness ----- */
+/* ----- Adaptations for small screens ----- */
 @media all and (max-width: 750px){ /* shared code for all smaller screens */
   .project-grid {
     grid-gap: 10px;
@@ -431,11 +461,10 @@ div.container a
     padding: 15px; /* 10px */
   }
   @media all and (max-width: 750px) {
-
-    body {
+  body {
     padding: 10px;
-    }
   }
+ }
   .profile__portrait {
     /* display: static; */
     float: none;
@@ -448,11 +477,10 @@ div.container a
     margin: 0 auto;
   }
   @media all and (max-width: 750px) {
-
-    .mobile-clear {
+  .mobile-clear {
     padding-top: 10px;
-    }
   }
+ }
 }
 @media all and (min-width: 500px) and (max-width: 750px) {
   .project-grid {
