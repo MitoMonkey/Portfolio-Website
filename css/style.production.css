@@ -116,6 +116,9 @@ button:hover, button:focus, .button:hover, .button:focus {
 button.a:visited {
   color: #fff;
 }
+a:visited.button {
+  color: #fff;
+}
 .buttons {
   clear: both; /* Why is this not placing the buttons UNDER the profile pic? */
   margin-top: 15px;
