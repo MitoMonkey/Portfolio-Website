@@ -121,57 +121,48 @@ a:visited.button {
 
 .navigation-list {
   list-style-type: none;
+  overflow: visible;
 }
 .navigation-list__item--active {
   text-decoration: none;
 }
 .navigation-list li {
   display: inline-block;
-  margin-left: var(--spacing);
+  margin-left: 20px;
+  margin-right: 15px;
 }
 
 /* --- Transform circle behind top nav on hover --- */
-/* div.container
-{
-  margin: 0 auto;
-	padding: 10em 3em;
-	text-align: center;
-}
-div.container a
-{
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
-} */
 .navigation-list a {
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
+
 .circleBehind a:before, .circleBehind a:after {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 50px;
+  width: 90px;
   height: 50px;
-  border: 4px solid #0277bd;
+  border: 4px solid var(--light-green);
   transform: translateX(-50%) translateY(-50%) scale(0.8);
   border-radius: 50%;
   background: transparent;
   content: "";
   opacity: 0;
   transition: all 0.3s;
-  z-index: 0;
+  z-index: -1;
 }
 .circleBehind a:after {
   border-width: 2px;
   transition: all 0.4s;
 }
 .circleBehind a:hover:before {
-  opacity: 1;
+  opacity: 0.6;
   transform: translateX(-50%) translateY(-50%) scale(1);
 }
 .circleBehind a:hover:after {
-  opacity: 1;
+  opacity: 0.6;
   transform: translateX(-50%) translateY(-50%) scale(1.3);
 }
 
