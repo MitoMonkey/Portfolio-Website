@@ -284,6 +284,10 @@ form label {
 form button {
   margin-top: var(--spacing);
 }
+.error-message {
+  color: red;
+  font-size: 0.8em;
+}
 
 @media (min-width: 400px) {
   form {
