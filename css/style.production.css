@@ -1,37 +1,26 @@
-/* first https://madlittlemods.github.io/postcss-css-variables/playground/
-then http://autoprefixer.github.io/ */
 /*
-Colors used:
-(dark green-blue): #05676e;
- */
-:root { /* text color */ /* dark green ; links, buttons */ /* Orange ; Visited link, 2ndary button */ /* active link */
-}
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
 
 * {
-  box-sizing: border-box; /* force the padding and border to be included in the final specified width rather than being added on top, with the width of the item itself changing to accommodate the padding and border */
-  font-family: 'Libre Baskerville', sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+  font-family: 'Glory', sans-serif;
 }
-
-/* copied from a CodePen. Seems like a good code.
-header, footer
-{
-  font-family: Raleway;
-  margin: 0 auto;
-  padding: 5em 3em;
-  text-align: center;
-  background: #555;
-} */
 
 body {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.6;
   /*  background-color: lightgray; */
   color: #2b2b2b;
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 700;
   font-variant: small-caps;
 }
@@ -45,100 +34,119 @@ h3 {
 }
 
 a {
-  color: #357b70; /* (dark green) */
+  color: #009688;
 }
-a:visited {
-  color: #e0b354; /* (Orange) */
+/* a:visited {
+  color: var(--secondary-color);
+} */
+a:hover {
+  text-decoration: none;
+  /*   color: #ff9800; */
 }
-a:hover, a:focus {
+a:focus {
   /* focus is relevant when navigating the page by keyboard */
   text-decoration: none;
+  /*   color: #ff9800; */
 }
 a:active {
-  color: #489c79;
+  color: #ff9800;
 }
 
-button { /* that class is necessary to create links that look like buttons */
+button {
   border: none; /* overwrites browser defaults and resets the border */
   display: inline-block;
-  font-family: inherit; /* takes the font from the outer container */
-  background-color: #357b70; /* (dark green) */
-  color: #fff;
+  font-family: inherit;
+  background-color: #009688;
+  color: #f1f1f1;
   text-decoration: none;
   padding: 15px;
   border-radius: 5px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2); /* last number is opacity. 0=transparent, 1=complete opacity */
   border-right: 2px solid rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.5s opacity;
+  -o-transition: 0.5s opacity;
   transition: 0.5s opacity;
 }
 
 @media all and (max-width: 750px) {
- button {
-  padding: 10px;
- }
+
+  button {
+    padding: 10px;
+  }
 }
 
-.button { /* that class is necessary to create links that look like buttons */
+.button { /* to create links that look like buttons */
   border: none; /* overwrites browser defaults and resets the border */
   display: inline-block;
-  font-family: inherit; /* takes the font from the outer container */
-  background-color: #357b70; /* (dark green) */
-  color: #fff;
+  font-family: inherit;
+  background-color: #009688;
+  color: #f1f1f1;
   text-decoration: none;
   padding: 15px;
   border-radius: 5px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2); /* last number is opacity. 0=transparent, 1=complete opacity */
   border-right: 2px solid rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.5s opacity;
+  -o-transition: 0.5s opacity;
   transition: 0.5s opacity;
 }
 
 @media all and (max-width: 750px) {
- .button {
-  padding: 10px;
- }
+
+  .button {
+    padding: 10px;
+  }
 }
 button:hover, button:focus, .button:hover, .button:focus {
   cursor: pointer;
   opacity: 0.8;
 }
 button.a:visited {
-  color: #fff;
+  color: #f1f1f1;
 }
 a:visited.button {
-  color: #fff;
+  color: #f1f1f1;
 }
 .buttons {
-  clear: both; /* Why is this not placing the buttons UNDER the profile pic? */
+  clear: both;
   margin-top: 15px;
   margin-bottom: 15px;
 }
 @media all and (max-width: 750px) {
- .buttons {
-  margin-bottom: 10px;
- }
+
+  .buttons {
+    margin-bottom: 10px;
+  }
 }
 @media all and (max-width: 750px) {
- .buttons {
-  margin-top: 10px;
- }
+
+  .buttons {
+    margin-top: 10px;
+  }
 }
-.button__secondary {
-  background-color: #e0b354;
+.button_secondary {
+  background-color: #ff9800;
   color: #2b2b2b;
+  padding: 10px;
 }
 
 .page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex; /* alternatives: https://replit.com/@CFCurriculum/CSS3-grids-and-flexbox-demo-1 */
   width: 100%;
   padding: 15px;
 }
 
 @media all and (max-width: 750px) {
- .page-header {
-  padding: 10px;
- }
+
+  .page-header {
+    padding: 10px;
+  }
 }
 .page-header__item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 50px;
   flex: 0 1 50px;
 }
 .page-header__item:first-child {
@@ -148,6 +156,8 @@ a:visited.button {
   height: 100%;
 }
 .page-header__item:last-child {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   text-align: right;
 }
@@ -170,48 +180,60 @@ a:visited.button {
   position: relative;
   z-index: 0;
 }
-
 .circleBehind a:before {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 90px;
   height: 50px;
-  border: 4px solid #489c79;
+  border: 4px solid #ff9800;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
   transform: translateX(-50%) translateY(-50%) scale(0.8);
   border-radius: 50%;
   background: transparent;
   content: "";
   opacity: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
   z-index: -1;
 }
-
 .circleBehind a:after {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 90px;
   height: 50px;
-  border: 4px solid #489c79;
+  border: 4px solid #ff9800;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
   transform: translateX(-50%) translateY(-50%) scale(0.8);
   border-radius: 50%;
   background: transparent;
   content: "";
   opacity: 0;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
   z-index: -1;
 }
 .circleBehind a:after {
   border-width: 2px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
 .circleBehind a:hover:before {
   opacity: 0.6;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(1);
   transform: translateX(-50%) translateY(-50%) scale(1);
 }
 .circleBehind a:hover:after {
   opacity: 0.6;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(1.3);
+  -ms-transform: translateX(-50%) translateY(-50%) scale(1.3);
   transform: translateX(-50%) translateY(-50%) scale(1.3);
 }
 
@@ -249,18 +271,20 @@ th {
   border: 1px solid;
 }
 @media all and (max-width: 750px) {
- th {
-  padding: 5px 10px 5px 10px;
- }
+
+  th {
+    padding: 5px 10px 5px 10px;
+  }
 }
 td {
   padding: 5px 15px 5px 15px;
   border: 1px solid;
 }
 @media all and (max-width: 750px) {
- td {
-  padding: 5px 10px 5px 10px;
- }
+
+  td {
+    padding: 5px 10px 5px 10px;
+  }
 }
 @media (max-width: 500px) {
   .experience__heading {
@@ -273,48 +297,57 @@ td {
   text-align: center;
   margin: auto;
 }
+.project-grid a {
+  color: #ff9800;
+}
 .project-grid__item { /* Grid fallback */
   display: inline-block;
   width: 33%;
   padding: 15px;
   margin: 10px;
-  background-color: #f4f3ed;
+  background-color: #009688;
+  color: #f1f1f1;
+  border-radius: 6px;
   border: 1px solid;
+  text-align: left;
 }
 @supports (display: grid) {
   .project-grid {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 15px 1fr 15px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px;
     margin: 0;
     padding: 15px;
   }
   @media all and (max-width: 750px) {
-  .project-grid {
-    padding: 10px;
+
+    .project-grid {
+      padding: 10px;
+    }
   }
- }
   @media all and (max-width: 750px) {
-  .project-grid {
-    grid-gap: 10px;
+
+    .project-grid {
+      grid-gap: 10px;
+    }
   }
- }
   .project-grid__item {
-    background-color: #F4F3ED;
     width: auto; /* just failsafes to make sure it looks good on every browser */
     min-height: auto; /* just failsafes to make sure it looks good on every browser */
-    padding: 15px;
+    padding: 15px 25px 30px 25px;
     margin: 0;
     /* offset-x | offset-y | blur-radius | spread-radius | color */
-    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2); */
+    -webkit-box-shadow: 3px 3px 8px rgb(0 0 0 / 30%);
+    box-shadow: 3px 3px 8px rgb(0 0 0 / 30%);
   }
-  @media all and (max-width: 750px) {
-  .project-grid__item {
-    padding: 10px;
-  }
- }
   .project-grid__item:last-child {
+    -ms-grid-column: 3;
     grid-column: 3 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
     grid-row: 1 / 3;
   }
 }
@@ -332,7 +365,9 @@ designed MOBILE FIRST ----- */
 
 form {
   padding: 1em;
-  background: #f9f9f9;
+  background: #009688;
+  color: #f1f1f1;
+  border-radius: 6px;
   border: 1px solid #c1c1c1;
   max-width: 600px;
   margin-left: auto;
@@ -342,6 +377,7 @@ form {
 form input {
   background: #fff;
   border: 1px solid #9c9c9c;
+  border-radius: 3px;
   width: 100%;
   padding: 0.7em;
   margin-bottom: 0.5rem;
@@ -349,6 +385,7 @@ form input {
 form textarea {
   background: #fff;
   border: 1px solid #9c9c9c;
+  border-radius: 3px;
   width: 100%;
   padding: 0.7em;
   margin-bottom: 0.5rem;
@@ -363,9 +400,10 @@ form button {
   margin-top: 15px;
 }
 @media all and (max-width: 750px) {
- form button {
-  margin-top: 10px;
- }
+
+  form button {
+    margin-top: 10px;
+  }
 }
 .error-message {
   color: red;
@@ -394,7 +432,12 @@ form button {
 /* ----- Footer ----- */
 .page-footer {
   clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
   /*
@@ -428,16 +471,18 @@ form button {
 }
 @media all and (max-width: 500px) {
   .project-grid {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
   body {
     padding: 15px; /* 10px */
   }
   @media all and (max-width: 750px) {
-  body {
-    padding: 10px;
+
+    body {
+      padding: 10px;
+    }
   }
- }
   .profile__portrait {
     /* display: static; */
     float: none;
@@ -450,13 +495,15 @@ form button {
     margin: 0 auto;
   }
   @media all and (max-width: 750px) {
-  .mobile-clear {
-    padding-top: 10px;
+
+    .mobile-clear {
+      padding-top: 10px;
+    }
   }
- }
 }
 @media all and (min-width: 500px) and (max-width: 750px) {
   .project-grid {
+    -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
