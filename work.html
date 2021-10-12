@@ -3,11 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Mitos portfolio site - Work</title>
-    <link rel="shortcut icon" href="./img/superhero.png" type="image/png">
+    <link rel="shortcut icon" href="./img/Mitosis/cell-division (5).png" type="image/png">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Glory&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.production.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 <!-- to add for this page: - Work -->
@@ -15,7 +20,7 @@
   <body>
 
     <header class="page-header">
-      <img src="./img/superhero.png" alt="logo" class="page-header__item">
+      <img src="./img/Mitosis/cell-division (5).png" alt="logo" class="page-header__item">
       <nav class="main-navigation page-header__item">
         <ul role="menubar" class="navigation-list circleBehind">
           <li role="presentation"> <!-- prevents screen readers from reading out that its a list -->
@@ -38,47 +43,56 @@
     <main>
       <section>
         <h1 class="aligncenter">Work</h1>
-        <p>Details about the features, technologies, etc of each project can be found in the GitHub readme file.</p>
+        <p class="aligncenter">This is selection of projects I created in my life as a web developer. Many of them are study projects without any actual purpose.</p>
+        <p class="aligncenter">Details about the features, technologies, etc of each project can be found in the GitHub readme file.</p>
+        </br>
         <div class="project-grid">
-          <div class="project-grid__item">
+          <!-- <div class="project-grid__item">
             <h2>Mobile web app</h2>
             <p>Within this project, I was responsible for the frontend. It’s written in React.js. Additionally, I've created the HTML and CSS templates.
             </p>
-            <a href="#">See project on GitHub</a>
-          </div>
+            <a href="#" target="_blank" rel="noopener noreferrer">See project on GitHub</a>
+          </div> -->
           <div class="project-grid__item">
             <h2>Meet app</h2>
-            <p>PWA showing events from a mock-data google calendar (with OAuth), built with CRA, following the TDD approach.</p>
-            <p>Main technologies used: CRA, serverless, AWS lambda, OAuth, Axios, Recharts, Jest (Enzyme, Cucumber, Puppeteer)</p>
-            <a href="https://mitomonkey.github.io/meet/">Live version</a>
-            <a href="https://github.com/MitoMonkey/meet">See project on GitHub</a>            
+            <p>PWA showing events from a mock-data google calendar, including filters and graphs.</p>
+            <p>Built with CRA, following the TDD approach.</p>
+            <p>Main technologies used: CRA, serverless (AWS lambda), OAuth, Axios, Recharts, Jest (Enzyme, Cucumber, Puppeteer)</p>
+            <div class="aligncenter">
+              <a href="https://mitomonkey.github.io/meet/" target="_blank" rel="noopener noreferrer">Live demo</a></br>
+              <a href="https://github.com/MitoMonkey/meet" target="_blank" rel="noopener noreferrer">See project on GitHub</a>            
+            </div>
           </div>
-          <div class="project-grid__item">
-            <h2>MoveX</h2>
-            <p>MoveX is a library of movements from various styles and traditions, with descriptions/cues and video sources.</p>
-            <p>For this study project I built a REST API and a non-relational database as the backend, as well as a React-based frontend client </p>
-            <p>Main technologies used for the client: Javascript, React, React Bootstrap, React Redux, Axios, Parcel, PropTypes, hosting on Netlify</p>
-            <p>Main technologies used for the backend: Javascript, non-relational DB on MongoDB Atlas, App hosted on Heroku, Postman (API testing), node.js (Express, Morgan, bodyParser, mongoose, CORS, Passport, bcrypt) </p>
-            <a href="https://move-x.netlify.app/">Live version</a>
-            <a href="https://github.com/MitoMonkey/MoveX-client">See client on GitHub</a>
-            <a href="https://github.com/MitoMonkey/MoveX-backend">See backend on GitHub</a>            
-          </div>
+<!--           <div class="project-grid__item">
+            <h2>Grid__Item3</h2>
+            <p>Description</p>
+            <a href="#">See project on GitHub</a>
+          </div> -->
           <div class="project-grid__item">
             <h2>Pokedéx app</h2>
             <p>An app to show a list of Pokemon from a public API, with a filter and a modal to show details for each Pokemon.</p>
             <p>Main technologies used: Javascript, jQuery, Bootstrap, node.js, linters and minifier</p>
-            <a href="https://mitomonkey.github.io/Pokedex-App/">Live demo</a>
-            <a href="https://github.com/MitoMonkey/Pokedex-App">See project on GitHub</a>
+            <div class="aligncenter">
+              <a href="https://mitomonkey.github.io/Pokedex-App/" target="_blank" rel="noopener noreferrer">Live demo</a></br>
+              <a href="https://github.com/MitoMonkey/Pokedex-App" target="_blank" rel="noopener noreferrer">See project on GitHub</a>
+            </div>
           </div>
           <div class="project-grid__item">
-            <h2>Grid__Item 5</h2>
-            <p>Description</p>
-            <a href="#">See project on GitHub</a>
+            <h2>MoveX</h2>
+            <p>MoveX is a library of movements from various styles and traditions, with descriptions/cues and video sources.</p>
+            <p>For this study project I built a REST API and a non-relational database as the backend, as well as a React-based frontend client.</p>
+            <p>Main technologies used for the client: Javascript, React, React Bootstrap, React Redux, Axios, Parcel, PropTypes, hosting on Netlify.</p>
+            <p>Main technologies used for the backend: Javascript, non-relational DB on MongoDB Atlas, App hosted on Heroku, Postman (API testing), node.js (Express, Morgan, bodyParser, mongoose, CORS, Passport, bcrypt)</p>
+            <div class="aligncenter">
+              <a href="https://move-x.netlify.app/" target="_blank" rel="noopener noreferrer">Live demo</a></br>
+              <a href="https://github.com/MitoMonkey/MoveX-client" target="_blank" rel="noopener noreferrer">See client on GitHub</a></br>
+              <a href="https://github.com/MitoMonkey/MoveX-backend" target="_blank" rel="noopener noreferrer">See backend on GitHub</a>
+            </div>
           </div>
 <!--           <div class="project-grid__item">
              <h2>Grid__Item 6</h2>
              <p>Description</p>
-             <a href="#">See project on GitHub</a>
+             <a href="#" target="_blank" rel="noopener noreferrer">See project on GitHub</a>
            </div> -->
         </div>
       </section>
@@ -87,9 +101,9 @@
     <footer class="page-footer">
       <p>Find me on</p>
       <div class="social-media">
-        <a href="https://github.com/MitoMonkey" target="_blank"><img src="img/github_logo.svg" alt="Github icon"></a>
-        <a href="https://www.linkedin.com/in/michael-flohrsch%C3%BCtz-8a58321b3/" target="_blank"><img src="img/linkedin_logo.svg" alt="LinkedIn icon"></a>
-        <a href="https://www.xing.com/profile/Michael_Flohrschuetz2" target="_blank"><img src="img/Xing_logo.svg" alt="Xing icon"></a>
+        <a href="https://github.com/MitoMonkey" target="_blank" rel="noopener noreferrer"><img src="img/github_logo.svg" alt="Github icon"></a>
+        <a href="https://www.linkedin.com/in/michael-flohrsch%C3%BCtz-8a58321b3/" target="_blank" rel="noopener noreferrer"><img src="img/linkedin_logo.svg" alt="LinkedIn icon"></a>
+        <a href="https://www.xing.com/profile/Michael_Flohrschuetz2" target="_blank" rel="noopener noreferrer"><img src="img/Xing_logo.svg" alt="Xing icon"></a>
       </div>
     </footer>
 

@@ -1,23 +1,27 @@
-/*
-Colors used:
-(dark green-blue): #05676e;
- */
 :root {
-  --dark-grey: #2b2b2b; /* text color */
-  --primary-color: #357b70; /* dark green ; links, buttons */
-  --secondary-color: #e0b354; /* Orange ; Visited link, 2ndary button */
-  --light-green: #489c79; /* active link */
   --font-weight: 400;
-  --font-size: 16px;
+  --font-size: 20px;
   --line-height: 1.6;
-  --text-color: #fff;
   --spacing: 15px;
   --heading-font-weight: 700;
+
+  --primary-color_OLD: #357b70;
+  --secondary-color_OLD: #e0b354;
+  --text-color_OLD: #fff;
+  --text-color: #f1f1f1;
+  --primary-color: #009688;
+  --secondary-color: #ff9800;
+  --red: rgb(245, 96, 96);
+  --med: #555;
+  --dark: #343a40;
+  --dark-grey: #2b2b2b;
 }
 
 * {
   box-sizing: border-box; /* force the padding and border to be included in the final specified width rather than being added on top, with the width of the item itself changing to accommodate the padding and border */
-  font-family: 'Libre Baskerville', sans-serif;
+  /* font-family: 'Libre Baskerville', sans-serif; */
+  font-family: 'Glory', sans-serif;
+  /* font-size: 105%; */
 }
 
 /* copied from a CodePen. Seems like a good code.
@@ -39,7 +43,7 @@ body {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 36px;
   font-weight: var(--heading-font-weight);
   font-variant: small-caps;
 }
@@ -53,25 +57,26 @@ h3 {
 }
 
 a {
-  color: var(--primary-color); /* (dark green) */
+  color: var(--primary-color);
 }
-a:visited {
-  color: var(--secondary-color); /* (Orange) */
-}
+/* a:visited {
+  color: var(--secondary-color);
+} */
 a:hover, a:focus {
   /* focus is relevant when navigating the page by keyboard */
   text-decoration: none;
+  color: var(--secondary-color);
 }
 a:active {
-  color: var(--light-green);
+  color: var(--secondary-color);
 }
 
 button,
-.button { /* that class is necessary to create links that look like buttons */
+.button { /* to create links that look like buttons */
   border: none; /* overwrites browser defaults and resets the border */
   display: inline-block;
-  font-family: inherit; /* takes the font from the outer container */
-  background-color: var(--primary-color); /* (dark green) */
+  font-family: inherit;
+  background-color: var(--primary-color);
   color: var(--text-color);
   text-decoration: none;
   padding: var(--spacing);
@@ -88,17 +93,17 @@ button.a:visited {
   color: var(--text-color);
 }
 a:visited.button {
-  color: #fff;
+  color: var(--text-color);
 }
 .buttons {
-  clear: both; /* Why is this not placing the buttons UNDER the profile pic? */
+  clear: both;
   margin-top: var(--spacing);
   margin-bottom: var(--spacing);
 }
-.button__secondary {
+/* .button__secondary {
   background-color: var(--secondary-color);
   color: var(--dark-grey);
-}
+} */
 
 .page-header {
   display: flex; /* alternatives: https://replit.com/@CFCurriculum/CSS3-grids-and-flexbox-demo-1 */
@@ -137,14 +142,13 @@ a:visited.button {
   position: relative;
   z-index: 0;
 }
-
 .circleBehind a:before, .circleBehind a:after {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 90px;
   height: 50px;
-  border: 4px solid var(--light-green);
+  border: 4px solid var(--secondary-color);
   transform: translateX(-50%) translateY(-50%) scale(0.8);
   border-radius: 50%;
   background: transparent;
@@ -210,13 +214,19 @@ th, td {
   text-align: center;
   margin: auto;
 }
+.project-grid a {
+  color: var(--secondary-color);
+}
 .project-grid__item { /* Grid fallback */
   display: inline-block;
   width: 33%;
   padding: 15px;
   margin: 10px;
-  background-color: #f4f3ed;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 6px;
   border: 1px solid;
+  text-align: left;
 }
 @supports (display: grid) {
   .project-grid {
@@ -227,13 +237,13 @@ th, td {
     padding: var(--spacing);
   }
   .project-grid__item {
-    background-color: #F4F3ED;
     width: auto; /* just failsafes to make sure it looks good on every browser */
     min-height: auto; /* just failsafes to make sure it looks good on every browser */
-    padding: var(--spacing);
+    padding: 15px 25px 30px 25px;
     margin: 0;
     /* offset-x | offset-y | blur-radius | spread-radius | color */
-    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2); */
+    box-shadow: 3px 3px 8px rgb(0 0 0 / 30%);
   }
   .project-grid__item:last-child {
     grid-column: 3 / 3;
@@ -254,7 +264,9 @@ designed MOBILE FIRST ----- */
 
 form {
   padding: 1em;
-  background: #f9f9f9;
+  background: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 6px;
   border: 1px solid #c1c1c1;
   max-width: 600px;
   margin-left: auto;
@@ -264,6 +276,7 @@ form {
 form input {
   background: #fff;
   border: 1px solid #9c9c9c;
+  border-radius: 3px;
   width: 100%;
   padding: 0.7em;
   margin-bottom: 0.5rem;
@@ -271,6 +284,7 @@ form input {
 form textarea {
   background: #fff;
   border: 1px solid #9c9c9c;
+  border-radius: 3px;
   width: 100%;
   padding: 0.7em;
   margin-bottom: 0.5rem;
