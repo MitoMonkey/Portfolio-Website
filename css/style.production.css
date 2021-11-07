@@ -56,6 +56,7 @@ button { /* to create links that look like buttons */
   background-color: #009688;
   color: #f1f1f1;
   text-decoration: none;
+  text-align: center;
   padding: 15px;
   border-radius: 5px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2); /* last number is opacity. 0=transparent, 1=complete opacity */
@@ -79,6 +80,7 @@ button { /* to create links that look like buttons */
   background-color: #009688;
   color: #f1f1f1;
   text-decoration: none;
+  text-align: center;
   padding: 15px;
   border-radius: 5px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2); /* last number is opacity. 0=transparent, 1=complete opacity */
@@ -125,6 +127,15 @@ a:visited.button {
   background-color: #ff9800;
   color: #2b2b2b;
   padding: 10px;
+}
+@media all and (max-width: 630px) {
+  .button {
+    display: block;
+    max-width: 220px;
+    margin: 0 auto;
+    margin-top: 15px;
+    clear: both;
+  }
 }
 
 .page-header {
@@ -238,6 +249,7 @@ a:visited.button {
   clear: both;
   max-width: 700px;
   margin: 0 auto;
+  padding: 15px;
 }
 ul {
   overflow: hidden;
@@ -626,6 +638,7 @@ form button {
     display: block;
     text-align: center;
     margin: 0 auto;
+    margin-top: 15px;
   }
   @media all and (max-width: 750px) {
 

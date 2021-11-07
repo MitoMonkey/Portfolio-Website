@@ -71,6 +71,7 @@ button,
   background-color: var(--primary-color);
   color: var(--text-color);
   text-decoration: none;
+  text-align: center;
   padding: var(--spacing);
   border-radius: 5px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2); /* last number is opacity. 0=transparent, 1=complete opacity */
@@ -96,6 +97,15 @@ a:visited.button {
   background-color: var(--secondary-color);
   color: var(--dark-grey);
   padding: 10px;
+}
+@media all and (max-width: 630px) {
+  .button {
+    display: block;
+    max-width: 220px;
+    margin: 0 auto;
+    margin-top: 15px;
+    clear: both;
+  }
 }
 
 .page-header {
@@ -167,6 +177,7 @@ a:visited.button {
   clear: both;
   max-width: 700px;
   margin: 0 auto;
+  padding: 15px;
 }
 ul {
   overflow: hidden;
@@ -466,5 +477,6 @@ form button {
     display: block;
     text-align: center;
     margin: 0 auto;
+    margin-top: 15px;
   }
 }
