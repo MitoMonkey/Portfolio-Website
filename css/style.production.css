@@ -7,16 +7,17 @@
 
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; 
+          box-sizing: border-box; /* force the padding and border to be included in the final specified width rather than being added on top, with the width of the item itself changing to accommodate the padding and border */
   font-family: 'Glory', sans-serif;
 }
 
 body {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.6;
   /*  background-color: lightgray; */
   color: #2b2b2b;
+  padding: 20px;
 }
 
 h1 {
@@ -39,20 +40,16 @@ a {
 /* a:visited {
   color: var(--secondary-color);
 } */
-a:hover {
-  text-decoration: none;
-  /*   color: #ff9800; */
-}
-a:focus {
+a:hover, a:focus {
   /* focus is relevant when navigating the page by keyboard */
   text-decoration: none;
-  /*   color: #ff9800; */
+  /*   color: var(--secondary-color); */
 }
 a:active {
   color: #ff9800;
 }
 
-button {
+button { /* to create links that look like buttons */
   border: none; /* overwrites browser defaults and resets the border */
   display: inline-block;
   font-family: inherit;
@@ -71,7 +68,7 @@ button {
 @media all and (max-width: 750px) {
 
   button {
-    padding: 10px;
+  padding: 10px;
   }
 }
 
@@ -94,7 +91,7 @@ button {
 @media all and (max-width: 750px) {
 
   .button {
-    padding: 10px;
+  padding: 10px;
   }
 }
 button:hover, button:focus, .button:hover, .button:focus {
@@ -115,16 +112,16 @@ a:visited.button {
 @media all and (max-width: 750px) {
 
   .buttons {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
   }
 }
 @media all and (max-width: 750px) {
 
   .buttons {
-    margin-top: 10px;
+  margin-top: 10px;
   }
 }
-.button_secondary {
+.button__secondary {
   background-color: #ff9800;
   color: #2b2b2b;
   padding: 10px;
@@ -141,13 +138,13 @@ a:visited.button {
 @media all and (max-width: 750px) {
 
   .page-header {
-    padding: 10px;
+  padding: 10px;
   }
 }
 .page-header__item {
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 50px;
-  flex: 0 1 50px;
+      -ms-flex: 0 1 50px;
+          flex: 0 1 50px;
 }
 .page-header__item:first-child {
   /* = logo */
@@ -157,8 +154,8 @@ a:visited.button {
 }
 .page-header__item:last-child {
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: right;
 }
 
@@ -188,8 +185,8 @@ a:visited.button {
   height: 50px;
   border: 4px solid #ff9800;
   -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
-  -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
-  transform: translateX(-50%) translateY(-50%) scale(0.8);
+      -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
+          transform: translateX(-50%) translateY(-50%) scale(0.8);
   border-radius: 50%;
   background: transparent;
   content: "";
@@ -207,8 +204,8 @@ a:visited.button {
   height: 50px;
   border: 4px solid #ff9800;
   -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
-  -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
-  transform: translateX(-50%) translateY(-50%) scale(0.8);
+      -ms-transform: translateX(-50%) translateY(-50%) scale(0.8);
+          transform: translateX(-50%) translateY(-50%) scale(0.8);
   border-radius: 50%;
   background: transparent;
   content: "";
@@ -227,14 +224,14 @@ a:visited.button {
 .circleBehind a:hover:before {
   opacity: 0.6;
   -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
-  -ms-transform: translateX(-50%) translateY(-50%) scale(1);
-  transform: translateX(-50%) translateY(-50%) scale(1);
+      -ms-transform: translateX(-50%) translateY(-50%) scale(1);
+          transform: translateX(-50%) translateY(-50%) scale(1);
 }
 .circleBehind a:hover:after {
   opacity: 0.6;
   -webkit-transform: translateX(-50%) translateY(-50%) scale(1.3);
-  -ms-transform: translateX(-50%) translateY(-50%) scale(1.3);
-  transform: translateX(-50%) translateY(-50%) scale(1.3);
+      -ms-transform: translateX(-50%) translateY(-50%) scale(1.3);
+          transform: translateX(-50%) translateY(-50%) scale(1.3);
 }
 
 .profile, .about {
@@ -273,7 +270,7 @@ th {
 @media all and (max-width: 750px) {
 
   th {
-    padding: 5px 10px 5px 10px;
+  padding: 5px 10px 5px 10px;
   }
 }
 td {
@@ -283,7 +280,7 @@ td {
 @media all and (max-width: 750px) {
 
   td {
-    padding: 5px 10px 5px 10px;
+  padding: 5px 10px 5px 10px;
   }
 }
 @media (max-width: 500px) {
@@ -293,67 +290,168 @@ td {
 }
 
 /* ----- Work page ----- */
+.no-bottom-padding {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.no-top-gap {
+  padding-top: 0;
+  margin-top: 0;
+}
+
 .project-grid { /* Grid fallback */
   text-align: center;
-  margin: auto;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 15px 40px;
+}
+
+@media all and (max-width: 750px) {
+
+  .project-grid {
+  padding: 10px 40px;
+  }
 }
 .project-grid a {
   color: #ff9800;
 }
 .project-grid__item { /* Grid fallback */
   display: inline-block;
-  width: 33%;
+  width: 50%;
   padding: 15px;
   margin: 10px;
   background-color: #009688;
   color: #f1f1f1;
   border-radius: 6px;
   border: 1px solid;
+  -webkit-box-shadow: 3px 3px 8px rgb(0 0 0 / 30%);
+          box-shadow: 3px 3px 8px rgb(0 0 0 / 30%);
   text-align: left;
+}
+@media all and (max-width: 750px) {
+
+  .project-grid__item {
+  padding: 10px;
+  }
+}
+.project-grid__item h2 {
+  text-align: center;
 }
 @supports (display: grid) {
   .project-grid {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 25px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+    
+  }
+  .project-grid__item {
+    width: auto;
+    min-width: 0; 
+    max-width: 100%;
+    min-height: auto; /* just failsafes to make sure it looks good on every browser */
+    padding: 15px 25px 30px 25px;
+    margin: 0;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+  }
+  /* .project-grid__item:last-child {
+    grid-column: 3 / 3;
+    grid-row: 1 / 3;
+  } */
+  .screenshot-container_1pic {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    margin: 0;
+  }
+  .screenshot-container_2pics {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 15px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    margin: 0;
+    grid-auto-rows: 1fr;
+  }
+  @media all and (max-width: 750px) {
+
+    .screenshot-container_2pics {
+    grid-gap: 10px;
+    }
+  }
+  .screenshot-container_3pics {
+    width: 100%;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 15px 1fr 15px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px;
     margin: 0;
-    padding: 15px;
+    grid-auto-rows: 1fr;
   }
   @media all and (max-width: 750px) {
 
-    .project-grid {
-      padding: 10px;
+    .screenshot-container_3pics {
+    grid-gap: 10px;
     }
   }
-  @media all and (max-width: 750px) {
-
-    .project-grid {
-      grid-gap: 10px;
-    }
-  }
-  .project-grid__item {
-    width: auto; /* just failsafes to make sure it looks good on every browser */
-    min-height: auto; /* just failsafes to make sure it looks good on every browser */
-    padding: 15px 25px 30px 25px;
+  .screenshot {
+    width: auto;
+    min-width: 0; 
+    max-width: 100%;
+    min-height: auto;
+    height: 100%;
     margin: 0;
-    /* offset-x | offset-y | blur-radius | spread-radius | color */
-    /* box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2); */
+    border: 3px solid #f1f1f1;
+    border-radius: 3px;
     -webkit-box-shadow: 3px 3px 8px rgb(0 0 0 / 30%);
-    box-shadow: 3px 3px 8px rgb(0 0 0 / 30%);
-  }
-  .project-grid__item:last-child {
-    -ms-grid-column: 3;
-    grid-column: 3 / 3;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    grid-row: 1 / 3;
+            box-shadow: 3px 3px 8px rgb(0 0 0 / 30%);
   }
 }
 
-/* ----- contact page
-designed MOBILE FIRST ----- */
+/* .screenshot-container:last-child {
+  margin-left: -3px;
+} */
+@media all and (max-width: 1000px){
+  .screenshot-container_2pics {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (max-width: 750px){
+  .project-grid {
+    grid-gap: 10px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  .screenshot-container_2pics {
+    -ms-grid-columns: 1fr 10px 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  /* .project-grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  } */
+}
+@media all and (max-width: 500px) {
+  .screenshot-container_2pics {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+/*   .screenshot-container_3pics {
+    grid-template-columns: 1fr;
+  } */
+}
+/* @media all and (min-width: 500px) and (max-width: 750px) {
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+} */
+
+/* ----- contact page (designed MOBILE FIRST) ----- */
 .contact-details {
   text-align: center;
   margin: 0 auto;
@@ -402,7 +500,7 @@ form button {
 @media all and (max-width: 750px) {
 
   form button {
-    margin-top: 10px;
+  margin-top: 10px;
   }
 }
 .error-message {
@@ -437,13 +535,58 @@ form button {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   /*
   max-width: 200px;
   margin: 30px auto;  the 30px top&bottom margin do not seem to have any effect because they are relating to the buttons instead of the closest element, which would be the profile pic
   margin-top: 200px; */
+}
+.social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.circle-link {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  margin: 8px;
+  background-color: white;
+  border: 1px solid #eeeeee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: 1s ease-out;
+  -o-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+.circle-link:hover {
+  -webkit-transform: translateY(-0.25rem);
+      -ms-transform: translateY(-0.25rem);
+          transform: translateY(-0.25rem);
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* ----- general classes ----- */
@@ -458,34 +601,24 @@ form button {
 
 /* ----- Adaptations for small screens ----- */
 @media all and (max-width: 750px){ /* shared code for all smaller screens */
-  .project-grid {
-    grid-gap: 10px;
-  }
-  .project-grid__item:last-child {
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  }
   h1 {
     font-size: 22px;
   }
 }
 @media all and (max-width: 500px) {
-  .project-grid {
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-  }
   body {
     padding: 15px; /* 10px */
   }
   @media all and (max-width: 750px) {
 
     body {
-      padding: 10px;
+    padding: 10px;
     }
   }
   .profile__portrait {
     /* display: static; */
     float: none;
+    margin: 0;
   }
   .mobile-clear {
     clear: both;
@@ -497,13 +630,7 @@ form button {
   @media all and (max-width: 750px) {
 
     .mobile-clear {
-      padding-top: 10px;
+    padding-top: 10px;
     }
-  }
-}
-@media all and (min-width: 500px) and (max-width: 750px) {
-  .project-grid {
-    -ms-grid-columns: 1fr 10px 1fr;
-    grid-template-columns: 1fr 1fr;
   }
 }
