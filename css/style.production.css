@@ -600,6 +600,9 @@ form button {
   -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
+.icon {
+  max-width: 30px;
+}
 
 /* ----- general classes ----- */
 .aligncenter {
