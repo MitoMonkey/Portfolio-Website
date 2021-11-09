@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Mitos.this - Work</title>
-  <link rel="shortcut icon" href="./img/Mitosis/cell-division (5).png" type="image/png">
+  <link rel="shortcut icon" href="./img/cell-division.png" type="image/png">
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
 <body>
 
   <header class="page-header">
-    <img src="./img/Mitosis/cell-division (5).png" alt="logo" class="page-header__item">
+    <img src="./img/cell-division.png" alt="logo" class="page-header__item">
     <nav class="main-navigation page-header__item">
       <ul role="menubar" class="navigation-list circleBehind">
         <li role="presentation">
@@ -55,10 +55,31 @@
 
       <div class="project-grid">
         <div class="project-grid__item">
+          <h2>This portfolio website</h2>
+          <div class="screenshot-container_2pics">
+            <img class="screenshot" src="img/Screenshots/Screenshot_MeetApp-1.png" alt="Meet app screenshot 1.">
+          </div>
+          <p>This started as a static website to learn HTML and CSS, but turned into a full grown portfolio website.</p>
+          <p>For practice reasons I chose to refrain from rebuilding it using librarys or build tools, so every line of
+            code here is hand-written.</p>
+          <p class="no-bottom-padding">Technologies:</p>
+          <ul class="no-top-gap">
+            <li>CSS basics like float, flexbox, grid, variables, animations</li>
+            <li>HTML basics like forms, tables, header, footer</li>
+            <li>Full responsiveness</li>
+            <li>Full accessibility</li>
+          </ul>
+          <div class="aligncenter">
+            <a href="https://github.com/MitoMonkey/Portfolio-Website" target="_blank"
+              rel="noopener noreferrer">Portfolio website on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-grid__item">
           <h2>Meet app</h2>
           <div class="screenshot-container_2pics">
-            <img class="screenshot" src="img/Screenshot_MeetApp-1.png" alt="Meet app screenshot 1.">
-            <img class="screenshot" src="img/Screenshot_MeetApp-2.png" alt="Meet app screenshot 1.">
+            <img class="screenshot" src="img/Screenshots/Screenshot_MeetApp-1.png" alt="Meet app screenshot 1.">
+            <img class="screenshot" src="img/Screenshots/Screenshot_MeetApp-2.png" alt="Meet app screenshot 1.">
           </div>
           <p>This app displays events in different cities which are fetched from Google Calendar API.</p>
           <p>The study goal was to learn about PWAs, test-driven-development (TDD), serverless functions, OAuth (a
@@ -88,7 +109,7 @@
         <div class="project-grid__item">
           <h2>MoveX Angular client</h2>
           <div class="screenshot-container_1pic">
-            <img class="screenshot" src="img/Screenshot_MoveX-Angular.png"
+            <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-Angular.png"
               alt="Screenshot of the MoveX Angular client.">
           </div>
           <p>MoveX is a library of movements from various styles and traditions, with descriptions/cues and video
@@ -118,7 +139,8 @@
         <div class="project-grid__item">
           <h2>MoveX React client</h2>
           <div class="screenshot-container_1pic">
-            <img class="screenshot" src="img/Screenshot_MoveX-React.png" alt="Screenshot of the MoveX React client.">
+            <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-React.png"
+              alt="Screenshot of the MoveX React client.">
           </div>
           <p>This is the React-based frontend - A single-page, responsive web application (SPA), built with React
             (including a number of additional modules), following the MVC design pattern.</p>
@@ -138,7 +160,8 @@
         <div class="project-grid__item">
           <h2>MoveX backend (API)</h2>
           <div class="screenshot-container_1pic">
-            <img class="screenshot" src="img/Screenshot_MoveX-API_2.png" alt="Screenshot of the MoveX endpoints.">
+            <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-API_2.png"
+              alt="Screenshot of the MoveX endpoints.">
           </div>
           <p>This is the REST API and a non-relational database for MoveX.</p>
           <p>For general info about MoveX see the Angular client.</p>
@@ -156,11 +179,11 @@
         <div class="project-grid__item">
           <h2>CHATzam</h2>
           <div class="screenshot-container_3pics">
-            <img class="screenshot" src="img/Screenshot_CHATzam_StartScreen.jpg"
+            <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_StartScreen.jpg"
               alt="Screenshot of the CHATzam app start screen.">
-            <img class="screenshot" src="img/Screenshot_CHATzam_ChatScreen.jpg"
+            <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_ChatScreen.jpg"
               alt="Screenshot of the CHATzam app chat screen.">
-            <img class="screenshot" src="img/Screenshot_CHATzam_ActionSheet.jpg"
+            <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_ActionSheet.jpg"
               alt="Screenshot of the CHATzam app action sheet.">
           </div>
           <p>A chat app for mobile devices (Android and iOS) created with React Native.</p>
@@ -185,8 +208,9 @@
         <div class="project-grid__item">
           <h2>Pokedéx app</h2>
           <div class="screenshot-container_2pics">
-            <img class="screenshot" src="img/Screenshot_Pokedex_main.png" alt="Pokedex screenshot 1: Main screen.">
-            <img class="screenshot" src="img/Screenshot_Pokedex_modal.png"
+            <img class="screenshot" src="img/Screenshots/Screenshot_Pokedex_main.png"
+              alt="Pokedex screenshot 1: Main screen.">
+            <img class="screenshot" src="img/Screenshots/Screenshot_Pokedex_modal.png"
               alt="Pokedex screenshot 2: Modal with details of a Pokemon.">
           </div>
           <p>An app to show a list of Pokemon from a public API.</p>
@@ -212,14 +236,29 @@
   </main>
 
   <footer class="page-footer">
-    <p>Find me on</p>
+    <p>Connect with me</p>
     <div class="social-media">
-      <a class="circle-link" href="https://github.com/MitoMonkey" target="_blank" rel="noopener noreferrer"><img
-          src="img/github_logo.svg" alt="Github icon"></a>
+      <a class="circle-link" href="tel:+491631631858" target="_blank" rel="noopener noreferrer">
+        <img src="img/Icons/Phone_icon.svg" class="icon" alt="Phone symbol"></a>
+      <a class="circle-link" href="mailto:Michael.Flohrschuetz@gmail.com?subject=WebDev%20contact" target="_blank"
+        rel="noopener noreferrer">
+        <img src="img/Icons/Email_icon.svg" class="icon" alt="Email symbol"></a>
+      <a class="circle-link" href="https://t.me/MitoFlyingMonkey" target="_blank" rel="noopener noreferrer">
+        <img src="img/Icons/Telegram_logo.svg" class="icon" alt="Telegram logo"></a>
+      <a class="circle-link" href="https://wa.me/491631631858" target="_blank" rel="noopener noreferrer">
+        <img src="img/Icons/Whatsapp_logo.svg" class="icon" alt="Whatsapp logo"></a>
+      <a class="circle-link" href="skype:flyingmonkey_6" target="_blank" rel="noopener noreferrer">
+        <img src="img/Icons/Skype_logo.svg" class="icon" alt="Skype logo"></a>
+      <a class="circle-link" href="https://github.com/MitoMonkey" target="_blank" rel="noopener noreferrer">
+        <img src="img/Icons/github_logo.svg" class="icon" alt="Github logo"></a>
       <a class="circle-link" href="https://www.linkedin.com/in/michael-flohrsch%C3%BCtz-8a58321b3/" target="_blank"
-        rel="noopener noreferrer"><img src="img/linkedin_logo.svg" alt="LinkedIn icon"></a>
+        rel="noopener noreferrer"><img src="img/Icons/linkedin_logo.svg" class="icon" alt="LinkedIn logo"></a>
       <a class="circle-link" href="https://www.xing.com/profile/Michael_Flohrschuetz2" target="_blank"
-        rel="noopener noreferrer"><img src="img/Xing_logo.svg" alt="Xing icon"></a>
+        rel="noopener noreferrer"><img src="img/Icons/Xing_logo.svg" class="icon" alt="Xing logo"></a>
+      <a class="circle-link" href="https://twitter.com/Mito_this" target="_blank" rel="noopener noreferrer"><img
+          src="img/Icons/Twitter_logo.svg" class="icon" alt="Twitter logo"></a>
+      <a class="circle-link" href="https://medium.com/@michael.flohrschuetz" target="_blank"
+        rel="noopener noreferrer"><img src="img/Icons/Medium_logo.svg" class="icon" alt="Medium logo"></a>
     </div>
   </footer>
 
