@@ -438,6 +438,7 @@ td {
     grid-gap: 10px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    padding: 10px;
   }
   .screenshot-container_2pics {
     -ms-grid-columns: 1fr 10px 1fr;

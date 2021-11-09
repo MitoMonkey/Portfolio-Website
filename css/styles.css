@@ -253,7 +253,6 @@ th, td {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 25px;
-    
   }
   .project-grid__item {
     width: auto;
@@ -312,6 +311,7 @@ th, td {
 }
 @media all and (max-width: 750px){
   .project-grid {
+    padding: 10px;
     grid-gap: 10px;
     grid-template-columns: 1fr;
   }
