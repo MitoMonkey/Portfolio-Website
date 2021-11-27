@@ -384,8 +384,10 @@ form button {
   margin-top: var(--spacing);
 }
 .error-message {
-  color: red;
-  font-size: 0.8em;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  font-size: 0.9em;
+  text-align: right;
 }
 
 @media (min-width: 400px) {
