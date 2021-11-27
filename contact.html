@@ -62,7 +62,8 @@
       <label class="standard-label" for="contact-msg">Message: </label>
       <textarea maxlength="240" id="contact-msg" required></textarea>
 
-      <button type="submit" class="button__secondary">Send message</button>
+      <button class="button__secondary g-recaptcha" data-sitekey="6Lebz2IdAAAAAGDCIuPL3Z61q93RkvNcYvoToCoB"
+        data-callback='onSubmit' data-action='submit'>Send message</button>
     </form>
   </main>
 
@@ -94,6 +95,7 @@
   </footer>
 
   <!-- <script src="js/tota11y.min.js"></script> -->
+  <script src="https://www.google.com/recaptcha/api.js"></script>
   <script src="js/contact-form.js"></script>
 </body>
 
