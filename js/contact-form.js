@@ -58,9 +58,9 @@
   // needs to make http POST request (with secret key) from the backend with the token
   // readm more here: https://developers.google.com/recaptcha/docs/verify
   // then also the "score" value from the JSON response must be set to a threshold between 0 and 1, below it the recaptcha is not "solved"
-  function onSubmit(token) {
+  /* function onSubmit(token) {
     form.submit();
     alert('Captcha correct!'); // More functionality will have to be added here
-  }
+  } */
 
 })();
