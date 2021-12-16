@@ -52,18 +52,29 @@
     <h3>Leave a message</h3>
     <form action="" method="post" id="contact-form">
       <div class="input-wrapper">
+        <label class="standard-label" for="contact-name">Name: </label>
+        <input type="name" id="contact-name" required>
+      </div>
+
+      <div class="input-wrapper">
         <label class="standard-label" for="contact-email">Email: </label>
         <input type="email" id="contact-email" required>
       </div>
 
-      <label class="standard-label" for="contact-tel">Telephone: </label>
-      <input type="tel" id="contact-tel"> <!-- pattern="\d{3}[\-]\d{3}[\-]\d{7}" -->
+      <div class="input-wrapper">
+        <label class="standard-label" for="contact-tel">Phone: </label>
+        <input type="tel" id="contact-tel"> <!-- pattern="\d{3}[\-]\d{3}[\-]\d{7}" -->
+      </div>
 
-      <label class="standard-label" for="contact-msg">Message: </label>
-      <textarea maxlength="240" id="contact-msg" required></textarea>
+      <div class="input-wrapper">
+        <label class="standard-label" for="contact-msg">Message: </label>
+        <textarea maxlength="500" id="contact-msg" required></textarea>
+      </div>
 
-      <button class="button__secondary g-recaptcha" data-sitekey="6Lebz2IdAAAAAGDCIuPL3Z61q93RkvNcYvoToCoB"
-        data-callback='onSubmit' data-action='submit'>Send message</button>
+      <button class="button__secondary" type="submit" id="contact-submit">Send message</button>
+
+      <!-- <button class="button__secondary g-recaptcha" data-sitekey="6Lebz2IdAAAAAGDCIuPL3Z61q93RkvNcYvoToCoB"
+        data-callback='onSubmit' data-action='submit'>Send message</button> -->
     </form>
   </main>
 
