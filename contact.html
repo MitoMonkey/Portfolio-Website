@@ -61,10 +61,10 @@
         <input type="email" id="contact-email" required>
       </div>
 
-      <div class="input-wrapper">
+      <!-- <div class="input-wrapper">
         <label class="standard-label" for="contact-tel">Phone: </label>
-        <input type="tel" id="contact-tel"> <!-- pattern="\d{3}[\-]\d{3}[\-]\d{7}" -->
-      </div>
+        <input type="tel" id="contact-tel">
+      </div> -->
 
       <div class="input-wrapper">
         <label class="standard-label" for="contact-msg">Message: </label>
@@ -72,9 +72,12 @@
       </div>
 
       <button class="button__secondary" type="submit" id="contact-submit">Send message</button>
-
       <!-- <button class="button__secondary g-recaptcha" data-sitekey="6Lebz2IdAAAAAGDCIuPL3Z61q93RkvNcYvoToCoB"
-        data-callback='onSubmit' data-action='submit'>Send message</button> -->
+        data-callback='CALLBACK-FUNCTION' data-action='submit'>Send message</button> -->
+      <!-- data-badge="inline" -->
+
+      <p id="form-success" style="display: none;">Sent successfully!</p>
+      <p id="form-sending" style="display: none;">Sending...</p>
     </form>
   </main>
 
@@ -106,7 +109,8 @@
   </footer>
 
   <!-- <script src="js/tota11y.min.js"></script> -->
-  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="js/contact-form.js"></script>
 </body>
 

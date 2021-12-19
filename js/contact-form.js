@@ -2,8 +2,13 @@
   let form = document.querySelector('#contact-form');
   let emailInput = document.querySelector('#contact-email');
   let nameInput = document.querySelector('#contact-name');
-  let telInput = document.querySelector('#contact-tel');
+  // let telInput = document.querySelector('#contact-tel');
   let msgInput = document.querySelector('#contact-msg');
+
+  let successInfo = document.querySelector('#form-success');
+  let sendingInfo = document.querySelector('#form-sending');
+
+  // let recaptchaResponse = document.querySelector('#contact-form textarea[name=\'g-recaptcha-response\']')
 
   function validateEmail() {
     let value = emailInput.value;
@@ -44,7 +49,7 @@
     return true;
   }
 
-  function validateTel() {
+  /* function validateTel() {
     let value = telInput.value;
 
     // phone can not contain letters ---- NOT CORRECT REGEX YET 
@@ -57,10 +62,11 @@
       showErrorMessage(telInput, 'Phone must be at least 8 digits.');
       return false;
     }
+    // pattern="\d{3}[\-]\d{3}[\-]\d{7}"
 
     showErrorMessage(telInput, null);
     return true;
-  }
+  } */
 
   function validateMsg() {
     let value = msgInput.value;
@@ -95,13 +101,64 @@
 
   emailInput.addEventListener('input', validateEmail);
   nameInput.addEventListener('input', validateName);
-  telInput.addEventListener('input', validateTel);
+  // telInput.addEventListener('input', validateTel);
   msgInput.addEventListener('input', validateMsg);
 
   form.addEventListener('submit', (e) => {
     e.preventDefault(); // Do not submit to the server
+    successInfo.style.display = 'none';
+
     if (validateEmail() && validateName() && validateMsg()) {
-      alert('Success!'); // More functionality will have to be added here
+      alert('This contact form is not functional yet. Please send email instead!');
+
+      // Send data to AWS API
+      axios.post('MY_API_ENDPOINT', {
+        // 'g-recaptcha-response': recaptchaResponse.value,
+        email: emailInput.value,
+        name: nameInput.value,
+        message: msgInput.value
+      },
+        {
+          headers: {
+            ContentType: 'application/json'
+          }
+        })
+        .then(res => {
+          // Do something if call succeeds
+        })
+        .catch(err => {
+          // Do something if call fails
+        })
+      // ALTERNATIVE FOR Axios
+      /* var formRequest = new Request(MY_API_ENDPOINT, {
+        method: 'POST',
+        body: JSON.stringify({
+          name: nameInput.value,
+          email: emailInput.value,
+          message: msgInput.value,
+          'g-recaptcha-response': recaptchaResponse.value
+        })
+
+        fetch(formRequest)
+        .then(function(response) {
+          if (response.status === 200) {
+            return response.json()
+          } else {
+            throw new Error('Something went wrong on api server!')
+          }
+        })
+        .then(function(response) {
+          successInfo.style.display = 'block'
+          sendingInfo.style.display = 'none'
+          nameInput.value = ''
+          emailInput.value = ''
+          messageInput.value = ''
+        }).catch(function(error) {
+          // errorsEl.style.display = 'block'
+          sendingInfo.style.display = 'none'
+          console.error(error)
+        })
+      }) */
     }
     else {
       alert('Please make sure all fields are correct and valid!')
