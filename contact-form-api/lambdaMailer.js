@@ -3,7 +3,7 @@ const ses = new aws.SES()
 const getParamsFromUrl = require('./getParamsFromUrl')
 
 module.exports = (options) => {
-    const { myEmail, myDomain } = options
+    const { mySender, myRecipient, myDomain } = options
 
     function generateResponse(code, payload) {
         return {
@@ -47,8 +47,8 @@ module.exports = (options) => {
         }
 
         return {
-            Source: myEmail,
-            Destination: { ToAddresses: [myEmail] },
+            Source: mySender,
+            Destination: { ToAddresses: [myRecipient] },
             ReplyToAddresses: [email],
             Message: {
                 Body: {
@@ -59,7 +59,7 @@ module.exports = (options) => {
                 },
                 Subject: {
                     Charset: 'UTF-8',
-                    Data: `You received a message from ${myDomain}!`
+                    Data: `New message from ${myDomain} contact form!`
                 }
             }
         }
@@ -73,8 +73,8 @@ module.exports = (options) => {
         const replacedName = name.replace(/\+/g, ' ')
         const replacedContent = content.replace(/\+/g, ' ')
         return {
-            Source: myEmail,
-            Destination: { ToAddresses: [myEmail] },
+            Source: mySender,
+            Destination: { ToAddresses: [myRecipient] },
             ReplyToAddresses: [email],
             Message: {
                 Body: {

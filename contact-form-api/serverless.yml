@@ -19,13 +19,16 @@ provider:
   profile: ${self:custom.secrets.PROFILE}
   environment: 
     NODE_ENV: ${self:custom.secrets.NODE_ENV}
-    EMAIL: ${self:custom.secrets.EMAIL}
+    RECIPIENT: ${self:custom.secrets.RECIPIENT}
+    SENDER: ${self:custom.secrets.SENDER}
     DOMAIN: ${self:custom.secrets.DOMAIN}
-  iamRoleStatements:
-    - Effect: "Allow"
-      Action:
-        - "ses:SendEmail"
-      Resource: "*"
+  iam:
+    role:
+      statements:
+        - Effect: "Allow"
+          Action:
+            - "ses:SendEmail"
+          Resource: "*"
 
 # you can add statements to the Lambda function's IAM Role here
 #  iam:

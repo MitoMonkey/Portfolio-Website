@@ -15,12 +15,13 @@
 
 // define the options for email and domain
 const options = {
-  myEmail: process.env.EMAIL, // myEmail is the email address enabled in AWS SES in the AWS Console
+  mySender: process.env.SENDER, // email address enabled in AWS SES in the AWS Console
+  myRecipient: process.env.RECIPIENT, // email address enabled in AWS SES in the AWS Console
   myDomain: process.env.DOMAIN // the domain of my website or '*' to accept requests from any domain
 }
 
 // initialize the function
-const { sendJSON, sendFormEncoded } = require('lambda-mailer')(options);
+const { sendJSON, sendFormEncoded } = require('./lambdaMailer')(options);
 
 // Content-Type: application/json
 // The event.body needs to be a JSON object with 3 properties
