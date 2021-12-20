@@ -50,7 +50,8 @@
     Germany <br>
 
     <h3>Leave a message</h3>
-    <form action="" method="post" id="contact-form">
+    <form action="https://{id}.execute-api.{region}.amazonaws.com/{stage}/dev/email/send/formencoded" method="POST"
+      id="contact-form">
       <div class="input-wrapper">
         <label class="standard-label" for="contact-name">Name: </label>
         <input type="name" id="contact-name" required>
