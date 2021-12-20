@@ -1,12 +1,15 @@
 (function () {
   let form = document.querySelector('#contact-form');
-  let emailInput = document.querySelector('#contact-email');
-  let nameInput = document.querySelector('#contact-name');
+  let emailInput = document.querySelector('#contact-form__email');
+  let nameInput = document.querySelector('#contact-form__name');
   // let telInput = document.querySelector('#contact-tel');
-  let msgInput = document.querySelector('#contact-msg');
+  let msgInput = document.querySelector('#contact-form__msg');
 
-  let successInfo = document.querySelector('#form-success');
-  let sendingInfo = document.querySelector('#form-sending');
+  let successInfo = document.querySelector('#contact-form__success');
+  let sendingInfo = document.querySelector('#contact-form__sending');
+  let sendingError = document.querySelector('#contact-form__error');
+
+  let submit = document.querySelector('#contact-form__submit');
 
   // let recaptchaResponse = document.querySelector('#contact-form textarea[name=\'g-recaptcha-response\']')
 
@@ -104,15 +107,56 @@
   // telInput.addEventListener('input', validateTel);
   msgInput.addEventListener('input', validateMsg);
 
+
   form.addEventListener('submit', (e) => {
-    e.preventDefault(); // Do not submit to the server
+    e.preventDefault();
+
+    sendingError.style.display = 'none';
     successInfo.style.display = 'none';
+    sendingInfo.style.display = 'block';
+    submit.disabled = true;
 
     if (validateEmail() && validateName() && validateMsg()) {
-      alert('This contact form is not functional yet. Please send email instead!');
+      // alert('This contact form is not functional yet. Please send email instead!'); // TEMPORARY DEVELOPMENT ALERT
 
       // Send data to AWS API
-      axios.post('MY_API_ENDPOINT', {
+      // To send data, fetch() uses the body property, while Axios uses the data property. Axios automatically stringifies the data when sending requests. When using fetch(), you have to do it manually 
+      // > does the lamdba function need adjustments/adaptation?
+      // fetch and promise theoretically need polyfills
+
+      const url = 'https://i5wekd3yrb.execute-api.eu-central-1.amazonaws.com/dev/email/send';
+      const options = {
+        method: 'POST',
+        headers: {
+          //'Accept': 'application/json',
+          //'Content-Type': 'application/json;charset=UTF-8'
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          // 'g-recaptcha-response': recaptchaResponse.value,
+          name: nameInput.value,
+          email: emailInput.value,
+          content: msgInput.value
+        })
+      };
+      fetch(url, options)
+        .then(response => {
+          successInfo.style.display = 'block';
+          sendingInfo.style.display = 'none';
+          submit.disabled = false;
+          console.log("Status:" + response.status);
+          // console.log("Response data:" + response.json());
+        })
+        .catch(err => {
+          successInfo.style.display = 'none';
+          sendingInfo.style.display = 'none';
+          sendingError.textContent = "ERROR: " + err;
+          sendingError.style.display = 'block';
+          console.log(err);
+          submit.disabled = false;
+        });
+
+      /* axios.post('https://i5wekd3yrb.execute-api.eu-central-1.amazonaws.com/dev/email/send', {
         // 'g-recaptcha-response': recaptchaResponse.value,
         email: emailInput.value,
         name: nameInput.value,
@@ -125,40 +169,21 @@
         })
         .then(res => {
           // Do something if call succeeds
+          successInfo.style.display = 'block';
+          sendingInfo.style.display = 'none';
+          submit.disabled = false;
+          console.log("Status:" + res.status);
+          // console.log("Response body:" + res.body);
         })
         .catch(err => {
           // Do something if call fails
-        })
-      // ALTERNATIVE FOR Axios
-      /* var formRequest = new Request(MY_API_ENDPOINT, {
-        method: 'POST',
-        body: JSON.stringify({
-          name: nameInput.value,
-          email: emailInput.value,
-          message: msgInput.value,
-          'g-recaptcha-response': recaptchaResponse.value
-        })
-
-        fetch(formRequest)
-        .then(function(response) {
-          if (response.status === 200) {
-            return response.json()
-          } else {
-            throw new Error('Something went wrong on api server!')
-          }
-        })
-        .then(function(response) {
-          successInfo.style.display = 'block'
-          sendingInfo.style.display = 'none'
-          nameInput.value = ''
-          emailInput.value = ''
-          messageInput.value = ''
-        }).catch(function(error) {
-          // errorsEl.style.display = 'block'
-          sendingInfo.style.display = 'none'
-          console.error(error)
-        })
-      }) */
+          successInfo.style.display = 'none';
+          sendingInfo.style.display = 'none';
+          sendingError.textContent = "ERROR: " + err;
+          sendingError.style.display = 'block';
+          console.log(err);
+          submit.disabled = false;
+        }) */
     }
     else {
       alert('Please make sure all fields are correct and valid!')

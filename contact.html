@@ -50,16 +50,16 @@
     Germany <br>
 
     <h3>Leave a message</h3>
-    <form action="https://{id}.execute-api.{region}.amazonaws.com/{stage}/dev/email/send/formencoded" method="POST"
-      id="contact-form">
+    <!-- action="https://{id}.execute-api.{region}.amazonaws.com/{stage}/dev/email/send/formencoded" method="POST" -->
+    <form id="contact-form">
       <div class="input-wrapper">
-        <label class="standard-label" for="contact-name">Name: </label>
-        <input type="name" id="contact-name" required>
+        <label class="standard-label" for="contact-form__name">Name: </label>
+        <input type="name" id="contact-form__name" required>
       </div>
 
       <div class="input-wrapper">
-        <label class="standard-label" for="contact-email">Email: </label>
-        <input type="email" id="contact-email" required>
+        <label class="standard-label" for="contact-form__email">Email: </label>
+        <input type="email" id="contact-form__email" required>
       </div>
 
       <!-- <div class="input-wrapper">
@@ -68,17 +68,18 @@
       </div> -->
 
       <div class="input-wrapper">
-        <label class="standard-label" for="contact-msg">Message: </label>
-        <textarea maxlength="500" id="contact-msg" required></textarea>
+        <label class="standard-label" for="contact-form__msg">Message: </label>
+        <textarea maxlength="500" rows="5" id="contact-form__msg" required></textarea>
       </div>
 
-      <button class="button__secondary" type="submit" id="contact-submit">Send message</button>
+      <button class="button__secondary" type="submit" id="contact-form__submit">Send message</button>
       <!-- <button class="button__secondary g-recaptcha" data-sitekey="6Lebz2IdAAAAAGDCIuPL3Z61q93RkvNcYvoToCoB"
         data-callback='CALLBACK-FUNCTION' data-action='submit'>Send message</button> -->
       <!-- data-badge="inline" -->
 
-      <p id="form-success" style="display: none;">Sent successfully!</p>
-      <p id="form-sending" style="display: none;">Sending...</p>
+      <p id="contact-form__success" style="display: none;">Thanks for reaching out. I'll be in touch ASAP.</p>
+      <p id="contact-form__sending" style="display: none;">Sending...</p>
+      <p id="contact-form__error" style="display: none;">ERROR</p>
     </form>
   </main>
 

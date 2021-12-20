@@ -168,7 +168,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/contact-form-api/dev/1640015584406-2021-12-20T15:53:04.406Z/contact-form-api.zip"
+          "S3Key": "serverless/contact-form-api/dev/1640021283480-2021-12-20T17:28:03.480Z/contact-form-api.zip"
         },
         "Handler": "handler.sendMail",
         "Runtime": "nodejs12.x",
@@ -180,7 +180,7 @@
             "NODE_ENV": "dev",
             "RECIPIENT": "Michael.Flohrschuetz@gmail.com",
             "SENDER": "FlyingMonkey@mail.de",
-            "DOMAIN": "*"
+            "DOMAIN": "https://mitothis.de"
           }
         },
         "Role": {
@@ -194,14 +194,14 @@
         "SendLogGroup"
       ]
     },
-    "SendLambdaVersionFu8eQMNWhebyadfQSUCEejqE373wJ6ZnGmRwJMQ": {
+    "SendLambdaVersion0dkEOJOknKU4mSdC0WeaAWxok7upA26wG5RF0SnqYM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "SendLambdaFunction"
         },
-        "CodeSha256": "nwN54P2C/BOqVMVxo+OR2NAdomKGvASnm7Lhg0yv0ro="
+        "CodeSha256": "qWzIwXKOoFJ/sTUrnous/ID4AJl4//HmpfN5Qa4nvJ0="
       }
     },
     "ApiGatewayRestApi": {
@@ -334,7 +334,7 @@
         "SendLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1640015583326": {
+    "ApiGatewayDeployment1640021282425": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -397,7 +397,7 @@
     "SendLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "SendLambdaVersionFu8eQMNWhebyadfQSUCEejqE373wJ6ZnGmRwJMQ"
+        "Ref": "SendLambdaVersion0dkEOJOknKU4mSdC0WeaAWxok7upA26wG5RF0SnqYM"
       },
       "Export": {
         "Name": "sls-contact-form-api-dev-SendLambdaFunctionQualifiedArn"
