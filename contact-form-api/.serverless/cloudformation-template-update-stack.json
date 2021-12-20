@@ -77,12 +77,6 @@
         "LogGroupName": "/aws/lambda/contact-form-api-dev-send"
       }
     },
-    "SendFormEncodedLogGroup": {
-      "Type": "AWS::Logs::LogGroup",
-      "Properties": {
-        "LogGroupName": "/aws/lambda/contact-form-api-dev-sendFormEncoded"
-      }
-    },
     "IamRoleLambdaExecution": {
       "Type": "AWS::IAM::Role",
       "Properties": {
@@ -174,9 +168,9 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/contact-form-api/dev/1640014664927-2021-12-20T15:37:44.927Z/contact-form-api.zip"
+          "S3Key": "serverless/contact-form-api/dev/1640015584406-2021-12-20T15:53:04.406Z/contact-form-api.zip"
         },
-        "Handler": "handler.sendJSON",
+        "Handler": "handler.sendMail",
         "Runtime": "nodejs12.x",
         "FunctionName": "contact-form-api-dev-send",
         "MemorySize": 1024,
@@ -200,57 +194,14 @@
         "SendLogGroup"
       ]
     },
-    "SendFormEncodedLambdaFunction": {
-      "Type": "AWS::Lambda::Function",
-      "Properties": {
-        "Code": {
-          "S3Bucket": {
-            "Ref": "ServerlessDeploymentBucket"
-          },
-          "S3Key": "serverless/contact-form-api/dev/1640014664927-2021-12-20T15:37:44.927Z/contact-form-api.zip"
-        },
-        "Handler": "handler.sendFormEncoded",
-        "Runtime": "nodejs12.x",
-        "FunctionName": "contact-form-api-dev-sendFormEncoded",
-        "MemorySize": 1024,
-        "Timeout": 6,
-        "Environment": {
-          "Variables": {
-            "NODE_ENV": "dev",
-            "RECIPIENT": "Michael.Flohrschuetz@gmail.com",
-            "SENDER": "FlyingMonkey@mail.de",
-            "DOMAIN": "*"
-          }
-        },
-        "Role": {
-          "Fn::GetAtt": [
-            "IamRoleLambdaExecution",
-            "Arn"
-          ]
-        }
-      },
-      "DependsOn": [
-        "SendFormEncodedLogGroup"
-      ]
-    },
-    "SendLambdaVersiondQlun6i0bQDYiWMgwCibBraZhsu7F2df3CRkhQs": {
+    "SendLambdaVersionFu8eQMNWhebyadfQSUCEejqE373wJ6ZnGmRwJMQ": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "SendLambdaFunction"
         },
-        "CodeSha256": "fOkKvnZUQoCQnXMPANEN/TFu8X6yQf2BRuUlXQhsh3k="
-      }
-    },
-    "SendFormEncodedLambdaVersionCflD4x0GQYQ2jAUhDkzyaT2hOCbqCDjlO2O6ScGqJ8": {
-      "Type": "AWS::Lambda::Version",
-      "DeletionPolicy": "Retain",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "SendFormEncodedLambdaFunction"
-        },
-        "CodeSha256": "fOkKvnZUQoCQnXMPANEN/TFu8X6yQf2BRuUlXQhsh3k="
+        "CodeSha256": "nwN54P2C/BOqVMVxo+OR2NAdomKGvASnm7Lhg0yv0ro="
       }
     },
     "ApiGatewayRestApi": {
@@ -292,31 +243,7 @@
         }
       }
     },
-    "ApiGatewayResourceEmailSendJson": {
-      "Type": "AWS::ApiGateway::Resource",
-      "Properties": {
-        "ParentId": {
-          "Ref": "ApiGatewayResourceEmailSend"
-        },
-        "PathPart": "json",
-        "RestApiId": {
-          "Ref": "ApiGatewayRestApi"
-        }
-      }
-    },
-    "ApiGatewayResourceEmailSendFormencoded": {
-      "Type": "AWS::ApiGateway::Resource",
-      "Properties": {
-        "ParentId": {
-          "Ref": "ApiGatewayResourceEmailSend"
-        },
-        "PathPart": "formencoded",
-        "RestApiId": {
-          "Ref": "ApiGatewayRestApi"
-        }
-      }
-    },
-    "ApiGatewayMethodEmailSendJsonOptions": {
+    "ApiGatewayMethodEmailSendOptions": {
       "Type": "AWS::ApiGateway::Method",
       "Properties": {
         "AuthorizationType": "NONE",
@@ -354,65 +281,20 @@
           ]
         },
         "ResourceId": {
-          "Ref": "ApiGatewayResourceEmailSendJson"
+          "Ref": "ApiGatewayResourceEmailSend"
         },
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
         }
       }
     },
-    "ApiGatewayMethodEmailSendFormencodedOptions": {
-      "Type": "AWS::ApiGateway::Method",
-      "Properties": {
-        "AuthorizationType": "NONE",
-        "HttpMethod": "OPTIONS",
-        "MethodResponses": [
-          {
-            "StatusCode": "200",
-            "ResponseParameters": {
-              "method.response.header.Access-Control-Allow-Origin": true,
-              "method.response.header.Access-Control-Allow-Headers": true,
-              "method.response.header.Access-Control-Allow-Methods": true
-            },
-            "ResponseModels": {}
-          }
-        ],
-        "RequestParameters": {},
-        "Integration": {
-          "Type": "MOCK",
-          "RequestTemplates": {
-            "application/json": "{statusCode:200}"
-          },
-          "ContentHandling": "CONVERT_TO_TEXT",
-          "IntegrationResponses": [
-            {
-              "StatusCode": "200",
-              "ResponseParameters": {
-                "method.response.header.Access-Control-Allow-Origin": "'*'",
-                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
-                "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST'"
-              },
-              "ResponseTemplates": {
-                "application/json": ""
-              }
-            }
-          ]
-        },
-        "ResourceId": {
-          "Ref": "ApiGatewayResourceEmailSendFormencoded"
-        },
-        "RestApiId": {
-          "Ref": "ApiGatewayRestApi"
-        }
-      }
-    },
-    "ApiGatewayMethodEmailSendJsonPost": {
+    "ApiGatewayMethodEmailSendPost": {
       "Type": "AWS::ApiGateway::Method",
       "Properties": {
         "HttpMethod": "POST",
         "RequestParameters": {},
         "ResourceId": {
-          "Ref": "ApiGatewayResourceEmailSendJson"
+          "Ref": "ApiGatewayResourceEmailSend"
         },
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
@@ -452,53 +334,7 @@
         "SendLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayMethodEmailSendFormencodedPost": {
-      "Type": "AWS::ApiGateway::Method",
-      "Properties": {
-        "HttpMethod": "POST",
-        "RequestParameters": {},
-        "ResourceId": {
-          "Ref": "ApiGatewayResourceEmailSendFormencoded"
-        },
-        "RestApiId": {
-          "Ref": "ApiGatewayRestApi"
-        },
-        "ApiKeyRequired": false,
-        "AuthorizationType": "NONE",
-        "Integration": {
-          "IntegrationHttpMethod": "POST",
-          "Type": "AWS_PROXY",
-          "Uri": {
-            "Fn::Join": [
-              "",
-              [
-                "arn:",
-                {
-                  "Ref": "AWS::Partition"
-                },
-                ":apigateway:",
-                {
-                  "Ref": "AWS::Region"
-                },
-                ":lambda:path/2015-03-31/functions/",
-                {
-                  "Fn::GetAtt": [
-                    "SendFormEncodedLambdaFunction",
-                    "Arn"
-                  ]
-                },
-                "/invocations"
-              ]
-            ]
-          }
-        },
-        "MethodResponses": []
-      },
-      "DependsOn": [
-        "SendFormEncodedLambdaPermissionApiGateway"
-      ]
-    },
-    "ApiGatewayDeployment1640014663796": {
+    "ApiGatewayDeployment1640015583326": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -507,10 +343,8 @@
         "StageName": "dev"
       },
       "DependsOn": [
-        "ApiGatewayMethodEmailSendJsonOptions",
-        "ApiGatewayMethodEmailSendFormencodedOptions",
-        "ApiGatewayMethodEmailSendJsonPost",
-        "ApiGatewayMethodEmailSendFormencodedPost"
+        "ApiGatewayMethodEmailSendOptions",
+        "ApiGatewayMethodEmailSendPost"
       ]
     },
     "SendLambdaPermissionApiGateway": {
@@ -519,43 +353,6 @@
         "FunctionName": {
           "Fn::GetAtt": [
             "SendLambdaFunction",
-            "Arn"
-          ]
-        },
-        "Action": "lambda:InvokeFunction",
-        "Principal": "apigateway.amazonaws.com",
-        "SourceArn": {
-          "Fn::Join": [
-            "",
-            [
-              "arn:",
-              {
-                "Ref": "AWS::Partition"
-              },
-              ":execute-api:",
-              {
-                "Ref": "AWS::Region"
-              },
-              ":",
-              {
-                "Ref": "AWS::AccountId"
-              },
-              ":",
-              {
-                "Ref": "ApiGatewayRestApi"
-              },
-              "/*/*"
-            ]
-          ]
-        }
-      }
-    },
-    "SendFormEncodedLambdaPermissionApiGateway": {
-      "Type": "AWS::Lambda::Permission",
-      "Properties": {
-        "FunctionName": {
-          "Fn::GetAtt": [
-            "SendFormEncodedLambdaFunction",
             "Arn"
           ]
         },
@@ -600,19 +397,10 @@
     "SendLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "SendLambdaVersiondQlun6i0bQDYiWMgwCibBraZhsu7F2df3CRkhQs"
+        "Ref": "SendLambdaVersionFu8eQMNWhebyadfQSUCEejqE373wJ6ZnGmRwJMQ"
       },
       "Export": {
         "Name": "sls-contact-form-api-dev-SendLambdaFunctionQualifiedArn"
-      }
-    },
-    "SendFormEncodedLambdaFunctionQualifiedArn": {
-      "Description": "Current Lambda function version",
-      "Value": {
-        "Ref": "SendFormEncodedLambdaVersionCflD4x0GQYQ2jAUhDkzyaT2hOCbqCDjlO2O6ScGqJ8"
-      },
-      "Export": {
-        "Name": "sls-contact-form-api-dev-SendFormEncodedLambdaFunctionQualifiedArn"
       }
     },
     "ServiceEndpoint": {

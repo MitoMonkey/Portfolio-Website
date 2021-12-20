@@ -3,10 +3,6 @@
 
 service: contact-form-api
 
-# You can pin your service to only deploy with a specific Serverless version
-# Check out our docs for more details
-# frameworkVersion: '2'
-
 custom:
   secrets: ${file(secrets.json)}
 
@@ -16,7 +12,6 @@ provider:
   lambdaHashingVersion: 20201221
   stage: ${self:custom.secrets.NODE_ENV}
   region: eu-central-1
-  profile: ${self:custom.secrets.PROFILE}
   environment: 
     NODE_ENV: ${self:custom.secrets.NODE_ENV}
     RECIPIENT: ${self:custom.secrets.RECIPIENT}
@@ -54,17 +49,10 @@ provider:
 
 functions:
   send:
-    handler: handler.sendJSON
+    handler: handler.sendMail
     events:
       - http:
-          path: email/send/json
-          method: post
-          cors: true
-  sendFormEncoded:
-    handler: handler.sendFormEncoded
-    events:
-      - http:
-          path: email/send/formencoded
+          path: email/send
           method: post
           cors: true
 
