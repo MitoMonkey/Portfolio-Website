@@ -156,6 +156,7 @@
           submit.disabled = false;
         });
 
+      // axios is imported in html file from CDN  
       /* axios.post('https://i5wekd3yrb.execute-api.eu-central-1.amazonaws.com/dev/email/send', {
         // 'g-recaptcha-response': recaptchaResponse.value,
         email: emailInput.value,
