@@ -120,6 +120,13 @@ a:visited.button {
   width: 100%;
   padding: var(--spacing);
 }
+.page-header__heading {
+  font-size: 32px;
+  font-weight: var(--heading-font-weight);
+  font-variant: small-caps;
+  padding-left: var(--spacing);
+  margin: 0 auto;
+}
 .page-header__item {
   flex: 0 1 50px;
 }
@@ -495,8 +502,8 @@ hr {
   :root {
     --spacing: 10px;
   }
-  h1 {
-    font-size: 22px;
+  h1, .page-header__heading {
+    font-size: 28px;
   }
 }
 @media all and (max-width: 500px) {
