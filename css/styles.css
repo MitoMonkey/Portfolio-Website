@@ -33,7 +33,48 @@ body {
   /*  background-color: lightgray; */
   color: var(--dark-grey);
   padding: 20px;
+
+  /* FOR SCROLL ANIMATIONS */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+/* ----- CUSTOM LAYOUT CLASSES ----- */
+
+.cleared {
+  /* display: block; */
+  clear: both;
+}
+.aligncenter {
+  text-align: center;
+  margin: 0 auto;
+  /* justify-content: center; */
+}
+.vertical-align {
+  vertical-align: middle;  
+}
+.padding-top {
+  padding-top: var(--spacing);
+}
+.padding-bottom {
+  padding-bottom: var(--spacing);
+}
+
+.scroll-box {
+  transform: translateX(-400%);
+  transition: transform 0.8s ease;
+}
+.scroll-box:nth-of-type(even) {
+  transform: translateX(400%);
+}
+.scroll-box.show {
+  transform: translateX(0);
+}
+
+
+/* ----- GENERAL ELEMENTS ----- */
 
 h1 {
   font-size: 36px;
@@ -115,10 +156,59 @@ a:visited.button {
   }
 }
 
+hr {
+  margin-top: var(--spacing);
+}
+
+.section {
+  clear: both;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+}
+ul {
+  overflow: hidden;
+}
+.section h1 {
+  text-align: center;
+}
+
+/* ----- Adaptations for small screens ----- */
+@media all and (max-width: 750px){ /* shared code for all smaller screens */
+  :root {
+    --spacing: 10px;
+  }
+  h1, .page-header__heading {
+    font-size: 28px;
+  }
+}
+@media all and (max-width: 500px) {
+  body {
+    padding: var(--spacing); /* 10px */
+  }
+  .profile__portrait {
+    /* display: static; */
+    float: none;
+    margin: 0;
+  }
+  p, .mobile-clear {
+    clear: both;
+    padding-top: var(--spacing); /* 10px */
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+}
+
+
+
+/* ---------- HEADER STYLING ---------- */
+
 .page-header {
   display: flex; /* alternatives: https://replit.com/@CFCurriculum/CSS3-grids-and-flexbox-demo-1 */
   width: 100%;
-  padding: var(--spacing);
+  padding: 0 var(--spacing);
 }
 .page-header__heading {
   font-size: 32px;
@@ -187,18 +277,8 @@ a:visited.button {
   transform: translateX(-50%) translateY(-50%) scale(1.3);
 }
 
-.section {
-  clear: both;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 15px;
-}
-ul {
-  overflow: hidden;
-}
-.section h1 {
-  text-align: center;
-}
+/* ---------- INTRO SECTION STYLING ---------- */
+
 .profile__portrait {
   float: left;
   width: 250px;
@@ -207,7 +287,7 @@ ul {
   border-radius: 50%;
 }
 
-/* ----- About page ----- */
+/* ---------- ABOUT SECTION STYLING ---------- */
 .experience__heading {
   clear: both;
   text-align: center;
@@ -227,7 +307,7 @@ th, td {
   }
 }
 
-/* ----- Work page ----- */
+/* ---------- PROJECTS SECTION STYLING ---------- */
 .no-bottom-padding {
   padding-bottom: 0;
   margin-bottom: 0;
@@ -357,7 +437,7 @@ th, td {
   }
 } */
 
-
+/* ---------- CONTACT MODAL STYLING ---------- */
 /* ----- contact page (designed MOBILE FIRST) ----- */
 .contact-details {
   text-align: center;
@@ -432,7 +512,7 @@ form button {
   }
 }
 
-/* ----- Footer ----- */
+/* ---------- FOOTER STYLING ---------- */
 .page-footer {
   clear: both;
   display: flex;
@@ -473,54 +553,4 @@ form button {
 }
 .impressum {
   padding-top: var(--spacing);
-}
-
-/* ----- general classes ----- */
-.aligncenter {
-  text-align: center;
-  margin: 0 auto;
-}
-.cleared {
-  /* display: block; */
-  clear: both;
-}
-.vertical-align {
-  vertical-align: middle;  
-}
-.padding-top {
-  padding-top: var(--spacing);
-}
-.padding-bottom {
-  padding-bottom: var(--spacing);
-}
-hr {
-  margin-top: var(--spacing);
-}
-
-/* ----- Adaptations for small screens ----- */
-@media all and (max-width: 750px){ /* shared code for all smaller screens */
-  :root {
-    --spacing: 10px;
-  }
-  h1, .page-header__heading {
-    font-size: 28px;
-  }
-}
-@media all and (max-width: 500px) {
-  body {
-    padding: var(--spacing); /* 10px */
-  }
-  .profile__portrait {
-    /* display: static; */
-    float: none;
-    margin: 0;
-  }
-  p, .mobile-clear {
-    clear: both;
-    padding-top: var(--spacing); /* 10px */
-    display: block;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 15px;
-  }
 }
