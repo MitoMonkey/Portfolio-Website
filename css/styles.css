@@ -159,13 +159,14 @@ a:visited.button {
 }
 
 hr {
-  margin-top: var(--spacing);
+  /* margin-top: var(--spacing); */
+  margin: 65px auto;
 }
 
 .section {
   clear: both;
   max-width: 1000px;
-  margin: 65px auto;
+  /* margin: 65px auto; */
   /* margin-top: 80px; */
   padding: 15px;
 }
@@ -215,7 +216,7 @@ ul {
   right: 0;
   z-index:10;
 
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease;
 
   width: 100%;
   padding: 12px var(--spacing);
