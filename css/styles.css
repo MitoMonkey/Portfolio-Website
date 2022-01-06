@@ -7,11 +7,9 @@ then http://autoprefixer.github.io/ */
   --line-height: 1.6;
   --spacing: 15px;
   --spacing_s: 10px;
+  --spacing_l: 20px;
   --heading-font-weight: 700;
 
-  --primary-color_OLD: #357b70;
-  --secondary-color_OLD: #e0b354;
-  --text-color_OLD: #fff;
   --text-color: #f1f1f1;
   --primary-color: #009688;
   --secondary-color: #ff9800;
@@ -39,6 +37,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 /* ----- CUSTOM LAYOUT CLASSES ----- */
@@ -62,7 +61,9 @@ body {
   padding-bottom: var(--spacing);
 }
 
+/* scroll-box is an element that slides in/out from the side as the user scrolls up/down the page */
 .scroll-box {
+  /* display: none; */
   transform: translateX(-400%);
   transition: transform 0.8s ease;
 }
@@ -70,6 +71,7 @@ body {
   transform: translateX(400%);
 }
 .scroll-box.show {
+  /* display: block; */
   transform: translateX(0);
 }
 
@@ -163,7 +165,8 @@ hr {
 .section {
   clear: both;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 65px auto;
+  /* margin-top: 80px; */
   padding: 15px;
 }
 ul {
@@ -206,16 +209,45 @@ ul {
 /* ---------- HEADER STYLING ---------- */
 
 .page-header {
-  display: flex; /* alternatives: https://replit.com/@CFCurriculum/CSS3-grids-and-flexbox-demo-1 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index:10;
+
+  transition: all 0.5s ease-in-out;
+
   width: 100%;
-  padding: 0 var(--spacing);
+  padding: 12px var(--spacing);
+  /* max-width: 1400px; */
+  /* margin: 0 auto; */
+
+  /* background-color: var(--text-color); */
+
+  display: flex; /* alternatives: https://replit.com/@CFCurriculum/CSS3-grids-and-flexbox-demo-1 */
+  /* justify-content: space-between; */
+  align-items: center;
 }
+
+/* when scolled down a bit */
+.page-header.scrolled {
+  background-color: var(--dark);
+  padding: 3px var(--spacing);
+}
+.page-header.scrolled a {
+  color: var(--text-color);
+}
+
+/* Header elements styling */
 .page-header__heading {
   font-size: 32px;
   font-weight: var(--heading-font-weight);
   font-variant: small-caps;
   padding-left: var(--spacing);
   margin: 0 auto;
+}
+.page-header.scrolled .page-header__heading {
+  color: var(--text-color);
 }
 .page-header__item {
   flex: 0 1 50px;
@@ -225,6 +257,9 @@ ul {
   max-width: 50px;
   max-height: 50px;
   height: 100%;
+}
+.page-header.scrolled .page-header__item:first-child {
+  filter: invert(100%);
 }
 .page-header__item:last-child {
   flex-grow: 1;
@@ -278,6 +313,10 @@ ul {
 }
 
 /* ---------- INTRO SECTION STYLING ---------- */
+
+#intro {
+  padding-top: 100px;
+}
 
 .profile__portrait {
   float: left;

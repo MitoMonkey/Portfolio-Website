@@ -25,7 +25,10 @@
       <ul role="menubar" class="navigation-list circleBehind">
         <li role="presentation">
           <!-- prevents screen readers from reading out that its a list -->
-          <a href="#intro" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+          <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="#skills" role="menuitem" class="navigation-list__item">Skills</a>
         </li>
         <li role="presentation">
           <a href="#projects" role="menuitem" class="navigation-list__item">Projects</a>
@@ -41,8 +44,7 @@
   </header>
 
   <main>
-    <div class="section" id="intro">
-
+    <section class="section" id="intro">
       <div class="scroll-box">
         <div class="mobile-clear">
           <img src="img/Michael_Profile.jpg" class="profile__portrait"
@@ -87,21 +89,21 @@
         <p>I look forward to read about your career opportunities, job openings or freelance project
           proposals.</p>
       </div>
-    </div>
+    </section>
 
-    <hr>
+    <hr id="skills">
 
-    <div class="section scroll-box" id="toolbelt">
+    <section class="section scroll-box">
       <h1>Toolbelt</h1>
       <p>I can build web sites and apps from concept, layout and interactive elements to backend/server-side and
         databases.</p>
       <p>I understand being a web-developer as a continuous process of learning. So I am always open for new programming
         languages, frameworks, libraries, approaches, etc.</p>
-    </div>
+    </section>
 
-    <hr>
+    <hr id="projects">
 
-    <div class="section scroll-box" id="projects">
+    <section class="section scroll-box">
       <h1>Projects</h1>
       <p>This is a selection of my projects as a web developer.</p>
       <p>More details about the features, technologies, etc. of each project can be found in the respective readme file
@@ -110,11 +112,11 @@
       <p>For the study projects created during the Full-stack Web-developer course @CarrerFoundry, I also worked with
         Kanban
         boards, user stories, user flows and architectural diagrams.</p>
-    </div>
+    </section>
 
-    <hr>
+    <hr id="about">
 
-    <div class="section" id="about">
+    <section class="section">
       <div class="scroll-box">
         <h1>About me</h1>
         <h2>Web development</h2>
@@ -183,10 +185,10 @@
           times.</p>
       </div>
 
-    </div>
+    </section>
+    <hr>
 
   </main>
-  <hr>
 
   <footer class="page-footer">
     <!-- <p class="padding-bottom padding-top" style="margin: 0;">Let's connect!</p> -->

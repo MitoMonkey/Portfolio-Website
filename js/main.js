@@ -1,11 +1,13 @@
 
-/* ---------- SCROLL ANIMATION ---------- */
+/* ---------- SCROLL BEHAVIOUR ---------- */
 const boxes = document.querySelectorAll('.scroll-box');
+const header = document.querySelector('.page-header');
 
 window.addEventListener('scroll', () => {
-    const triggerBottom = window.innerHeight / 5 * 4;
-    // const triggerTop = window.innerHeight / 5;
 
+    /* SLIDE SECTIONS IN FROM THE SIDES */
+    const triggerBottom = window.innerHeight / 4 * 3;
+    // const triggerTop = window.innerHeight / 5;
     boxes.forEach(box => {
         const boxTop = box.getBoundingClientRect().top;
         // const boxBottom = box.getBoundingClientRect().bottom;
@@ -15,13 +17,19 @@ window.addEventListener('scroll', () => {
         } else {
             box.classList.remove('show');
         }
-
         /* if (boxBottom < triggerTop) {
             box.classList.remove('show');
         } else {
             box.classList.add('show');
         } */
     })
+
+    /* HEADER ANIMATION */
+    if (window.scrollY > header.offsetHeight) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
 });
 
 /* ---------- ANIMATIONS AT PAGE INITIAL OPEN ---------- */
