@@ -21,7 +21,8 @@
 <body>
 
   <header class="page-header">
-    <img src="./img/cell-division.png" class="page-header__item">
+    <img src="./img/cell-division.png" alt="Logo, a cell dividing in mitosis" class="page-header__item">
+    <span class="page-header__item page-header__heading">Mito.this</span>
     <nav class="main-navigation page-header__item">
       <ul role="menubar" class="navigation-list circleBehind">
         <li role="presentation">
@@ -29,10 +30,13 @@
           <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
         </li>
         <li role="presentation">
-          <a href="about.html" role="menuitem" class="navigation-list__item">About me</a>
+          <a href="index.html#skills" role="menuitem" class="navigation-list__item">Skills</a>
         </li>
         <li role="presentation">
-          <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+          <a href="index.html#projects" role="menuitem" class="navigation-list__item">Projects</a>
+        </li>
+        <li role="presentation">
+          <a href="index.html#about" role="menuitem" class="navigation-list__item">About me</a>
         </li>
         <li role="presentation">
           <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Contact</a>
@@ -43,9 +47,13 @@
   <!-- difference in the header between the pages: navigation-list__item--active -->
 
   <main class="contact-details">
-    <h1>Contact</h1>
+    <h1>Get in touch</h1>
     <!-- <h3>Leave a message</h3> -->
-    <p>I am available for contract and freelance work. Message me to collaborate or hire me.</p>
+    <p>Currently I am available for remote contract and freelance work. Message me to collaborate or hire me. I will get
+      back to you within max 48 hours.</p>
+    <p>I would love to contribute in physical-competence &/ -wellbeing companies/projects that help people to live
+      healthy, mobile, empowered and embodied lives.</p>
+    <p>Looking forward to read about your career opportunities, job openings or freelance project proposals.</p>
     <!-- action="https://{id}.execute-api.{region}.amazonaws.com/{stage}/dev/email/send/formencoded" method="POST" -->
     <form id="contact-form">
       <div class="input-wrapper">
@@ -78,11 +86,10 @@
       <p id="contact-form__error" style="display: none;">ERROR</p>
     </form>
   </main>
-  <hr>
 
-  <footer class="page-footer">
-    <!-- <p class="padding-bottom padding-top" style="margin: 0;">Let's connect!</p> -->
-    <h2 class="padding-bottom padding-top" style="margin: 0;">Let's connect!</h2>
+  <footer class="page-footer padding-top">
+    <!-- <p class="padding-bottom" style="margin: 0;">Let's connect!</p> -->
+    <!-- <h2 class="padding-bottom" style="margin: 0;">Let's connect!</h2> -->
     <div class="social-media">
       <a class="circle-link" href="tel:+491631631858" target="_blank" rel="noopener noreferrer">
         <img src="img/Icons/Phone_icon.svg" class="icon" alt="Phone symbol"></a>

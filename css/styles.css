@@ -24,6 +24,16 @@ then http://autoprefixer.github.io/ */
   font-family: 'Glory', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+/* Disable smooth scrolling when users have prefers-reduced-motion enabled */
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
 body {
   font-weight: var(--font-weight);
   font-size: var(--font-size);
@@ -67,6 +77,7 @@ body {
   transform: translateX(-400%);
   transition: transform 0.8s ease;
 }
+/* .scroll-box:nth-of-type(2n) */
 .scroll-box:nth-of-type(even) {
   transform: translateX(400%);
 }
@@ -169,6 +180,7 @@ hr {
   /* margin: 65px auto; */
   /* margin-top: 80px; */
   padding: 15px;
+  /* scroll-margin-top: 80px; */
 }
 ul {
   overflow: hidden;
@@ -325,6 +337,7 @@ ul {
   max-width: 100%; /* to make sure it is fully visible on a small screen */
   margin-right: 40px;
   border-radius: 50%;
+  /* padding-top: 60px; */
 }
 
 /* ---------- ABOUT SECTION STYLING ---------- */
