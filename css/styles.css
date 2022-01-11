@@ -377,12 +377,11 @@ ul {
 
 @keyframes tools-scroll {
   0% {
-    /* transform: translateX(calc(250px * 4)); */
     transform: translateX(0);
   }
   100% {
-    /* transform: translateX(calc(-250px * 4)); */
     transform: translateX(-50%);
+    /* the logo sequence is doubled, once the end of the first half has reached the end (which looks exactly like the starting point), the animation restarts */
   }
 }
 .tools-slider {
