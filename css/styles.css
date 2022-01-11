@@ -389,6 +389,7 @@ ul {
   /* background: pr; */
   /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125); */
   background-color: white;
+  padding: var(--spacing) 0;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -405,12 +406,12 @@ ul {
 }
 .tools-slider::after {
   right: 0;
-  top: 0;
+  top: var(--spacing);
   transform: rotateZ(180deg);
 }
 .tools-slider::before {
   left: 0;
-  top: 0;
+  top: var(--spacing);
 }
 .tools-slide-track {
   animation: tools-scroll 30s linear infinite;
@@ -427,6 +428,7 @@ ul {
 }
 .tool.aws {
   max-width: 90px;
+  margin-top: 10px;
 }
 .tool.angular {
   max-height: 115px;
