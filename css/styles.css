@@ -76,17 +76,34 @@ main {
 }
 
 /* scroll-box is an element that slides in/out from the side as the user scrolls up/down the page */
-.scroll-box {
-  /* display: none; */
+/* .scroll-box {
+  /* display: none; * /
   transform: translateX(-200rem);
   transition: transform 0.8s ease;
 }
-/* .scroll-box:nth-of-type(2n) */
+/* .scroll-box:nth-of-type(2n) * /
 .scroll-box:nth-of-type(even) {
   transform: translateX(200rem);
 }
 .scroll-box.show {
-  /* display: block; */
+  /* display: block; * /
+  transform: translateX(0);
+} */
+
+/* slide-in is an element that slides in/out from the l/r side as the user scrolls up/down the page */
+.slide-in {
+  transition: opacity 0.3s, transform 0.8s ease;
+}
+.slide-in.l {
+  opacity: 0;
+  transform: translateX(-100vw);
+}
+.slide-in.r {
+  opacity: 0;
+  transform: translateX(100vw);
+}
+.slide-in.show {
+  opacity: 1;
   transform: translateX(0);
 }
 
