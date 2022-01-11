@@ -5,7 +5,7 @@ const header = document.querySelector('.page-header');
 
 window.addEventListener('scroll', () => {
 
-    /* SLIDE SECTIONS IN FROM THE SIDES */
+    /* SLIDE SECTIONS aka "scroll-box" IN FROM THE SIDES */
     const triggerBottom = window.innerHeight / 5 * 4;
     // const triggerTop = window.innerHeight / 5;
     boxes.forEach(box => {
