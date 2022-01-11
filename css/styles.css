@@ -49,6 +49,9 @@ body {
   justify-content: center;
   overflow-x: hidden; /* hide horizontal scroll bar, because of the elements sliding in from the sides */
 }
+main {
+  text-align: center;
+}
 
 /* ----- CUSTOM LAYOUT CLASSES ----- */
 
@@ -552,16 +555,39 @@ th, td {
   }
 } */
 
-/* ---------- CONTACT MODAL STYLING ---------- */
-/* ----- contact page (designed MOBILE FIRST) ----- */
-.contact-details {
-  text-align: center;
-  margin: 0 auto;
-  line-height: 1.8;
-  margin-bottom: 30px;
+/* ---------- CONTACT PAGE ---------- */
+.contact-page {
+  padding-top: 60px;
 }
-.contact-details h3 {
+.contact {
+  text-align: center;
+  padding-bottom: var(--spacing);
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contact .contact-col-l {
+  flex: 1 1 600px;
+  text-align: right;
+}
+.contact .contact-col-r {
+  flex: 1 1 600px;
+  text-align: center;
+}
+@media all and (max-width: 1240px) {
+  .contact .contact-col-l { 
+    text-align: center;
+  }
+}
+.contact h3 {
   margin-bottom: 10px;
+}
+.contact p {
+  margin: var(--spacing);
 }
 
 form {
@@ -571,8 +597,7 @@ form {
   border-radius: 6px;
   border: 1px solid #c1c1c1;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: var(--spacing) auto;
   line-height: 1.5;
   box-shadow: 3px 3px 8px rgb(0 0 0 / 30%);
 }
