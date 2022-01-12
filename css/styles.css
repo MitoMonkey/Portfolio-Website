@@ -108,7 +108,7 @@ main {
 }
 .slide-in.bottom {
   opacity: 0;
-  transform: translateY(100vh);
+  transform: translateY(10vh);
 }
 .slide-in.show {
   opacity: 1;
