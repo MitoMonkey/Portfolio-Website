@@ -102,9 +102,18 @@ main {
   opacity: 0;
   transform: translateX(100vw);
 }
+.slide-in.top {
+  opacity: 0;
+  transform: translateY(-100vh);
+}
+.slide-in.bottom {
+  opacity: 0;
+  transform: translateY(100vh);
+}
 .slide-in.show {
   opacity: 1;
   transform: translateX(0);
+  transform: translateY(0);
 }
 
 
