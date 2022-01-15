@@ -168,7 +168,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/contact-form-api/dev/1640021283480-2021-12-20T17:28:03.480Z/contact-form-api.zip"
+          "S3Key": "serverless/contact-form-api/dev/1642089301168-2022-01-13T15:55:01.168Z/contact-form-api.zip"
         },
         "Handler": "handler.sendMail",
         "Runtime": "nodejs12.x",
@@ -180,7 +180,7 @@
             "NODE_ENV": "dev",
             "RECIPIENT": "Michael.Flohrschuetz@gmail.com",
             "SENDER": "FlyingMonkey@mail.de",
-            "DOMAIN": "https://mitothis.de"
+            "DOMAIN": "https://michaelflohrschuetz.com"
           }
         },
         "Role": {
@@ -194,14 +194,14 @@
         "SendLogGroup"
       ]
     },
-    "SendLambdaVersion0dkEOJOknKU4mSdC0WeaAWxok7upA26wG5RF0SnqYM": {
+    "SendLambdaVersion7xExrTUXEBGRmOLvVyuSZPhGgcEkNUzy1TGeYsQoz1c": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "SendLambdaFunction"
         },
-        "CodeSha256": "qWzIwXKOoFJ/sTUrnous/ID4AJl4//HmpfN5Qa4nvJ0="
+        "CodeSha256": "5L1HfxuuaaixwnaigeL29H335VRRU2A+7l3DZZ2BpfQ="
       }
     },
     "ApiGatewayRestApi": {
@@ -334,7 +334,7 @@
         "SendLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1640021282425": {
+    "ApiGatewayDeployment1642089299811": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -397,7 +397,7 @@
     "SendLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "SendLambdaVersion0dkEOJOknKU4mSdC0WeaAWxok7upA26wG5RF0SnqYM"
+        "Ref": "SendLambdaVersion7xExrTUXEBGRmOLvVyuSZPhGgcEkNUzy1TGeYsQoz1c"
       },
       "Export": {
         "Name": "sls-contact-form-api-dev-SendLambdaFunctionQualifiedArn"

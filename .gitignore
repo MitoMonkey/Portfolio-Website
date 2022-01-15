@@ -1,2 +1,5 @@
 secrets.json
+/contact-form-api/.serverless
+/.serverless
+.serverless
 /depricated
