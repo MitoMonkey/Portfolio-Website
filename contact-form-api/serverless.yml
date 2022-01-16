@@ -54,7 +54,10 @@ functions:
       - http:
           path: email/send
           method: post
-          cors: true
+          # cors: true
+          cors:
+            origin: ${self:custom.secrets.DOMAIN}, ${self:custom.secrets.DOMAIN_WWW}
+            headers: Content-Type
 
 #    The following are a few example events you can configure
 #      - httpApi:

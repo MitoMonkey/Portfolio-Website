@@ -117,19 +117,14 @@
     submit.disabled = true;
 
     if (validateEmail() && validateName() && validateMsg()) {
-      // alert('This contact form is not functional yet. Please send email instead!'); // TEMPORARY DEVELOPMENT ALERT
-
       // Send data to AWS API
-      // To send data, fetch() uses the body property, while Axios uses the data property. Axios automatically stringifies the data when sending requests. When using fetch(), you have to do it manually 
-      // > does the lamdba function need adjustments/adaptation?
+      // To send data, fetch() uses the body property, while Axios uses the data property. Axios automatically stringifies the data when sending requests. When using fetch(), you have to do it manually
       // fetch and promise theoretically need polyfills
 
       const url = 'https://i5wekd3yrb.execute-api.eu-central-1.amazonaws.com/dev/email/send';
       const options = {
         method: 'POST',
         headers: {
-          //'Accept': 'application/json',
-          //'Content-Type': 'application/json;charset=UTF-8'
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
@@ -144,16 +139,17 @@
           successInfo.style.display = 'block';
           sendingInfo.style.display = 'none';
           submit.disabled = false;
+
           console.log("Status:" + response.status);
-          // console.log("Response data:" + response.json());
         })
         .catch(err => {
           successInfo.style.display = 'none';
           sendingInfo.style.display = 'none';
           sendingError.textContent = "ERROR: " + err;
           sendingError.style.display = 'block';
-          console.log(err);
           submit.disabled = false;
+
+          console.log("Error: " + err);
         });
 
       // axios is imported in html file from CDN  

@@ -168,7 +168,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/contact-form-api/dev/1642089301168-2022-01-13T15:55:01.168Z/contact-form-api.zip"
+          "S3Key": "serverless/contact-form-api/dev/1642349231633-2022-01-16T16:07:11.633Z/contact-form-api.zip"
         },
         "Handler": "handler.sendMail",
         "Runtime": "nodejs12.x",
@@ -194,14 +194,14 @@
         "SendLogGroup"
       ]
     },
-    "SendLambdaVersion7xExrTUXEBGRmOLvVyuSZPhGgcEkNUzy1TGeYsQoz1c": {
+    "SendLambdaVersionAIUFvQsGFNIPyXhrfStZMQuO9pE7Dn7c98giCZPzM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "SendLambdaFunction"
         },
-        "CodeSha256": "5L1HfxuuaaixwnaigeL29H335VRRU2A+7l3DZZ2BpfQ="
+        "CodeSha256": "XAsq5c8c8Yde3myIi0/UIW0mTmNwe5vS1ggBl6+iVpQ="
       }
     },
     "ApiGatewayRestApi": {
@@ -270,12 +270,12 @@
             {
               "StatusCode": "200",
               "ResponseParameters": {
-                "method.response.header.Access-Control-Allow-Origin": "'*'",
-                "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
+                "method.response.header.Access-Control-Allow-Origin": "'https://michaelflohrschuetz.com'",
+                "method.response.header.Access-Control-Allow-Headers": "'Content-Type'",
                 "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST'"
               },
               "ResponseTemplates": {
-                "application/json": ""
+                "application/json": "#set($origin = $input.params(\"Origin\"))\n#if($origin == \"\") #set($origin = $input.params(\"origin\")) #end\n#if($origin.matches(\"https://michaelflohrschuetz[.]com\") || $origin.matches(\"https://www[.]michaelflohrschuetz[.]com\")) #set($context.responseOverride.header.Access-Control-Allow-Origin = $origin) #end"
               }
             }
           ]
@@ -334,7 +334,7 @@
         "SendLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1642089299811": {
+    "ApiGatewayDeployment1642349230332": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -397,7 +397,7 @@
     "SendLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "SendLambdaVersion7xExrTUXEBGRmOLvVyuSZPhGgcEkNUzy1TGeYsQoz1c"
+        "Ref": "SendLambdaVersionAIUFvQsGFNIPyXhrfStZMQuO9pE7Dn7c98giCZPzM"
       },
       "Export": {
         "Name": "sls-contact-form-api-dev-SendLambdaFunctionQualifiedArn"
