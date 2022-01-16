@@ -13,7 +13,7 @@ function generateResponse(code, payload) {
     statusCode: code,
     headers: {
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Headers': 'x-requested-with'
+      //'Access-Control-Allow-Headers': 'x-requested-with'
       //'Access-Control-Allow-Credentials': true // only required if you use cookies or other authentication
     },
     body: JSON.stringify(payload)
@@ -24,7 +24,7 @@ function generateError(code, err) {
     statusCode: code,
     headers: {
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Headers': 'x-requested-with'
+      //'Access-Control-Allow-Headers': 'x-requested-with'
       //'Access-Control-Allow-Credentials': true
     },
     body: JSON.stringify(err.message)

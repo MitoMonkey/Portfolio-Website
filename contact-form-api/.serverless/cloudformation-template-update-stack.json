@@ -168,7 +168,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/contact-form-api/dev/1642349231633-2022-01-16T16:07:11.633Z/contact-form-api.zip"
+          "S3Key": "serverless/contact-form-api/dev/1642349917808-2022-01-16T16:18:37.808Z/contact-form-api.zip"
         },
         "Handler": "handler.sendMail",
         "Runtime": "nodejs12.x",
@@ -194,14 +194,14 @@
         "SendLogGroup"
       ]
     },
-    "SendLambdaVersionAIUFvQsGFNIPyXhrfStZMQuO9pE7Dn7c98giCZPzM": {
+    "SendLambdaVersionaSou3OPDffM9oPk7gKeSKYFgk9tOn3Wvh7nFn8eW4": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "SendLambdaFunction"
         },
-        "CodeSha256": "XAsq5c8c8Yde3myIi0/UIW0mTmNwe5vS1ggBl6+iVpQ="
+        "CodeSha256": "vYAte6c8Dy5pJidER5msagM4lCwDvzzSc6DZyqZhkkc="
       }
     },
     "ApiGatewayRestApi": {
@@ -334,7 +334,7 @@
         "SendLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1642349230332": {
+    "ApiGatewayDeployment1642349916681": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -397,7 +397,7 @@
     "SendLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "SendLambdaVersionAIUFvQsGFNIPyXhrfStZMQuO9pE7Dn7c98giCZPzM"
+        "Ref": "SendLambdaVersionaSou3OPDffM9oPk7gKeSKYFgk9tOn3Wvh7nFn8eW4"
       },
       "Export": {
         "Name": "sls-contact-form-api-dev-SendLambdaFunctionQualifiedArn"

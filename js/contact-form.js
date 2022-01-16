@@ -145,7 +145,7 @@
         .catch(err => {
           successInfo.style.display = 'none';
           sendingInfo.style.display = 'none';
-          sendingError.textContent = "ERROR: " + err;
+          sendingError.textContent = "ERROR: Please contact me via email and let me know about this problem. Sorry for the inconvenience.";
           sendingError.style.display = 'block';
           submit.disabled = false;
 
