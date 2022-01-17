@@ -64,11 +64,6 @@ const slider_init = document.querySelectorAll('.slide-in.init');
 window.addEventListener("load", () => {
     //init();
 
-    /* slide in things that should be loaded on any screen at page load */
-    slider_init.forEach(box => {
-        box.classList.add('show');
-    })
-
     /* slide in additional elements on large screens */
     const triggerBottom = window.innerHeight / 5 * 4;
     slider.forEach(box => {
@@ -79,5 +74,10 @@ window.addEventListener("load", () => {
         } else {
             box.classList.remove('show');
         }
+    })
+
+    /* slide in things that should be loaded on any screen at page load */
+    slider_init.forEach(box => {
+        box.classList.add('show');
     })
 });
