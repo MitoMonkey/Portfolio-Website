@@ -156,7 +156,6 @@ button,
 .button { /* to create links that look like buttons */
   /*border: none; /* overwrites browser defaults and resets the border */
   display: inline-block;
-  font-family: inherit;
   background-color: var(--primary-color);
   color: var(--text-color);
   text-decoration: none;
@@ -188,6 +187,7 @@ a:visited.button {
 .button__secondary {
   background-color: var(--secondary-color);
   color: var(--dark-grey) !important;
+  margin: var(--spacing_s);
 }
 @media all and (max-width: 630px) {
   .button {
@@ -216,7 +216,7 @@ hr {
   top: 0;
   /* left: 0;
   right: 0; */
-  z-index:10;
+  z-index: 5;
   padding: 12px 30px;
   /* max-width: 1400px; */
   /* margin: 0 auto; */
@@ -498,7 +498,7 @@ ul {
 .modal {
   display: none; /* Hidden by default */
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
@@ -509,9 +509,10 @@ ul {
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
   width: 80%;
+  /* height: 80%; */
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;  
   border: 1px solid #888;
   border-radius: 8px;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
