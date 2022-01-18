@@ -1,25 +1,25 @@
-let projects = [
+/* let projects = [
     {
         ID: 'MoveX-React-Modal',
-        showBtnId: 'Show-MoveX-React-Modal',
-        closeBtnId: 'Close-MoveX-React-Modal'
+        showBtnId: 'Show-MoveX-React-Modal'
     },
     {
         ID: 'MoveX-Angular-Modal',
-        showBtnId: 'Show-MoveX-Angular-Modal',
-        closeBtnId: 'Close-MoveX-Angular-Modal'
+        showBtnId: 'Show-MoveX-Angular-Modal'
     }
-];
+]; */
 
+const projects = ['MoveX-React-Modal', 'MoveX-Angular-Modal'];
 
 projects.forEach(project => {
     // Get the button that opens the modal
-    var btn = document.getElementById(project.showBtnId);
+    /* let btn = document.getElementById(project.showBtnId); */
+    let btn = document.querySelector('#Show-' + project);
 
     // When the user clicks on the button, open the modal
     btn.onclick = function () {
         // Get and display the modal
-        var modal = document.getElementById(project.ID);
+        var modal = document.getElementById(project);
         modal.style.display = "block";
 
         // When the user clicks anywhere outside of the modal, close it (.modal is actually the overlay and does not include .modal-content)
@@ -35,10 +35,10 @@ projects.forEach(project => {
             }
         });
 
-        // Get the <span> element that closes the modal
-        let close = document.getElementById(project.closeBtnId);
+        // Get the <span> element that closes the modal and close the modal onclick
+        /* let close = document.getElementById(project.closeBtnId); */
         /* let close = document.getElementsByClassName('closeModal'); */
-        // When the user clicks on <span> (x), close the modal
+        let close = document.querySelector('#' + project + ' .closeModal');
         close.onclick = function () {
             modal.style.display = "none";
         }

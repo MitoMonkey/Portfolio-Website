@@ -169,6 +169,205 @@
         on GitHub.</p>
       <p>For the study projects created during the Full-stack Web-developer course @CarrerFoundry, I also worked with
         Kanban boards, user stories, user flows and architectural diagrams.</p>
+
+      <div class="project-grid">
+        <div class="project-grid__item">
+          <h2>Portfolio website</h2>
+          <div class="screenshot-container_1pic">
+            <img class="screenshot" src="img/Screenshots/Screenshot_Portfolio.png" alt="Portfolio screenshot.">
+          </div>
+          <p>This started as a static website to learn HTML and CSS, but turned into a full grown portfolio website.</p>
+          <p>For practice reasons I chose to refrain from rebuilding it using librarys or build tools, so every line of
+            code here is hand-written.</p>
+          <p class="no-bottom-padding">Technologies:</p>
+          <ul class="no-top-gap">
+            <li>CSS basics like float, flexbox, grid, variables, animations</li>
+            <li>HTML basics like forms, tables, header, footer</li>
+            <li>Full responsiveness</li>
+            <li>Full accessibility</li>
+          </ul>
+          <div class="aligncenter">
+            <a href="https://github.com/MitoMonkey/Portfolio-Website" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">Portfolio website on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-grid__item">
+          <h2>Meet app</h2>
+          <div class="screenshot-container_2pics">
+            <img class="screenshot" src="img/Screenshots/Screenshot_MeetApp-1.png" alt="Meet app screenshot 1.">
+            <img class="screenshot" src="img/Screenshots/Screenshot_MeetApp-2.png" alt="Meet app screenshot 1.">
+          </div>
+          <p>This app displays events in different cities which are fetched from Google Calendar API.</p>
+          <p>The study goal was to learn about PWAs, test-driven-development (TDD), serverless functions, OAuth (a
+            mechanism to log into an app with your google account), performance monitoring and how to draw pretty
+            charts.</p>
+          <p>PWA (progressive web application) means it is responsive, available offline, cross-platform and can be
+            added to the home screen.</p>
+          <p class="no-bottom-padding">Features:</p>
+          <ul class="no-top-gap">
+            <li>Show/hide event details</li>
+            <li>Filter by city name</li>
+            <li>Choose number of events</li>
+            <li>Chart 1: Number of upcoming events per city</li>
+            <li>Chart 2: Popularity of topics</li>
+          </ul>
+          <p>Built with CRA (CreatReactApp), following the TDD (test driven development) approach.</p>
+          <p>Main technologies used: React, CSS, serverless (AWS lambda), OAuth (Google Cloud Console), Axios, Recharts,
+            Jest (Enzyme, Cucumber, Puppeteer), Atatus (performance monitoring)</p>
+          <div class="aligncenter">
+            <a href="https://mitomonkey.github.io/meet/" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">MeetApp live demo</a>
+            <a href="https://github.com/MitoMonkey/meet" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">MeetApp on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-grid__item">
+          <h2>MoveX Angular client</h2>
+          <div class="screenshot-container_1pic">
+            <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-Angular.png"
+              alt="Screenshot of the MoveX Angular client.">
+          </div>
+          <p>MoveX is a library of movements from various styles and traditions, with descriptions/cues and video
+            sources.</p>
+          <p>For the MoveX study project I created an API including a non-relational database, as well as two different
+            frontend clients (Angular and React).</p>
+          <p>This is the Angular client - A single-page, responsive web application (SPA), using Material design.</p>
+          <p class="no-bottom-padding">Features:</p>
+          <ul class="no-top-gap">
+            <li>View a list of all moves</li>
+            <li>See details for each move, style or source</li>
+            <li>User registration and login</li>
+            <li>Update profile (username, password, email, birthday)</li>
+            <li>Users can add to add remove a move to/from their list of favorites</li>
+            <li>Users can delete their account</li>
+          </ul>
+          <p>Main technologies used: TypeScript, Angular, Angular-Material, CSS, TypeDoc for documentation, hosting on
+            GitHub-pages.</p>
+          <div class="aligncenter">
+            <a href="https://mitomonkey.github.io/MoveX-Angular-client" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">MoveX Angular live demo</a>
+            <a href="https://github.com/MitoMonkey/MoveX-Angular-client" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">MoveX Angular client on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-grid__item">
+          <h2>MoveX React client</h2>
+          <div class="screenshot-container_1pic">
+            <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-React.png"
+              alt="Screenshot of the MoveX React client.">
+          </div>
+          <p>This is the React-based frontend - A single-page, responsive web application (SPA), built with React
+            (including a number of additional modules), following the MVC design pattern.</p>
+          <p>For general info about MoveX see the Angular client.</p>
+          <p>Basic features: see Angular client. The React version additionally has thorough form validation and a
+            search function.</p>
+          <p>Main technologies used: JavaScript, React, React Bootstrap, React Redux, Axios, Parcel, PropTypes, Netlify
+            hosting.</p>
+          <div class="aligncenter">
+            <a href="https://move-x.netlify.app/" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">MoveX React live demo</a>
+            <a href="https://github.com/MitoMonkey/MoveX-client" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">MoveX React client on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-grid__item">
+          <h2>MoveX backend (API)</h2>
+          <div class="screenshot-container_1pic">
+            <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-API_2.png"
+              alt="Screenshot of the MoveX endpoints.">
+          </div>
+          <p>This is the REST API and a non-relational database for MoveX.</p>
+          <p>For general info about MoveX see the Angular client.</p>
+          <p>The study goals here were to learn about NodeJS (incl. a number of packages), databases (SQL and NoSQL) and
+            APIs in general.</p>
+          <p>Main technologies used: Javascript, non-relational DB on MongoDB Atlas, App hosted on
+            Heroku, Postman (API endpoint testing), node.js (Express, Morgan, bodyParser, mongoose, CORS, Passport,
+            bcrypt), JSDoc for documentation.</p>
+          <div class="aligncenter">
+            <a href="https://github.com/MitoMonkey/MoveX-backend" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">MoveX backend on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-grid__item">
+          <h2>CHATzam</h2>
+          <div class="screenshot-container_3pics">
+            <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_StartScreen.jpg"
+              alt="Screenshot of the CHATzam app start screen.">
+            <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_ChatScreen.jpg"
+              alt="Screenshot of the CHATzam app chat screen.">
+            <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_ActionSheet.jpg"
+              alt="Screenshot of the CHATzam app action sheet.">
+          </div>
+          <p>A chat app for mobile devices (Android and iOS) created with React Native.</p>
+          <p>The study goals here were to learn how to develop and test cross-platform native apps.</p>
+          <p class="no-bottom-padding">Features:</p>
+          <ul class="no-top-gap">
+            <li>Enter username</li>
+            <li>Choose background color</li>
+            <li>Send and receive messages</li>
+            <li>Share pictures from the devices gallery</li>
+            <li>Take and share photos</li>
+            <li>Share location</li>
+            <li>See past messages even while offline</li>
+          </ul>
+          <p>Main technologies used: JavaScript, React Native, Android Studio, Expo, Google Firebase.</p>
+          <p>As this is a mobile app in development stage, there is no live demo available. See GitHub readme for
+            instructions to use/test it.</p>
+          <div class="aligncenter">
+            <a href="https://github.com/MitoMonkey/Chat-App" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">CHATzam on GitHub</a>
+          </div>
+        </div>
+
+        <!-- <div class="project-grid__item">
+                <h2>Pokedéx app</h2>
+                <div class="screenshot-container_2pics">
+                  <img class="screenshot" src="img/Screenshots/Screenshot_Pokedex_main.png"
+                    alt="Pokedex screenshot 1: Main screen.">
+                  <img class="screenshot" src="img/Screenshots/Screenshot_Pokedex_modal.png"
+                    alt="Pokedex screenshot 2: Modal with details of a Pokemon.">
+                </div>
+                <p>An app to show a list of Pokemon from a public API.</p>
+                <p class="no-bottom-padding">Features:</p>
+                <ul class="no-top-gap">
+                  <li>Load Pokemon data from a public external API</li>
+                  <li>Render a button for each Pokemon</li>
+                  <li>Open a modal when button is clicked, to show details about the Pokemon</li>
+                  <li>Filter bar to search Pokemon by name</li>
+                </ul>
+                <p>The study goals were to learn DOM manipulation with JavaScript, jQuery, styling with Bootstrap, and code
+                  optimization with linters and minfiers.</p>
+                <div class="aligncenter">
+                  <a href="https://mitomonkey.github.io/Pokedex-App/" target="_blank" rel="noopener noreferrer"
+                    class="button button__secondary">Pokedéx live demo</a>
+                  <a href="https://github.com/MitoMonkey/Pokedex-App" target="_blank" rel="noopener noreferrer"
+                    class="button button__secondary">Pokedéx on GitHub</a>
+                </div>
+              </div> -->
+
+      </div>
+
+      <!-- "READ MORE" MODALS FOR EACH PROJECT -->
+
+      <button id="Show-MoveX-React-Modal">Open Modal React</button>
+      <button id="Show-MoveX-Angular-Modal">Open Modal Angular</button>
+      <div id="MoveX-React-Modal" class="modal">
+        <div class="modal-content">
+          <span class="closeModal" id="Close-MoveX-React-Modal">&times;</span>
+          <p>Some text in the Modal.. React</p>
+        </div>
+      </div>
+      <div id="MoveX-Angular-Modal" class="modal">
+        <div class="modal-content">
+          <span class="closeModal" id="Close-MoveX-Angular-Modal">&times;</span>
+          <p>Some text in the Modal.. Angular</p>
+        </div>
+      </div>
     </section>
 
     <hr id="about">
@@ -215,14 +414,14 @@
         <a href="files/Michael Flohrschuetz.pdf" class="button mobile-clear align-center" download>Download my CV</a>
       </div>
 
-      <div class="slide-in r">
+      <!-- <div class="slide-in r">
         <h2>Mito.this</h2>
         <p>“Mito.this” is first of all a reference to my nickname “Mito”. It also refers to the biological process of
           mitosis (cell
           division) as programming often comprises replication of code which then gets more and more specialized. And
           lastly, Mito.this also refers to the JavaScript keyword “this”, which is a very important concept, but can be
           quite tricky at times.</p>
-      </div>
+      </div> -->
 
     </section>
     <hr>
@@ -262,6 +461,7 @@
 
   <!-- <script src="js/tota11y.min.js"></script> -->
   <script src="js/animations.js"></script>
+  <script src="js/project-modal.js"></script>
 </body>
 
 </html>
