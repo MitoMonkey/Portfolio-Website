@@ -1,5 +1,4 @@
 /* const projects = ['Portfolio', 'MoveX_Angular', 'MoveX_React', 'MoveX_API', 'MeetApp', 'CHATzam'];
-
 projects.forEach(project => {
     // Get the button that opens the modal
     let btn = document.querySelector('#Show-' + project + '-Modal');
@@ -31,11 +30,15 @@ projects.forEach(project => {
     }
 }); */
 
+/* get all read-more buttons */
 const btns = document.querySelectorAll('.read-more');
 btns.forEach(btn => {
-    let project = '#' + btn.id;
-    let modal = document.querySelector(project + '_container');
-    // When the user clicks on the button, open the corresponding modal
+    let project = '#' + btn.id + '_container';
+
+    /* get the corresponding modal div */
+    let modal = document.querySelector(project);
+
+    // When the user clicks on the read-more button, open the modal
     btn.onclick = function () {
         modal.style.display = "block";
     }
@@ -46,7 +49,7 @@ btns.forEach(btn => {
             modal.style.display = "none";
         }
     }
-    // hide the modal when user presses ESC key
+    // close the modal when user presses ESC key
     window.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.style.display === "block") {
             modal.style.display = "none";
@@ -54,7 +57,7 @@ btns.forEach(btn => {
     });
 
     // Get the <span> element that closes the modal and close the modal onclick
-    let close = document.querySelector(project + '_container' + ' .closeModal');
+    let close = document.querySelector(project + ' .closeModal');
     close.onclick = function () {
         modal.style.display = "none";
     }
