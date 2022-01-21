@@ -538,9 +538,16 @@ ul {
     width: 100%;
   }
 }
-.project-grid__item h2 {
+.project-grid__item h2, .project-grid__item p {
   text-align: center;
+  margin: 0;
 }
+.projects_button-container {
+  text-align: center;
+  margin: var(--spacing) auto;
+  align-self: end;
+}
+ 
 @supports (display: grid) {
   .project-grid {
     display: grid;
@@ -563,9 +570,12 @@ ul {
   }
   .project-grid__item {
     width: auto;
-    min-width: 0; 
-    max-width: 100%;
-    min-height: auto; /* just failsafes to make sure it looks good on every browser */
+    display: grid;
+    justify-content: center; /* vertically center the content in each column */
+    align-content: stretch; /* horizontally center at top of the column */
+    /* min-width: 0; 
+    max-width: 100%; 
+    min-height: auto; */ /* just failsafes to make sure it looks good on every browser */
     padding: 15px 25px 30px 25px;
     margin: 0;
   }
@@ -628,7 +638,8 @@ ul {
 
 .tech-cards-container {
   /* width: 100%; */
-  padding-top: var(--spacing_s);
+  /* padding-top: var(--spacing_s); */
+  margin: var(--spacing) 0;
 }
 .tech-card {
   background-color: var(--med);
@@ -659,7 +670,12 @@ ul {
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.5); /* Black with opacity */
+  /* opacity: 0;
+  transition: 0.8s ease; */
 }
+/* .modal.show {
+  opacity: 1;
+} */
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
@@ -671,7 +687,6 @@ ul {
   border: 1px solid #888;
   border-radius: 8px;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
-  transition: 0.8s ease-out;
   text-align: left;
 }
 /* The Close Button */

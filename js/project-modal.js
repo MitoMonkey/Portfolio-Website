@@ -33,6 +33,8 @@ projects.forEach(project => {
 /* get all read-more buttons */
 const btns = document.querySelectorAll('.read-more');
 btns.forEach(btn => {
+
+    /* "assamble" the div id */
     let project = '#' + btn.id + '_container';
 
     /* get the corresponding modal div */
@@ -41,6 +43,8 @@ btns.forEach(btn => {
     // When the user clicks on the read-more button, open the modal
     btn.onclick = function () {
         modal.style.display = "block";
+        /* modal.style.opacity = 1; */
+        /* modal.classList.add('show'); */
     }
 
     // When the user clicks anywhere outside of the modal, close it (.modal is actually the overlay and does not include .modal-content)

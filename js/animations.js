@@ -59,6 +59,7 @@ window.addEventListener('scroll', () => {
 
 /* ---------- ANIMATIONS AT PAGE INITIAL OPEN ---------- */
 
+/* elements that should always slide in on page load without scrolling */
 const slider_init = document.querySelectorAll('.slide-in.init');
 
 window.addEventListener("load", () => {
