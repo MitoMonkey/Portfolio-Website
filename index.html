@@ -26,9 +26,11 @@
 
 <body>
   <header class="page-header">
-    <img src="./img/cell-division.png" alt="Logo, a cell dividing in mitosis" class="page-header__item">
-    <a href="index.html" class="page-header__item page-header__heading">Mito.this</a>
-    <nav class="main-navigation page-header__item" id="main-nav">
+    <div class="page-header__item">
+      <img src="./img/cell-division.png" class="page-header__logo" alt="Logo, a cell dividing in mitosis">
+      <a href="index.html" class="page-header__heading">Mito.this</a>
+    </div>
+    <nav class="main-navigation page-header__item">
       <ul role="menubar" class="navigation-list circleBehind">
         <li role="presentation">
           <!-- prevents screen readers from reading out that its a list -->
@@ -48,7 +50,12 @@
         </li>
       </ul>
       <!-- hamburger nav for small screens -->
-      <a href="javascript:void(0);" id="hamburger"><i class="fa fa-bars"></i></a>
+      <!-- <a href="javascript:void(0);" id="hamburger"><i class="fa fa-bars"></i></a> -->
+      <div class="hamburger">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </div>
     </nav>
   </header>
 
