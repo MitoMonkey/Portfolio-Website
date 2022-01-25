@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mito.this - MoveX Case Study</title>
+    <link rel="shortcut icon" href="./img/cell-division.png" type="image/png">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Glory&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.production.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <div class="page-header__item">
+            <img src="./img/cell-division.png" class="page-header__logo" alt="Logo, a cell dividing in mitosis">
+            <a href="index.html" class="page-header__heading">Mito.this</a>
+        </div>
+        <nav class="main-navigation page-header__item">
+            <ul role="menubar" class="navigation-list circleBehind">
+                <li role="presentation">
+                    <!-- prevents screen readers from reading out that its a list -->
+                    <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+                </li>
+                <li role="presentation">
+                    <a href="index.html#skills" role="menuitem" class="navigation-list__item">Skills</a>
+                </li>
+                <li role="presentation">
+                    <a href="index.html#projects" role="menuitem" class="navigation-list__item">Projects</a>
+                </li>
+                <li role="presentation">
+                    <a href="index.html#about" role="menuitem" class="navigation-list__item">About me</a>
+                </li>
+                <li role="presentation">
+                    <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+                </li>
+            </ul>
+            <!-- hamburger nav for small screens -->
+            <div class="hamburger">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </div>
+        </nav>
+    </header>
+    <!-- difference in the header to index.html: navigation-list__item--active and most hrefs -->
+
+    <main class="case-study">
+        <h1>Case Study for Move-X full-stack project</h1>
+
+        <div class="section">
+            <h2>Overview</h2>
+            <p>MoveX is a library of movements from various styles and traditions, with descriptions/cues and video
+                sources.
+            </p>
+            <p>It consists of a backend and two frontend clients. The backend is where the moves are stored in a
+                database,
+                as well as
+                the API that allows apps to interact with the database. The frontend clients, one created with React and
+                one
+                with
+                Angular provide the interface that allows user to browse the moves, view details about each move, style
+                or
+                source,
+                manage their user profile and create a list of their favorite moves.</p>
+        </div>
+
+        <div class="section">
+            <h2>Purpose & Objective</h2>
+            <p>I built this personal project in the context of a CareerFoundry course to master full-stack web
+                development.
+            </p>
+            <p>The goal was to create a fully functional, responsive and engaging web app to provide movers with
+                inspiration
+                and
+                details about a variety of movements.</p>
+            <p>The challenge was to build an API from scratch, set up and connect a database, as well as make use of the
+                most popular
+                frontend JavaScript libraries/frameworks – React and Angular – to create engaging interactive user
+                interfaces.</p>
+            <p>At the same time the project was set up to produce a great portfolio project and get used to common
+                project
+                requirements
+                like user stories and user flows.</p>
+        </div>
+
+        <div class="section">
+            <h2>Tech Stack / Tools</h2>
+            <p><b>MERN and MEAN stack</b></p>
+            <table class="tech-container">
+                <tbody>
+                    <tr>
+                        <td class="nowrap"><b>Backend</b></td>
+                        <td>VS Code, NodeJS (Express, Morgan, bodyParser, mongoose, CORS, Passport, bcrypt),
+                            MongoDB, Postman, Heroku, JSDoc</td>
+                        <td class="nowrap"><a href="https://github.com/MitoMonkey/MoveX-backend" target="_blank"
+                                rel="noopener noreferrer" class="button">GitHub</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nowrap"><b>React client</b></td>
+                        <td>VS Code, JavaScript, React, React Redux, React Bootstrap, Parcel, PropTypes, Axios, Netlify
+                        </td>
+                        <td class="nowrap"><a href="https://move-x.netlify.app/" target="_blank"
+                                rel="noopener noreferrer" class="button">Live demo</a>
+                            <a href="https://github.com/MitoMonkey/MoveX-client" target="_blank"
+                                rel="noopener noreferrer" class="button">GitHub</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="nowrap"><b>Angular client</b></td>
+                        <td>VS Code, TypeScript, Angular, Angular-Material, GitHub-Pages, TypeDoc</td>
+                        <td class="nowrap"><a href="https://mitomonkey.github.io/MoveX-Angular-client" target="_blank"
+                                rel="noopener noreferrer" class="button">Live demo</a>
+                            <a href="https://github.com/MitoMonkey/MoveX-Angular-client" target="_blank"
+                                rel="noopener noreferrer" class="button">GitHub</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Duration</h2>
+            <p>All in all it took approximately 3 month. For sure a lot more than a project like this should take in
+                “real
+                life”. But
+                since it was a study projects, there were so many things to learn and figure out. I got really absorbed
+                in
+                it an at the
+                end felt ready to call myself a web developer.</p>
+        </div>
+
+        <div class="section">
+            <h2>Credits</h2>
+            <p> Big thanks goes to my tutor Ali El Zoheiry. Without him this would have been way less instructive and
+                fun.
+                And of course
+                I also thank my mentor Ramadhan Aheebwa. Thanks also to Theano Eirini Kakaziani for great feedback on
+                this
+                case study.</p>
+        </div>
+
+        <div class="section">
+            <h2>Approach</h2>
+            <h3>Backend</h3>
+            <div class="floating-img_container">
+                <div class="img-container">
+                    <img src="img/Screenshots/Screenshot_MoveX-API_2_small.png"
+                        alt="Screenshot of the code for a MoveX API endpoint.">
+                </div>
+                <p>For the server side I created a RESTful API using Node.js and Express as well as a non-relational
+                    database (MongoDB).
+                    The API allows to retrieve data about the moves and users from the database through common HTTP
+                    requests
+                    and returns JSON. API and database are connected by the business logic layer, using Mongoose.</p>
+            </div>
+            <div class="floating-img_container r">
+                <p>I also implemented a login endpoint with basic HTTP authentication returning a authorization JWT
+                    (token)
+                    to the client.
+                    This is necessary to ensure only logged in users can access the database. Initially the mechanisms
+                    of
+                    authentication and authorization were quite challenging for me. After with time and effort it become
+                    clear and functional.<br>
+                    To test the endpoints I used Postman.
+                </p>
+                <div class="img-container">
+                    <img src="img/Screenshots/Screenshot_MoveX-API_Postman.jpg"
+                        alt="Screenshot of Postman, the software user to test the API endpoints.">
+                </div>
+            </div>
+
+            <h3>React client</h3>
+            <div class="floating-img_container">
+                <div class="img-container">
+                    <img src="img/Screenshots/Screenshot_MoveX-React.png" alt="Screenshot of the MoveX React client.">
+                </div>
+                <p> Once the backend was set up, I created a frontend (the user interface) using React library. It is a
+                    single-page,
+                    responsive web application (SPA), built following the MVC design pattern. There are multiple views:
+                    Registration, login,
+                    main view (where all the moves are shown as cards), move view (where details about a specific move
+                    are
+                    elaborated),
+                    style view and source view (details about the style/source, as well as all the matching moves in the
+                    database) and a
+                    profile view (here the user can edit their user data and view cards for their favorite moves).</p>
+
+            </div>
+            <p>This was the biggest and most challenging, but also very exciting part for me as there was a lot to learn
+                starting off
+                with React. Compared to pure/classical HTML, CSS and JavaScript, it is a very different approach to
+                interface creation
+                and design. There were many topics I had to research, experiment with and figure out.</p>
+            <div class="floating-img_container r">
+                <p>In React everything consists of two types of components: class components (the "traditional" way) and
+                    functional
+                    components (a modern alternative). For the Move-X client I wrote a couple of each to practice both.
+                    In a real-world
+                    scenario more consistency would be advisable. In this case I would opt for mainly functional
+                    components as I preferred
+                    to work with them and they seem more efficient in several ways.</p>
+                <div class="img-container">
+                    <img src="img/Screenshots/Screenshot_MoveX-React_components.jpg"
+                        alt="Comparison of React class and functional components.">
+                </div>
+            </div>
+            <div class="floating-img_container">
+                <div class="img-container">
+                    <img src="img/Screenshots/Screenshot_MoveX-React_redux.jpg" alt="React-Redux state management.">
+                </div>
+                <p>React-Redux added a huge level of complexity. It allows a much more sophisticated way to share
+                    "state" (=
+                    data) between
+                    components by storing them in a central "store". Figuring out how that really works and how to
+                    refactor
+                    my
+                    app took me a
+                    while, but in the end it all made a lot of sense and worked smoothly. However in the future I would
+                    search
+                    for "updated"
+                    alternatives that allow similar functionality with less complicated procedures.</p>
+
+            </div>
+
+            <h3>Angular client</h3>
+            <div class="floating-img_container r">
+                <p>Later on I created another client accessing the same API and database. This time I used Angular
+                    framework. It
+                    is again a
+                    single-page, responsive web application with mostly the same functionality as the React client, just
+                    a
+                    very
+                    different
+                    technology and new layout. In this version, after registration/login, there is just one main view
+                    with a
+                    slider to
+                    display all moves. From there modals can be opened to display details about a style or source, as
+                    well
+                    as to
+                    edit the
+                    user profile.</p>
+                <div class="img-container">
+                    <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-Angular.png"
+                        alt="Screenshot of the MoveX Angular client.">
+                </div>
+            </div>
+            <p>Starting with Angular was a beast. It is a full-grown framework (compared to React being "just" a
+                library),
+                which means
+                it comes with a lot more pre-defined structure and built-in functionality. But as soon as I started to
+                understand the
+                basic structure it started to make a lot of sense and recreating the client (with a completely different
+                layout) was
+                actually quite fast.</p>
+            <div class="floating-img_container">
+                <div class="img-container">
+                    <img src="img/Screenshots/Screenshot_MoveX-Angular_userflow.jpg"
+                        alt="User flow of the MoveX Angular client">
+                </div>
+                <p>Creating the layout, mostly following Material design, was also a new experience. It is a complex
+                    world
+                    but
+                    in its
+                    basics also surprisingly efficient and straight-forward. I was expecting to get a similar user flow
+                    as
+                    in
+                    the react app,
+                    but Angulars workflow automatically led me to create a much easier and more efficient result.</p>
+            </div>
+            <p>I am clearly not an Angular expert (yet), but I got to love it for its straight forward workflow and the
+                clear,
+                organized structure. For small projects it would clearly be an overkill though.</p>
+        </div>
+
+        <div class="section">
+            <h2>Conclusion</h2>
+            <p>MoveX was my first full-stack web application. Traversing from rather abstract server code and database
+                structures all
+                the way to two great user interfaces was a great achievement.</p>
+            <p>The whole server side, with it’s security mechanisms and logic layers was quite challenging at first. But
+                after a lot of
+                research and some help from my tutor it all made sense.</p>
+            <p>I especially found it very interesting to experience the two very different approaches of React vs
+                Angular and their
+                respective workflows.</p>
+            <p>In React I liked the flexibility of modularity and the clarity of combining layout and functionality into
+                a component.
+                However Redux was a bit cumbersome. But maybe it is something one needs to get used to, to reap the
+                benefits.</p>
+            <p>Angular is great for it’s straight forward workflow and variety of great looking built-in elements. For
+                such a small
+                project is quite bulky though and contains a lot of unnecessary features. When I continue to work with
+                Angular I would
+                like to dive deeper into Material design.</p>
+            <p>I couldn’t say that I like either React or Angular more than the other. They both have pros and cons and
+                ultimately it
+                will always depend on the scope and requirements of a project to choose appropriate tools.</p>
+        </div>
+    </main>
+
+    <footer class="page-footer padding-top slide-in bottom init">
+        <!-- <p class="padding-bottom padding-top" style="margin: 0;">Let's connect!</p> -->
+        <h2 class="padding-bottom padding-top" style="margin: 0;">Let's connect!</h2>
+        <div class="social-media">
+            <a class="circle-link" href="tel:+491631631858" target="_blank" rel="noopener noreferrer">
+                <img src="img/Icons/Phone_icon.svg" class="icon" alt="Phone symbol"></a>
+            <a class="circle-link" href="mailto:Michael.Flohrschuetz@gmail.com?subject=WebDev%20contact" target="_blank"
+                rel="noopener noreferrer">
+                <img src="img/Icons/email_icon.svg" class="icon" alt="Email symbol"></a>
+            <a class="circle-link" href="https://t.me/MitoFlyingMonkey" target="_blank" rel="noopener noreferrer">
+                <img src="img/Icons/Telegram_logo.svg" class="icon" alt="Telegram logo"></a>
+            <a class="circle-link" href="https://wa.me/491631631858" target="_blank" rel="noopener noreferrer">
+                <img src="img/Icons/Whatsapp_logo.svg" class="icon" alt="Whatsapp logo"></a>
+            <a class="circle-link" href="skype:flyingmonkey_6" target="_blank" rel="noopener noreferrer">
+                <img src="img/Icons/Skype_logo.svg" class="icon" alt="Skype logo"></a>
+            <a class="circle-link" href="https://github.com/MitoMonkey" target="_blank" rel="noopener noreferrer">
+                <img src="img/Icons/github_logo.svg" class="icon" alt="Github logo"></a>
+            <a class="circle-link" href="https://stackoverflow.com/cv/mitothis" target="_blank"
+                rel="noopener noreferrer">
+                <img src="img/Icons/stackoverflow_logo.png" class="icon" alt="stackoverflow logo"></a>
+            <a class="circle-link" href="https://www.linkedin.com/in/michael-flohrschuetz" target="_blank"
+                rel="noopener noreferrer"><img src="img/Icons/linkedin_logo.svg" class="icon" alt="LinkedIn logo"></a>
+            <a class="circle-link" href="https://www.xing.com/profile/Michael_Flohrschuetz2" target="_blank"
+                rel="noopener noreferrer"><img src="img/Icons/Xing_logo.svg" class="icon" alt="Xing logo"></a>
+            <a class="circle-link" href="https://twitter.com/Mito_this" target="_blank" rel="noopener noreferrer"><img
+                    src="img/Icons/Twitter_logo.svg" class="icon" alt="Twitter logo"></a>
+            <!-- <a class="circle-link" href="https://medium.com/@michael.flohrschuetz" target="_blank"
+          rel="noopener noreferrer"><img src="img/Icons/Medium_logo.svg" class="icon" alt="Medium logo"></a> -->
+        </div>
+        <a href="/files/Impressum.pdf" class="impressum" download>Impressum (PDF download)</a>
+    </footer>
+
+    <!-- <script src="js/tota11y.min.js"></script> -->
+    <script src="js/animations.js"></script>
+    <script src="js/hamburger-menu.js"></script>
+</body>
+
+</html>
