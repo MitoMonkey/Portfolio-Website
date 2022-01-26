@@ -952,7 +952,6 @@ form button {
   width: 100%;
   border-collapse: collapse;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.34);
-  /* text-align: left; */
 }
 
 .case-study .nowrap {
@@ -978,8 +977,6 @@ form button {
   flex-wrap: nowrap;
 }
 .case-study .img-container {
-  /* flex: 1 1 500px; */
- /* min-width: 380px;  without this the img does not flex-grow or shrink */
   padding: var(--spacing);
 }
 .case-study img {
@@ -1000,9 +997,6 @@ form button {
     flex-direction: column;
   }
   .case-study .img-container {
-    /* min-height: 0; */
-    /* min-width: 0;
-    flex-basis: 300px; */
     max-width: 650px;
   }
   .case-study .floating-img_container p {

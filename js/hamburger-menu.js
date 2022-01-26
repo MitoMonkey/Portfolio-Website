@@ -1,19 +1,28 @@
-let hamburger = document.querySelector('.hamburger');
-let nav = document.querySelector('.navigation-list');
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.navigation-list');
 
+/* show/hide nav list when user clicks on the hamburger */
 hamburger.addEventListener('click', function (e) {
-    /* e.preventDefault(); */
-
     hamburger.classList.toggle("active");
     nav.classList.toggle("active");
-
-    /* nav.style.display = 'block';
-    nav.classList.toggle('responsive'); */
 });
 
-/* close the (responsive) nav menu when a link is clicked */
+
 const navLinks = document.querySelectorAll(".navigation-list__item");
-navLinks.forEach(n => n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    nav.classList.remove("active");
-}));
+navLinks.forEach(n => {
+    n.addEventListener("click", () => {
+
+        /* close the (responsive) nav menu when a link is clicked */
+        hamburger.classList.remove("active");
+        nav.classList.remove("active");
+
+        /* reset (=add) underline of all nav items */
+        navLinks.forEach(item => {
+            if (item.classList.contains('navigation-list__item--active')) item.classList.remove('navigation-list__item--active');
+        })
+        /* remove underline of the nav-list-item that is clicked (important for nav links that are just page jumps) */
+        n.classList.add('navigation-list__item--active');
+    })
+});
+
+
