@@ -124,11 +124,6 @@ h3 {
   font-size: 22px;
   font-weight: var(--heading-font-weight);
 }
-@media all and (max-width: 750px){
-  h1 {
-    font-size: 28px;
-  }
-}
 @media all and (min-width: 1600px) {
   h1 {
     font-size: 48px;
@@ -194,13 +189,13 @@ a:visited.button {
   color: var(--dark-grey) !important;
   margin: var(--spacing_s);
 }
-@media all and (max-width: 630px) {
+@media all and (max-width: 550px) {
   .button {
-    display: block;
-    max-width: 220px;
-    margin: 0 auto;
-    margin-top: 15px;
-    clear: both;
+    /* display: block;
+    max-width: 220px; */
+    margin: 5px;
+    /* margin-top: 15px;
+    clear: both; */
   }
 }
 
@@ -318,7 +313,7 @@ hr {
     background-color: var(--primary-color);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .page-header.scrolled a {
     color: var(--primary-color); /* do not change the color onscroll in the hamburger menu */
   }
@@ -434,7 +429,7 @@ hr {
   max-width: 1000px;
   /* margin: 65px auto; */
   /* margin-top: 80px; */
-  padding: 15px;
+  padding: var(--spacing);
   /* scroll-margin-top: 80px; */
   flex: 1 1;
 }
@@ -621,10 +616,21 @@ ul {
   text-align: center;
   margin: 0;
 }
-.projects_button-container {
+.button-container {
   text-align: center;
   margin: var(--spacing) auto;
-  align-self: end;
+  /* align-self: end; */
+}
+.button-container .button__secondary {
+  margin: 5px;
+}
+@media all and (max-width: 500px){
+  .button-container {
+    width: 100%;
+  }
+  .button-container a , .button-container .button__secondary {
+    width: 100%;
+  }
 }
  
 @supports (display: grid) {
@@ -676,7 +682,7 @@ ul {
     width: auto;
     display: grid;
     justify-content: center; /* vertically center the content in each column */
-    align-content: stretch; /* horizontally center at top of the column */
+    align-items: stretch;
     /* min-width: 0; 
     max-width: 100%; 
     min-height: auto; */ /* just failsafes to make sure it looks good on every browser */
@@ -721,17 +727,26 @@ ul {
     .screenshot-container_2pics {
       grid-template-columns: 1fr;
     }
+    .screenshot-container_3pics {
+      grid-template-columns: 1fr 1fr;
+    }
+    .project-grid__item.s6 {
+      align-content: start;
+    }
   }
-  @media all and (max-width: 750px){
+  @media all and (max-width: 800px){
     .screenshot-container_2pics {
       grid-template-columns: 1fr 1fr;
     }
+    .screenshot-container_3pics {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
-  @media all and (max-width: 500px) {
+  /* @media all and (max-width: 500px) {
     .screenshot-container_2pics {
       grid-template-columns: 1fr;
     }
-  }
+  } */
 }
 
 .tech-cards-container {
@@ -810,14 +825,14 @@ ul {
 
 
 
-
 /* ---------- CONTACT PAGE ---------- */
-.contact-page {
+/* .contact-page {
   padding-top: 60px;
-}
+} */
 .contact {
   text-align: center;
-  padding-bottom: var(--spacing);
+  /* padding-bottom: var(--spacing); */
+  padding: 0 var(--spacing);
   margin: 0 auto;
 
   display: flex;
@@ -907,6 +922,9 @@ form button {
     width: calc(100% - 150px);
   }
 }
+#contact-footer {
+  padding: 0 var(--spacing);
+}
 
 /* ---------- FOOTER STYLING ---------- */
 .page-footer {
@@ -954,11 +972,15 @@ form button {
 
 
 /* ---------- MOVEX CASE STUDY ---------- */
+.case-study {
+  padding: var(--spacing);
+}
 .case-study .section {
   padding: 0;
 }
 .case-study h1 {
   width: 100%;
+  margin-top: 80px;
 }
 
 .case-study table, .case-study td {
