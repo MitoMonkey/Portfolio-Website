@@ -4,12 +4,14 @@
 ![Screenshot](./img/Screenshots/Screenshot_Portfolio.png)
 
 ## Production version
-[View page here: mitothis.de](https://mitothis.de/)
+[View page here: MichaelFlohrschuetz.com](https://MichaelFlohrschuetz.com/)
 
 This project started as a static website to learn HTML and CSS, but turned into a full-grown portfolio website.
 
 ## Built with
 For practice reasons I chose to refrain from rebuilding it using libraries or build tools, so every line of code here is hand-written HTML, CSS and JavaScript.
+
+For hosting, I simply upload the files via FTP. I plan to integrate a GitHub action to automate this process. 
 
 ### Contact form
 To protect my email address from spam bots I created a AWS API and a AWS lamda function which is evoked upon submission of the contact form. It sends me an email with the form content through AWS SES. 
