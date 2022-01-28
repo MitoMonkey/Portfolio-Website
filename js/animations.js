@@ -3,11 +3,18 @@
 /* const boxes = document.querySelectorAll('.scroll-box'); */
 const slider = document.querySelectorAll('.slide-in');
 const header = document.querySelector('.page-header');
+const scroll_cta = document.getElementById("scroll_calltoaaction");
 
 window.addEventListener('scroll', () => {
 
-    /* SLIDE SECTIONS aka "slide-in" IN FROM THE SIDE */
+    /* hide the "scoll to read more" call-to-action as soon as the user starts to scroll */
+    if (!scroll_cta.classList.contains('hide')) {
+        scroll_cta.classList.remove('show');
+        scroll_cta.classList.add('hide');
+    }
 
+
+    /* SLIDE SECTIONS aka "slide-in" IN FROM THE SIDE */
     const triggerBottom = window.innerHeight / 5 * 4;
     // const triggerTop = window.innerHeight / 5;
 
@@ -28,7 +35,6 @@ window.addEventListener('scroll', () => {
             box.classList.add('show');
         } * /
     }) */
-
 
     slider.forEach(box => {
         const boxTop = box.getBoundingClientRect().top;
@@ -66,7 +72,7 @@ window.addEventListener("load", () => {
     //init();
 
     /* slide in additional elements on large screens */
-    const triggerBottom = window.innerHeight / 5 * 4;
+    /* const triggerBottom = window.innerHeight / 5 * 4;
     slider.forEach(box => {
         const boxTop = box.getBoundingClientRect().top;
 
@@ -75,10 +81,12 @@ window.addEventListener("load", () => {
         } else {
             box.classList.remove('show');
         }
-    })
+    }) */
 
     /* slide in things that should be loaded on any screen at page load */
     slider_init.forEach(box => {
         box.classList.add('show');
     })
+
+    scroll_cta.classList.add('show');
 });

@@ -399,7 +399,7 @@ hr {
 .slide-in.top {
   transform: translateY(-100vh);
 }
-.slide-in.show {
+.show {
   opacity: 1 !important;
   transform: translateX(0) !important;
   transform: translateY(0) !important;
@@ -449,9 +449,18 @@ ul {
 @media all and (max-width: 820px) {
   #hero .col-l {
     flex: 0 1 300px;
-}
+  }
 }
 
+#scroll_calltoaaction {
+  transition: all 0.8s ease;
+  transform: translateY(100px);
+  opacity: 0;
+}
+#scroll_calltoaaction.hide {
+  opacity: 0;
+  transform: translateY(-100px);
+}
 
 /* ---------- SKILLS SECTION ---------- */
 
