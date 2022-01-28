@@ -511,9 +511,66 @@ ul {
   margin: 0 -30px -30px -30px;
 }
 
+
+#tools-cards {
+  /* width: auto;
+  display: grid;
+  grid-gap: var(--spacing_s);
+  --auto-grid-min-size: 300px;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  justify-items: center; */
+  /* grid-auto-rows: 1fr; /* this makes all boxes equal height, */
+  /* grid-auto-flow: row; */
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.tools-cards_col {
+  margin: var(--spacing_s);
+  padding: var(--spacing_s);
+  max-width: 300px;
+
+  border: 1px solid var(--primary-color);
+  border-radius: 20px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.34);
+}
+#tools-cards h4 {
+  margin: var(--spacing_s);
+}
+@media all and (max-width: 660px) {
+  .tools-cards_col {
+    max-width: 100%;
+    width: 100%;
+    margin: 5px;
+  }
+  #tools-cards h4 {
+    margin-top: 0;
+  }
+}
+
+
+.tech-container {
+  width: 100%;
+  margin: var(--spacing) auto;
+  border-collapse: collapse;
+  border: 1px solid var(--primary-color);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.34);
+}
+.tech-container th {
+  border: 1px solid var(--primary-color);
+  /* padding: 5px; */  
+}
+.tech-container .tech-card {
+  margin: 0 3px;
+}
+
+
+
 #skillset {
   align-items: flex-start;
-  
 }
 #skillset .col-l {
   flex: 1 1;
@@ -746,7 +803,7 @@ ul {
   background-color: #fefefe;
   width: 80%;
   max-width: 1000px;
-  margin: 5% auto; /* 15% from the top and centered */
+  margin: 5% auto;
   padding: var(--spacing_xl);  
   border: 1px solid #888;
   border-radius: 8px;
@@ -754,7 +811,7 @@ ul {
   text-align: left;
 }
 .modal h1 {
-  margin-top: 0;
+  margin: 0 35px 10px 35px;
 }
 /* The Close Button */
 .closeModal {
@@ -769,15 +826,27 @@ ul {
   text-decoration: none;
   cursor: pointer;
 }
-
 .modal .screenshot {
   width: 80%;
   margin: 0 auto;
 }
+
 @media all and (max-width: 800px) {
  .modal-content {
    padding: var(--spacing_l);
+   width: 90%;
  } 
+}
+@media all and (max-width: 500px) {
+ .modal h1 {
+    margin: 0 20px;
+  }
+}
+@media all and (max-width: 400px) {
+ .modal .button__secondary {
+    width: 100%;
+    margin: 5px auto;
+  }
 }
 
 

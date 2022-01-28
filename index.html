@@ -15,8 +15,8 @@
   <!-- <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet"> -->
 
-  <link rel="stylesheet" type="text/css" href="css/style.production.css">
-  <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/style.production.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -98,12 +98,39 @@
     <hr id="skills">
 
     <section class="section">
-      <h1 class="slide-in l">Toolbelt</h1>
-      <p class="slide-in l">I can build web sites and apps from concept, layout and interactive elements to
+
+      <h1 class="slide-in l">Skills</h1>
+      <p class="slide-in r">I can build web sites and apps from concept, layout and interactive elements to
         backend/server-side and
         databases.</p>
 
-      <div class="tools-slider slide-in l">
+      <div class="columns" id="skillset">
+        <div id="frontend" class="col-l slide-in l">
+          <h3>Frontend</h3>
+          <ul>
+            <li>&#8226 Intuitive interfaces</li>
+            <li>&#8226 UX/UI (Personas, user stories, user flows)</li>
+            <li>&#8226 Responsive design, modals and touch interaction</li>
+            <li>&#8226 Accessible websites / -apps</li>
+            <li>&#8226 Progressive web applications</li>
+            <li>&#8226 Mobile Apps (React Native, Expo, PWA)</li>
+            <li>&#8226 Test- & Behavior-Driven-Development</li>
+            <li>&#8226 Continuous Integration / Delivery</li>
+          </ul>
+        </div>
+        <div id="backend" class="col-r slide-in r">
+          <h3>Backend</h3>
+          <ul>
+            <li>&#8226 NodeJS & Express</li>
+            <li>&#8226 Creation and integration of APIs</li>
+            <li>&#8226 Implementation and integration of Web Services like FaaS</li>
+            <li>&#8226 Relational and non-relational databases</li>
+          </ul>
+        </div>
+      </div>
+
+      <h1 class="slide-in r">Toolbelt</h1>
+      <div class="tools-slider slide-in r">
         <div class="tools-slide-track">
           <img src="img/tools/html_logo.png" class="tool" alt="HTML5 logo">
           <img src="img/tools/css_logo.png" class="tool" alt="CSS logo">
@@ -139,28 +166,78 @@
         </div>
       </div>
 
-      <div class="columns" id="skillset">
-        <div id="frontend" class="col-l slide-in l">
-          <h3>Frontend</h3>
-          <ul>
-            <li>&#8226 Intuitive interfaces</li>
-            <li>&#8226 UX/UI (Personas, user stories, user flows)</li>
-            <li>&#8226 Responsive design, modals and touch interaction</li>
-            <li>&#8226 Accessible websites / -apps</li>
-            <li>&#8226 Progressive web applications</li>
-            <li>&#8226 Mobile Apps (React Native, Expo, PWA)</li>
-            <li>&#8226 Test- & Behavior-Driven-Development</li>
-            <li>&#8226 Continuous Integration / Delivery</li>
-          </ul>
+      <div id="tools-cards" class="slide-in l padding-top">
+        <div class="tools-cards_col">
+          <h4>Languages</h4>
+          <div class="tools-cards_cards-container">
+            <span class="tech-card">HTML</span>
+            <span class="tech-card">CSS</span>
+            <span class="tech-card">JavaScript</span>
+            <span class="tech-card">TypeScript</span>
+          </div>
         </div>
-        <div id="backend" class="col-r slide-in r">
-          <h3>Backend</h3>
-          <ul>
-            <li>&#8226 NodeJS & Express</li>
-            <li>&#8226 Creation and integration of APIs</li>
-            <li>&#8226 Implementation and integration of FaaS</li>
-            <li>&#8226 Relational and non-relational databases</li>
-          </ul>
+        <div class="tools-cards_col">
+          <h4>Frontend libraries & frameworks</h4>
+          <div class="tools-cards_cards-container">
+            <span class="tech-card">jQuery</span>
+            <span class="tech-card">Bootstrap</span>
+            <span class="tech-card">React</span>
+            <span class="tech-card">React-Redux</span>
+            <span class="tech-card">Angular</span>
+            <span class="tech-card">Angular-Material</span>
+          </div>
+        </div>
+        <div class="tools-cards_col">
+          <h4>Backend and other libraries</h4>
+          <div class="tools-cards_cards-container">
+            <span class="tech-card">NodeJS</span>
+            <span class="tech-card">Express</span>
+            <span class="tech-card">Morgan</span>
+            <span class="tech-card">CORS</span>
+            <span class="tech-card">Axios</span>
+            <span class="tech-card">Parcel</span>
+            <span class="tech-card">PropTypes</span>
+            <span class="tech-card">serverless</span>
+            <span class="tech-card">Recharts</span>
+          </div>
+        </div>
+        <div class="tools-cards_col">
+          <h4>Testing & QA</h4>
+          <div class="tools-cards_cards-container">
+            <span class="tech-card">Postman</span>
+            <span class="tech-card">Jest</span>
+            <span class="tech-card">Enzyme</span>
+            <span class="tech-card">Cucumber</span>
+            <span class="tech-card">Puppeteer</span>
+          </div>
+        </div>
+        <div class="tools-cards_col">
+          <h4>Documentation</h4>
+          <div class="tools-cards_cards-container">
+            <span class="tech-card">JSDoc</span>
+            <span class="tech-card">TypeDoc</span>
+          </div>
+        </div>
+        <div class="tools-cards_col">
+          <h4>Web services & databases</h4>
+          <div class="tools-cards_cards-container">
+            <span class="tech-card">GitHub</span>
+            <span class="tech-card">AWS</span>
+            <span class="tech-card">MongoDB</span>
+            <span class="tech-card">PostgreSQL</span>
+            <span class="tech-card">Google Firestore</span>
+            <span class="tech-card">Heroku</span>
+            <span class="tech-card">Netlify</span>
+          </div>
+        </div>
+        <div class="tools-cards_col">
+          <h4>Mobile Apps</h4>
+          <div class="tools-cards_cards-container">
+            <span class="tech-card">PWA</span>
+            <span class="tech-card">React Native</span>
+            <span class="tech-card">Android Studio</span>
+            <span class="tech-card">Expo</span>
+          </div>
         </div>
       </div>
 
