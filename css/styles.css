@@ -1003,6 +1003,12 @@ form button {
 .case-study {
   padding: var(--spacing);
 }
+.case-study .hero-img {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 6px;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.54);
+}
 .case-study .section {
   padding: 0;
 }
@@ -1057,6 +1063,27 @@ form button {
   margin: var(--spacing);
   max-width: 400px;
 }
+
+.takeaways {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  text-align: left;
+}
+.takeaways .col {
+  max-width: 500px;
+  padding: var(--spacing)
+}
+.takeaways h4 {
+  margin: 0 auto;
+}
+.takeaways ul {
+  margin: 0 auto;
+}
+
 @media (max-width: 900px) {
   .case-study .floating-img_container {
     flex-direction: column-reverse;
@@ -1071,4 +1098,9 @@ form button {
     text-align: center;
     max-width: 100%;
   }
+
+  /* .takeaways {
+    flex-direction: column;
+  } */
 }
+

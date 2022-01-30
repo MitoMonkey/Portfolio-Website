@@ -1433,6 +1433,13 @@ form button {
   padding: 10px;
   }
 }
+.case-study .hero-img {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 6px;
+  -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.54);
+          box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.54);
+}
 .case-study .section {
   padding: 0;
 }

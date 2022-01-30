@@ -8,9 +8,11 @@ const scroll_cta = document.getElementById("scroll_calltoaaction");
 window.addEventListener('scroll', () => {
 
     /* hide the "scoll to read more" call-to-action as soon as the user starts to scroll */
-    if (!scroll_cta.classList.contains('hide')) {
-        scroll_cta.classList.remove('show');
-        scroll_cta.classList.add('hide');
+    if (scroll_cta) {
+        if (!scroll_cta.classList.contains('hide')) {
+            scroll_cta.classList.remove('show');
+            scroll_cta.classList.add('hide');
+        }
     }
 
 
@@ -88,5 +90,5 @@ window.addEventListener("load", () => {
         box.classList.add('show');
     })
 
-    scroll_cta.classList.add('show');
+    if (scroll_cta) { scroll_cta.classList.add('show'); }
 });
