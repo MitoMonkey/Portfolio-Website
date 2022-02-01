@@ -256,6 +256,76 @@ hr {
   }
 }
 
+.floating-img_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+.floating-img_container .img-container {
+  padding: 15px;
+  max-width: 500px;
+}
+@media all and (max-width: 750px) {
+
+  .floating-img_container .img-container {
+  padding: 10px;
+  }
+}
+.floating-img_container .txt-container {
+  max-width: 500px;
+}
+.floating-img_container img {
+  width: 100%;
+  border-radius: 6px;
+  -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.54);
+          box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.54);
+}
+.floating-img_container p {
+  text-align: left;
+  margin: 15px;
+}
+@media all and (max-width: 750px) {
+
+  .floating-img_container p {
+  margin: 10px;
+  }
+}
+@media (max-width: 900px) {
+  .floating-img_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .floating-img_container.rev {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .floating-img_container .img-container {
+    max-width: 650px;
+  }
+  .floating-img_container p {
+    text-align: center;
+  }
+  .floating-img_container .txt-container {
+    max-width: 100%;
+  }
+}
+
 
 /* ---------- HEADER STYLING ---------- */
 
@@ -333,6 +403,8 @@ hr {
 /* change header when scolled down (only on large screens with no hamburger menu) */
 .page-header.scrolled {
   background-color: #343a40;
+  -webkit-box-shadow: 0 5px 8px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 5px 8px rgba(0, 0, 0, 0.6);
 }
 .page-header.scrolled .page-header__heading {
   color: #f1f1f1;
@@ -654,6 +726,17 @@ ul {
       -ms-transform: translateY(-100px);
           transform: translateY(-100px);
 }
+
+
+/* ---------- ABOUT ME SECTION ---------- */
+
+#about-me {
+  margin-top: -65px;
+}
+
+
+
+
 
 /* ---------- SKILLS SECTION ---------- */
 
@@ -1495,7 +1578,7 @@ form button {
   }
 }
 
-.case-study .floating-img_container {
+.takeaways {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1503,59 +1586,30 @@ form button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+  text-align: left;
 }
-.case-study .img-container {
-  padding: 15px;
+.takeaways .col {
+  max-width: 500px;
+  padding: 15px
 }
 @media all and (max-width: 750px) {
 
-  .case-study .img-container {
+  .takeaways .col {
   padding: 10px;
   }
 }
-.case-study img {
-  width: 100%;
-  border-radius: 6px;
-  -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.54);
-          box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.54);
+.takeaways h4 {
+  margin: 0 auto;
 }
-.case-study .floating-img_container p {
-  text-align: left;
-  margin: 15px;
-  max-width: 400px;
-}
-@media all and (max-width: 750px) {
-
-  .case-study .floating-img_container p {
-  margin: 10px;
-  }
-}
-@media (max-width: 900px) {
-  .case-study .floating-img_container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  .case-study .floating-img_container.r {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .case-study .img-container {
-    max-width: 650px;
-  }
-  .case-study .floating-img_container p {
-    text-align: center;
-    max-width: 100%;
-  }
+.takeaways ul {
+  margin: 0 auto;
 }
