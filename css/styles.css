@@ -667,6 +667,7 @@ ul {
 }
 
 .project-grid {
+  /* make the grid wider than normal section on large screens, but still keep it horizontally centered */
   position: relative;
   top: 0;
   width: 80vw;
@@ -717,13 +718,33 @@ ul {
     width: 100%;
   }
 }
- 
+
+.screenshot-container_1pic, .screenshot-container_2pics, .screenshot-container_3pics {
+    width: 100%;
+    margin: var(--spacing_s) 0;
+  }
+.screenshot {
+  max-width: 100%;
+  /* width: auto; */
+  /* min-width: 0;  */
+  /* min-height: auto; */
+  /* height: 100%;
+  width: auto; */
+  
+  margin: 0;
+  border: 3px solid var(--text-color);
+  border-radius: 3px;
+  box-shadow: 3px 3px 8px rgb(0 0 0 / 30%);
+}
+
+
 @supports (display: grid) {
   .project-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }
+
   .project-grid__item.slide-in {
     transform: translateX(-100vw);
   }
@@ -754,6 +775,7 @@ ul {
       transform: translateX(100vw);
     }
   }
+
   @media all and (max-width: 800px){
     .project-grid {
       grid-gap: 15px;
@@ -763,6 +785,7 @@ ul {
       transform: translateY(10vh);
     }
   }
+
   .project-grid__item {
     width: auto;
     display: grid;
@@ -774,37 +797,21 @@ ul {
 
 
   .screenshot-container_1pic {
-    width: 100%;
     display: grid;
-    margin: var(--spacing_s) 0;
   }
   .screenshot-container_2pics {
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: var(--spacing);
-    margin: var(--spacing_s) 0;
     grid-auto-rows: 1fr;
   }
   .screenshot-container_3pics {
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: var(--spacing);
-    margin: var(--spacing_s) 0;
     grid-auto-rows: 1fr;
   }
-  .screenshot {
-    width: auto;
-    min-width: 0; 
-    max-width: 100%;
-    min-height: auto;
-    height: 100%;
-    margin: 0;
-    border: 3px solid var(--text-color);
-    border-radius: 3px;
-    box-shadow: 3px 3px 8px rgb(0 0 0 / 30%);
-  }
+
   @media all and (max-width: 1000px){
     .screenshot-container_2pics {
       grid-template-columns: 1fr;

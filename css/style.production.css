@@ -974,6 +974,7 @@ ul {
 }
 
 .project-grid {
+  /* make the grid wider than normal section on large screens, but still keep it horizontally centered */
   position: relative;
   top: 0;
   width: 80vw;
@@ -1031,7 +1032,31 @@ ul {
     width: 100%;
   }
 }
- 
+
+.screenshot-container_1pic {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+.screenshot-container_2pics {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+.screenshot-container_3pics {
+    width: 100%;
+    margin: 10px 0;
+  }
+.screenshot {
+  max-width: 100%;
+  margin: 0;
+  border: 3px solid #f1f1f1;
+  border-radius: 3px;
+  -webkit-box-shadow: 3px 3px 8px rgb(0 0 0 / 30%);
+          box-shadow: 3px 3px 8px rgb(0 0 0 / 30%);
+}
+
+
 @supports (display: grid) {
   .project-grid {
     display: -ms-grid;
@@ -1040,6 +1065,7 @@ ul {
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }
+
   .project-grid__item.slide-in {
     -webkit-transform: translateX(-100vw);
         -ms-transform: translateX(-100vw);
@@ -1087,6 +1113,7 @@ ul {
               transform: translateX(100vw);
     }
   }
+
   @media all and (max-width: 800px){
     .project-grid {
       grid-gap: 15px;
@@ -1099,6 +1126,7 @@ ul {
               transform: translateY(10vh);
     }
   }
+
   .project-grid__item {
     width: auto;
     display: -ms-grid;
@@ -1115,19 +1143,15 @@ ul {
 
 
   .screenshot-container_1pic {
-    width: 100%;
     display: -ms-grid;
     display: grid;
-    margin: 10px 0;
   }
   .screenshot-container_2pics {
-    width: 100%;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 15px 1fr;
     grid-template-columns: 1fr 1fr;
     grid-gap: 15px;
-    margin: 10px 0;
     grid-auto-rows: 1fr;
   }
   @media all and (max-width: 750px) {
@@ -1137,13 +1161,11 @@ ul {
     }
   }
   .screenshot-container_3pics {
-    width: 100%;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 15px 1fr 15px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px;
-    margin: 10px 0;
     grid-auto-rows: 1fr;
   }
   @media all and (max-width: 750px) {
@@ -1152,18 +1174,7 @@ ul {
     grid-gap: 10px;
     }
   }
-  .screenshot {
-    width: auto;
-    min-width: 0; 
-    max-width: 100%;
-    min-height: auto;
-    height: 100%;
-    margin: 0;
-    border: 3px solid #f1f1f1;
-    border-radius: 3px;
-    -webkit-box-shadow: 3px 3px 8px rgb(0 0 0 / 30%);
-            box-shadow: 3px 3px 8px rgb(0 0 0 / 30%);
-  }
+
   @media all and (max-width: 1000px){
     .screenshot-container_2pics {
       -ms-grid-columns: 1fr;
