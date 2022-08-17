@@ -1,6 +1,11 @@
 /* for production first https://madlittlemods.github.io/postcss-css-variables/playground/
 then http://autoprefixer.github.io/ */
 
+@font-face {
+  font-family: gloria;
+  src: url(Glory-VariableFont_wght.ttf);
+}
+
 :root {
   --font-weight: 400;
   --font-weight_l: 600;
@@ -21,7 +26,7 @@ then http://autoprefixer.github.io/ */
   --dark: #343a40;
   --dark-grey: #2b2b2b;
 }
-@media all and (max-width: 750px){
+@media all and (max-width: 750px) {
   :root {
     --spacing: 10px;
   }
@@ -29,7 +34,7 @@ then http://autoprefixer.github.io/ */
 
 * {
   box-sizing: border-box; /* force the padding and border to be included in the final specified width rather than being added on top, with the width of the item itself changing to accommodate the padding and border */
-  font-family: 'Glory', sans-serif;
+  font-family: gloria;
 }
 
 html {
@@ -38,9 +43,9 @@ html {
 }
 /* Disable smooth scrolling when users have prefers-reduced-motion enabled */
 @media screen and (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -64,7 +69,7 @@ main {
   align-items: center;
   justify-content: center;
   overflow-x: hidden; /* hide horizontal scroll bar, because of the elements sliding in from the sides */
-  
+
   width: 100%;
   flex: 1 1;
 }
@@ -79,7 +84,7 @@ main {
   margin: 0 auto;
 }
 .vertical-align {
-  vertical-align: middle;  
+  vertical-align: middle;
 }
 .padding-top {
   padding-top: var(--spacing);
@@ -89,7 +94,8 @@ main {
 }
 
 @media all and (max-width: 500px) {
-  p, .mobile-clear {
+  p,
+  .mobile-clear {
     clear: both;
     padding: var(--spacing_s) 0;
     display: block;
@@ -97,7 +103,6 @@ main {
     margin: 0 auto;
   }
 }
-
 
 /* ----- GENERAL ELEMENTS ----- */
 
@@ -135,7 +140,8 @@ a {
 /* a:visited {
   color: var(--secondary-color);
 } */
-a:hover, a:focus {
+a:hover,
+a:focus {
   /* focus is relevant when navigating the page by keyboard */
   text-decoration: none;
 }
@@ -144,7 +150,8 @@ a:active {
 }
 
 button,
-.button { /* to create links that look like buttons */
+.button {
+  /* to create links that look like buttons */
   border: none; /* overwrites browser defaults and resets the border */
   display: inline-block;
   background-color: var(--primary-color);
@@ -159,7 +166,10 @@ button,
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.34);
   transition: 0.8s ease-out;
 }
-button:hover, button:focus, .button:hover, .button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
   cursor: pointer;
   transform: scale(1.07);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -238,7 +248,6 @@ hr {
   }
 }
 
-
 /* ---------- HEADER STYLING ---------- */
 
 .page-header {
@@ -282,7 +291,7 @@ hr {
   text-decoration: none;
   padding-left: var(--spacing);
 }
-@media all and (max-width: 750px){
+@media all and (max-width: 750px) {
   .page-header__heading {
     font-size: 28px;
   }
@@ -326,24 +335,25 @@ hr {
   z-index: 1;
 }
 
-
 /* --- HAMBURGER NAV FOR MOBILE / SMALL SCREENS --- */
 
 .hamburger {
   display: none; /* hide it on large enough screens */
 }
 .hamburger-bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    transition: all 0.3s ease-in-out;
-    background-color: var(--primary-color);
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--primary-color);
 }
 
 @media screen and (max-width: 750px) {
   .page-header.scrolled a {
-    color: var(--primary-color); /* do not change the color onscroll in the hamburger menu */
+    color: var(
+      --primary-color
+    ); /* do not change the color onscroll in the hamburger menu */
   }
 
   .hamburger {
@@ -360,12 +370,12 @@ hr {
 
     width: 100%;
     height: 100%;
-    
+
     display: flex;
     flex-direction: column;
     background-color: var(--dark);
     text-align: center;
-    transition: 0.3s;    
+    transition: 0.3s;
   }
   .navigation-list li {
     display: block;
@@ -388,11 +398,9 @@ hr {
   }
 }
 
-
-
-
 /* --- "ANIMATED" CIRCLES ON NAV ITEM HOVER --- */
-.circleBehind a:before, .circleBehind a:after {
+.circleBehind a:before,
+.circleBehind a:after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -419,8 +427,6 @@ hr {
   opacity: 0.6;
   transform: translateX(-50%) translateY(-50%) scale(1.3);
 }
-
-
 
 /* ---------- MAIN SECTION GENERAL ---------- */
 
@@ -462,8 +468,6 @@ ul {
   margin-top: var(--spacing);
 }
 
-
-
 /* ---------- HERO SECTION STYLING ---------- */
 
 #hero {
@@ -504,16 +508,11 @@ ul {
   transform: translateY(-100px);
 }
 
-
 /* ---------- ABOUT ME SECTION ---------- */
 
 #about-me {
   margin-top: -65px;
 }
-
-
-
-
 
 /* ---------- SKILLS SECTION ---------- */
 
@@ -532,9 +531,10 @@ ul {
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 100%;  
+  width: 100%;
 }
-.tools-slider::before, .tools-slider::after {
+.tools-slider::before,
+.tools-slider::after {
   background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
   height: 100px;
@@ -573,7 +573,6 @@ ul {
   margin: 0 -30px -30px -30px;
 }
 
-
 #tools-cards {
   /* width: auto;
   display: grid;
@@ -583,7 +582,7 @@ ul {
   justify-items: center; */
   /* grid-auto-rows: 1fr; /* this makes all boxes equal height, */
   /* grid-auto-flow: row; */
-  
+
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -613,7 +612,6 @@ ul {
   }
 }
 
-
 .tech-container {
   width: 100%;
   margin: var(--spacing) auto;
@@ -623,13 +621,11 @@ ul {
 }
 .tech-container th {
   border: 1px solid var(--primary-color);
-  /* padding: 5px; */  
+  /* padding: 5px; */
 }
 .tech-container .tech-card {
   margin: 0 3px;
 }
-
-
 
 #skillset {
   align-items: flex-start;
@@ -653,9 +649,6 @@ ul {
   padding: 0;
 }
 
-
-
-
 /* ---------- PROJECTS SECTION STYLING ---------- */
 .no-bottom-padding {
   padding-bottom: 0;
@@ -675,14 +668,15 @@ ul {
   left: calc(-40vw + 50%);
   text-align: center;
 }
-@media all and (max-width: 1200px){
+@media all and (max-width: 1200px) {
   .project-grid {
     position: static;
     width: 100%;
     margin: auto;
   }
 }
-.project-grid__item { /* Basic layout and grid fallback */
+.project-grid__item {
+  /* Basic layout and grid fallback */
   display: inline-block;
   width: 50%;
   padding: var(--spacing_s);
@@ -693,12 +687,14 @@ ul {
   border: 1px solid;
   box-shadow: 3px 3px 8px rgb(0 0 0 / 30%);
 }
-@media all and (max-width: 800px){
-  .project-grid__item { /* Grid fallback */
+@media all and (max-width: 800px) {
+  .project-grid__item {
+    /* Grid fallback */
     width: 100%;
   }
 }
-.project-grid__item h2, .project-grid__item p {
+.project-grid__item h2,
+.project-grid__item p {
   text-align: center;
   margin: 0;
 }
@@ -710,19 +706,22 @@ ul {
 .button-container .button__secondary {
   margin: 5px;
 }
-@media all and (max-width: 500px){
+@media all and (max-width: 500px) {
   .button-container {
     width: 100%;
   }
-  .button-container a , .button-container .button__secondary {
+  .button-container a,
+  .button-container .button__secondary {
     width: 100%;
   }
 }
 
-.screenshot-container_1pic, .screenshot-container_2pics, .screenshot-container_3pics {
-    width: 100%;
-    margin: var(--spacing_s) 0;
-  }
+.screenshot-container_1pic,
+.screenshot-container_2pics,
+.screenshot-container_3pics {
+  width: 100%;
+  margin: var(--spacing_s) 0;
+}
 .screenshot {
   max-width: 100%;
   /* width: auto; */
@@ -730,13 +729,12 @@ ul {
   /* min-height: auto; */
   /* height: 100%;
   width: auto; */
-  
+
   margin: 0;
   border: 3px solid var(--text-color);
   border-radius: 3px;
   box-shadow: 3px 3px 8px rgb(0 0 0 / 30%);
 }
-
 
 @supports (display: grid) {
   .project-grid {
@@ -751,7 +749,7 @@ ul {
   .project-grid__item.slide-in:nth-child(even) {
     transform: translateX(100vw);
   }
-  @media all and (min-width: 1800px){
+  @media all and (min-width: 1800px) {
     .project-grid {
       grid-template-columns: 1fr 1fr 1fr;
       max-width: 2200px;
@@ -776,7 +774,7 @@ ul {
     }
   }
 
-  @media all and (max-width: 800px){
+  @media all and (max-width: 800px) {
     .project-grid {
       grid-gap: 15px;
       grid-template-columns: 1fr;
@@ -795,7 +793,6 @@ ul {
     margin: 0;
   }
 
-
   .screenshot-container_1pic {
     display: grid;
   }
@@ -812,7 +809,7 @@ ul {
     grid-auto-rows: 1fr;
   }
 
-  @media all and (max-width: 1000px){
+  @media all and (max-width: 1000px) {
     .screenshot-container_2pics {
       grid-template-columns: 1fr;
     }
@@ -823,7 +820,7 @@ ul {
       align-content: start;
     }
   }
-  @media all and (max-width: 800px){
+  @media all and (max-width: 800px) {
     .screenshot-container_2pics {
       grid-template-columns: 1fr 1fr;
     }
@@ -850,7 +847,6 @@ ul {
   }
 }
 
-
 /* ---------- PROJECT MODALS ---------- */
 
 /* The Modal (background) */
@@ -863,7 +859,7 @@ ul {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.5); /* Black with opacity */
+  background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
   /* opacity: 0;
   transition: 0.8s ease; */
 }
@@ -873,7 +869,7 @@ ul {
   width: 80%;
   max-width: 1000px;
   margin: 5% auto;
-  padding: var(--spacing_xl);  
+  padding: var(--spacing_xl);
   border: 1px solid #888;
   border-radius: 8px;
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
@@ -901,24 +897,22 @@ ul {
 }
 
 @media all and (max-width: 800px) {
- .modal-content {
-   padding: var(--spacing_l);
-   width: 90%;
- } 
+  .modal-content {
+    padding: var(--spacing_l);
+    width: 90%;
+  }
 }
 @media all and (max-width: 500px) {
- .modal h1 {
+  .modal h1 {
     margin: 0 20px;
   }
 }
 @media all and (max-width: 400px) {
- .modal .button__secondary {
+  .modal .button__secondary {
     width: 100%;
     margin: 5px auto;
   }
 }
-
-
 
 /* ---------- CONTACT PAGE ---------- */
 
@@ -942,7 +936,7 @@ ul {
   text-align: center;
 }
 @media all and (max-width: 1240px) {
-  .contact .contact-col-l { 
+  .contact .contact-col-l {
     text-align: center;
   }
 }
@@ -1058,7 +1052,6 @@ form button {
   padding-bottom: 65px;
 }
 
-
 /* ---------- MOVEX CASE STUDY ---------- */
 .case-study {
   padding: var(--spacing);
@@ -1077,10 +1070,10 @@ form button {
   margin-top: 80px;
 }
 
-.case-study table, .case-study td {
+.case-study table,
+.case-study td {
   border: 1px solid var(--primary-color);
   padding: var(--spacing);
-  
 }
 .case-study table {
   width: 100%;
@@ -1099,7 +1092,7 @@ form button {
     margin: var(--spacing_s) 0 !important;
   }
   .case-study .nowrap {
-  white-space: normal;
+    white-space: normal;
   }
 }
 
@@ -1114,7 +1107,7 @@ form button {
 }
 .takeaways .col {
   max-width: 500px;
-  padding: var(--spacing)
+  padding: var(--spacing);
 }
 .takeaways h4 {
   margin: 0 auto;
@@ -1122,4 +1115,3 @@ form button {
 .takeaways ul {
   margin: 0 auto;
 }
-
