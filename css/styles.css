@@ -3,7 +3,11 @@ then http://autoprefixer.github.io/ */
 
 @font-face {
   font-family: gloria;
-  src: url(Glory-VariableFont_wght.ttf);
+  src: url(../font/Glory-Regular.ttf);
+}
+@font-face {
+  font-family: gloria-bold;
+  src: url(../font/Glory-SemiBold.ttf);
 }
 
 :root {
@@ -35,6 +39,10 @@ then http://autoprefixer.github.io/ */
 * {
   box-sizing: border-box; /* force the padding and border to be included in the final specified width rather than being added on top, with the width of the item itself changing to accommodate the padding and border */
   font-family: gloria;
+}
+
+b {
+  font-family: gloria-bold;
 }
 
 html {
