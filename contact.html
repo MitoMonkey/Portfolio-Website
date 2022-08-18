@@ -1,99 +1,307 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Contact</title>
 
-<head>
-  <meta charset="utf-8">
-  <title>Mito.this - Contact</title>
-  <link rel="shortcut icon" href="./img/cell-division.png" type="image/png">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Glory&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/style.production.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<!-- to add for this page: - Contact -->
+    <meta property="og:title" content="Michael Flohrschuetz - Contact me" />
+    <meta
+      property="og:description"
+      content="Contact form, email, fon and social media links."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://MichaelFlohrschuetz.com/contact" />
+    <meta
+      property="og:image"
+      content="https://michaelflohrschuetz.com/img/Screenshots/Screenshot_Portfolio_contact.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Preview screenshot of the contact page."
+    />
 
-<body>
+    <link rel="shortcut icon" href="./img/cell-division.png" type="image/png" />
 
-  <header class="page-header">
-    <img src="./img/cell-division.png" class="page-header__item">
-    <nav class="main-navigation page-header__item">
-      <ul role="menubar" class="navigation-list circleBehind">
-        <li role="presentation">
-          <!-- prevents screen readers from reading out that its a list -->
-          <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
-        </li>
-        <li role="presentation">
-          <a href="about.html" role="menuitem" class="navigation-list__item">About me</a>
-        </li>
-        <li role="presentation">
-          <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
-        </li>
-        <li role="presentation">
-          <a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <!-- difference in the header between the pages: navigation-list__item--active -->
+    <link rel="stylesheet" type="text/css" href="./css/normalize.min.css" />
 
-  <main class="contact-details">
-    <h1>Contact</h1>
-    Michael Flohrschütz<br>
-    Klenzestr. 7 <br>
-    80469 München <br>
-    Germany <br>
+    <!-- <link rel="stylesheet" type="text/css" href="css/styles.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/style.production.css" />
 
-    <h3>Leave a message</h3>
-    <form action="" method="post" id="contact-form">
-      <div class="input-wrapper">
-        <label class="standard-label" for="contact-email">Email: </label>
-        <input type="email" id="contact-email" required>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <header class="page-header">
+      <div class="page-header__item">
+        <a href="index.html" class="page-header__logo-container"
+          ><img
+            src="./img/cell-division.png"
+            class="page-header__logo"
+            alt="Logo, a cell dividing in mitosis"
+        /></a>
+        <!-- <a href="index.html" class="page-header__heading">Mito.this</a> -->
       </div>
-      <br>
-      <label class="standard-label" for="contact-tel">Telephone: </label>
-      <input type="tel" id="contact-tel"> <!-- pattern="\d{3}[\-]\d{3}[\-]\d{7}" -->
-      <br>
-      <label class="standard-label" for="contact-msg">Message: </label>
-      <textarea maxlength="240" id="contact-msg" required></textarea>
-      <br>
-      <button type="submit" class="button__secondary">Send message</button>
-    </form>
-  </main>
+      <nav class="main-navigation page-header__item">
+        <ul role="menubar" class="navigation-list circleBehind">
+          <li role="presentation">
+            <!-- prevents screen readers from reading out that its a list -->
+            <a href="index.html" role="menuitem" class="navigation-list__item"
+              >Home</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              href="index.html#about"
+              role="menuitem"
+              class="navigation-list__item"
+              >About me</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              href="index.html#skills"
+              role="menuitem"
+              class="navigation-list__item"
+              >Skills</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              href="index.html#projects"
+              role="menuitem"
+              class="navigation-list__item"
+              >Projects</a
+            >
+          </li>
+          <li role="presentation">
+            <a
+              href="contact.html"
+              role="menuitem"
+              class="navigation-list__item navigation-list__item--active"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <!-- hamburger nav for small screens -->
+        <div class="hamburger">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </div>
+      </nav>
+    </header>
+    <!-- difference in the header to index.html: navigation-list__item--active and most hrefs -->
 
-  <footer class="page-footer">
-    <p>Connect with me</p>
-    <div class="social-media">
-      <a class="circle-link" href="tel:+491631631858" target="_blank" rel="noopener noreferrer">
-        <img src="img/Icons/Phone_icon.svg" class="icon" alt="Phone symbol"></a>
-      <a class="circle-link" href="mailto:Michael.Flohrschuetz@gmail.com?subject=WebDev%20contact" target="_blank"
-        rel="noopener noreferrer">
-        <img src="img/Icons/Email_icon.svg" class="icon" alt="Email symbol"></a>
-      <a class="circle-link" href="https://t.me/MitoFlyingMonkey" target="_blank" rel="noopener noreferrer">
-        <img src="img/Icons/Telegram_logo.svg" class="icon" alt="Telegram logo"></a>
-      <a class="circle-link" href="https://wa.me/491631631858" target="_blank" rel="noopener noreferrer">
-        <img src="img/Icons/Whatsapp_logo.svg" class="icon" alt="Whatsapp logo"></a>
-      <a class="circle-link" href="skype:flyingmonkey_6" target="_blank" rel="noopener noreferrer">
-        <img src="img/Icons/Skype_logo.svg" class="icon" alt="Skype logo"></a>
-      <a class="circle-link" href="https://github.com/MitoMonkey" target="_blank" rel="noopener noreferrer">
-        <img src="img/Icons/github_logo.svg" class="icon" alt="Github logo"></a>
-      <a class="circle-link" href="https://www.linkedin.com/in/michael-flohrschuetz" target="_blank"
-        rel="noopener noreferrer"><img src="img/Icons/linkedin_logo.svg" class="icon" alt="LinkedIn logo"></a>
-      <a class="circle-link" href="https://www.xing.com/profile/Michael_Flohrschuetz2" target="_blank"
-        rel="noopener noreferrer"><img src="img/Icons/Xing_logo.svg" class="icon" alt="Xing logo"></a>
-      <a class="circle-link" href="https://twitter.com/Mito_this" target="_blank" rel="noopener noreferrer"><img
-          src="img/Icons/Twitter_logo.svg" class="icon" alt="Twitter logo"></a>
-      <a class="circle-link" href="https://medium.com/@michael.flohrschuetz" target="_blank"
-        rel="noopener noreferrer"><img src="img/Icons/Medium_logo.svg" class="icon" alt="Medium logo"></a>
-    </div>
-  </footer>
+    <main class="contact-page">
+      <h1 class="slide-in top init">Get in touch</h1>
+      <div class="contact">
+        <div class="contact-col-l slide-in l init">
+          <!-- <p>
+            <b
+              >Currently I am available for remote contract and freelance
+              work.</b
+            >
+          </p> -->
+          <p>
+            My professional goal is to contribute in physical-competence &/
+            -wellbeing companies/projects that help people to live healthy,
+            mobile, empowered and embodied lives, as well as foster human
+            connection and ecological sustainability.
+          </p>
+          <p>
+            I am very happy about my current employment at
+            <a
+              href="https://www.teamfit.eu"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><b>Teamfit</b></a
+            >.<br />If you want to know more about it, or have improvement
+            ideas, feel free to reach out.
+          </p>
+          <p>
+            Apart from that I am curious to read what you are working on. :-)
+          </p>
+          <!-- <p>
+            Looking forward to read about your career opportunities, job
+            openings or freelance project proposals. I will get back to you
+            within max 48 hours.
+          </p> -->
+        </div>
+        <div class="contact-col-r slide-in r init">
+          <form id="contact-form">
+            <div class="input-wrapper">
+              <label class="standard-label" for="contact-form__name"
+                >Name:
+              </label>
+              <input type="name" id="contact-form__name" required />
+            </div>
 
-  <!-- <script src="js/tota11y.min.js"></script> -->
-  <script src="js/scripts.js"></script>
-</body>
+            <div class="input-wrapper">
+              <label class="standard-label" for="contact-form__email"
+                >Email:
+              </label>
+              <input type="email" id="contact-form__email" required />
+            </div>
 
+            <div class="input-wrapper">
+              <label class="standard-label" for="contact-form__msg"
+                >Message:
+              </label>
+              <textarea
+                maxlength="500"
+                rows="5"
+                id="contact-form__msg"
+                required
+              ></textarea>
+            </div>
+
+            <button
+              class="button__secondary"
+              type="submit"
+              id="contact-form__submit"
+            >
+              Send message
+            </button>
+            <!-- <button class="button__secondary g-recaptcha" data-sitekey="6Lebz2IdAAAAAGDCIuPL3Z61q93RkvNcYvoToCoB"
+        data-callback='CALLBACK-FUNCTION' data-action='submit'>Send message</button> -->
+            <!-- data-badge="inline" -->
+
+            <p id="contact-form__success" style="display: none">
+              Thanks for reaching out. I'll be in touch ASAP.
+            </p>
+            <p id="contact-form__sending" style="display: none">Sending...</p>
+            <p id="contact-form__error" style="display: none">ERROR</p>
+          </form>
+
+          <div>
+            <p>
+              Or through your email client:
+              <a
+                href="mailto:Michael.Flohrschuetz@gmail.com?subject=WebDev%20contact"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Michael.Flohrschuetz@gmail.com</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="page-footer padding-top slide-in bottom init"
+      id="contact-footer"
+    >
+      <!-- <p class="padding-bottom padding-top" style="margin: 0;">Let's connect!</p> -->
+      <h2 class="padding-bottom padding-top" style="margin: 0">
+        Let's connect!
+      </h2>
+      <div class="social-media">
+        <a
+          class="circle-link"
+          href="tel:+491631631858"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="img/Icons/Phone_icon.svg" class="icon" alt="Phone symbol"
+        /></a>
+        <a
+          class="circle-link"
+          href="mailto:Michael.Flohrschuetz@gmail.com?subject=WebDev%20contact"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="img/Icons/email_icon.svg" class="icon" alt="Email symbol"
+        /></a>
+        <a
+          class="circle-link"
+          href="https://t.me/MitoFlyingMonkey"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="img/Icons/Telegram_logo.svg"
+            class="icon"
+            alt="Telegram logo"
+        /></a>
+        <a
+          class="circle-link"
+          href="https://wa.me/491631631858"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="img/Icons/Whatsapp_logo.svg"
+            class="icon"
+            alt="Whatsapp logo"
+        /></a>
+        <a
+          class="circle-link"
+          href="skype:flyingmonkey_6"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="img/Icons/Skype_logo.svg" class="icon" alt="Skype logo"
+        /></a>
+        <a
+          class="circle-link"
+          href="https://github.com/MitoMonkey"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="img/Icons/github_logo.svg" class="icon" alt="Github logo"
+        /></a>
+        <a
+          class="circle-link"
+          href="https://stackoverflow.com/cv/mitothis"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="img/Icons/stackoverflow_logo.png"
+            class="icon"
+            alt="stackoverflow logo"
+        /></a>
+        <a
+          class="circle-link"
+          href="https://www.linkedin.com/in/michael-flohrschuetz"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+            src="img/Icons/linkedin_logo.svg"
+            class="icon"
+            alt="LinkedIn logo"
+        /></a>
+        <a
+          class="circle-link"
+          href="https://www.xing.com/profile/Michael_Flohrschuetz2"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img src="img/Icons/Xing_logo.svg" class="icon" alt="Xing logo"
+        /></a>
+        <a
+          class="circle-link"
+          href="https://twitter.com/Mito_this"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+            src="img/Icons/Twitter_logo.svg"
+            class="icon"
+            alt="Twitter logo"
+        /></a>
+        <!-- <a class="circle-link" href="https://medium.com/@michael.flohrschuetz" target="_blank"
+          rel="noopener noreferrer"><img src="img/Icons/Medium_logo.svg" class="icon" alt="Medium logo"></a> -->
+      </div>
+      <a href="/files/Impressum.pdf" class="impressum" download
+        >Impressum (PDF download)</a
+      >
+    </footer>
+
+    <!-- <script src="js/tota11y.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    <script src="js/contact-form.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/hamburger-menu.js"></script>
+  </body>
 </html>

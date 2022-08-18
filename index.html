@@ -3,23 +3,32 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Mitos.this - Portfolio site</title>
+  <title>Michael Flohrschuetz Portfolio</title>
   <link rel="shortcut icon" href="./img/cell-division.png" type="image/png">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Glory&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
+
+  <meta property="og:title" content="Michael Flohrschuetz full-stack JavaScript web-developer" />
+  <meta property="og:description"
+    content="I am enthusiastic about crafting innovative tools to improve physical health, capability and awareness." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://MichaelFlohrschuetz.com" />
+  <meta property="og:image" content="https://michaelflohrschuetz.com/img/Screenshots/Screenshot_Portfolio.png" />
+  <meta property="og:image:alt" content="Preview screenshot of the website." />
+
+  <link rel="stylesheet" type="text/css" href="./css/normalize.min.css">
+  
   <link rel="stylesheet" type="text/css" href="css/style.production.css">
   <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
   <header class="page-header">
-    <img src="./img/cell-division.png" alt="logo" class="page-header__item">
+    <div class="page-header__item">
+      <a href="index.html" class="page-header__logo-container"><img src="./img/cell-division.png"
+          class="page-header__logo" alt="Logo, a cell dividing in mitosis"></a>
+      <!-- <a href="index.html" class="page-header__heading">Mito.this</a> -->
+    </div>
     <nav class="main-navigation page-header__item">
       <ul role="menubar" class="navigation-list circleBehind">
         <li role="presentation">
@@ -27,46 +36,810 @@
           <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
         </li>
         <li role="presentation">
-          <a href="about.html" role="menuitem" class="navigation-list__item">About me</a>
+          <a href="#about" role="menuitem" class="navigation-list__item">About me</a>
         </li>
         <li role="presentation">
-          <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+          <a href="#skills" role="menuitem" class="navigation-list__item">Skills</a>
+        </li>
+        <li role="presentation">
+          <a href="#projects" role="menuitem" class="navigation-list__item">Projects</a>
         </li>
         <li role="presentation">
           <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
         </li>
       </ul>
+      <!-- hamburger nav for small screens -->
+      <div class="hamburger">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </div>
     </nav>
   </header>
 
   <main>
-    <div class="profile">
-      <h1>Welcome to the world of Mito.this</h1>
-      <div class="mobile-clear">
-        <img src="img/Michael_Profile.jpg" class="profile__portrait"
-          alt="Michael's profile picture. A sporty guy with a charming smile and a big nose.">
+    <section class="section" id="hero">
+      <h1 class="slide-in top init">Welcome</h1>
+
+      <div class="columns">
+        <div class="col-l slide-in l init">
+          <img src="img/Michael_Profile.jpg" id="profile"
+            alt="Michael's profile picture. A sporty guy with a charming smile and a big nose.">
+        </div>
+
+        <div class="col-r slide-in r init">
+          <p>My name is Michael Tobias Flohrschütz - call me Mito.</p>
+          <p>I am a <b>full-stack JavaScript web-developer</b> with a background in AcroYoga, movement practice and
+            bodywork.</p>
+          <p><b>I am enthusiastic about crafting innovative tools to improve physical health, capability and
+              awareness.</b></p>
+          <p>My main expertise is in <b>JavaScript</b>, its libraries and frameworks (particularly React and React Native). I
+            love to keep learning and evolving.</p>
+        </div>
       </div>
-      <p class="mobile-clear">My name is Michael Flohrschütz. I am a <span>web developer</span> based in Munich,
-        Germany.</p>
-      <p>My main expertise is in JavaScript and its libraries and frameworks (particularly React and Angular).</p>
-      <p>But I am also an BSc audio engineer and a passionate mover.</p>
-      <a href="work.html" class="button mobile-clear">Check out some of my code</a>
-      <a href="contact.html" class="button mobile-clear">Hire me!</a>
+
+      <div class="button-container cleared padding-top">
+        <a href="#projects" class="button mobile-clear slide-in l init">Check out some of my work</a>
+        <a href="contact.html" class="button mobile-clear slide-in bottom init">Get in touch</a>
+        <a href="files/Michael Flohrschuetz.pdf" class="button mobile-clear slide-in r init" download>Download my CV</a>
+      </div>
+
+      <div class="cleared padding-top slide-in bottom init">
+        <p>Currently I work for <b><a href="https://www.teamfit.eu" target="_blank" rel="noopener noreferrer">Teamfit</a></b>, a React Native based mobile App.</p>
+        <p>For many years now and through various careers, my mission is to support people to live <b>healthy, mobile, empowered and embodied lives.</b></p>
+          <p>Beyond the individual, I also care a lot about <b>community/connection</b> and <b>ecological sustainability</b>.
+        </p>
+      </div>
+    </section>
+
+    <hr id="about">
+
+    <p id="scroll_calltoaaction"><i>(Scroll down to read more)</i></p>
+
+    <div class="section" id="about-me">
+      <div>
+        <h1>About me</h1>
+        <div class="floating-img_container rev">
+          <div class="txt-container slide-in l">
+            <p>Born and raised in Munich, Germany, I always had an urge to travel and explore as well as broad
+              interests.
+              So I went to study audio engineering in Graz, Austria and later lived a nomadic lifestyle for a couple of
+              years training and teaching AcroYoga.<br>
+              But at some point I realized lasting happiness and freedom can only be found inside. A good life is not
+              something that can be achieved. It is not so much what I do or where, but HOW. It is presence in each
+              moment.<br>
+              Now I am back in Munich, have a beautiful daughter and mainly venture out into the depths the internet and
+              explore code. The focus has shifted to creation and stability.
+            </p>
+            <p>My friends describe me as <b>open-minded, curious, creative, devoted and pleasant-natured</b>.</p>
+            <p>Among my key talents are my ability to <b>analyze and systematize</b>, as well as to make complex things
+              comprehensible.</p>
+            <p>I prefer to be <b>prepared</b> and wisely choose my path of action, rather than just dashing forward.</p>
+            <p>I work well <b>autonomously</b>, but I do not thrive on competition.<br>
+              The greatest things are achieved <b>collaboratively</b>. At the core of working effectively as a team I
+              see respect, support, sincere communication and a clear common goal/mission.</p>
+          </div>
+          <div class="img-container slide-in r">
+            <img src="img/Waterfall_2.jpeg" alt="Me on a large waterfall">
+          </div>
+        </div>
+
+      </div>
+      <div class="slide-in r">
+        <h2>Why I am a web developer</h2>
+        <p><b>Developing code allows me to dive into a state of flow and enthusiasm. It sparks my curiosity and
+            satisfies my joy in solving problems and crafting useful, innovative things.</b></p>
+        <p>Habitually I analyze how things could be optimized in functionality and usability, from software to movement
+          patterns to a kitchen tool. </p>
+        <p>I have always been drawn to domains that integrate both brain hemispheres: Technology and creativity,
+          understanding and experience, intellect and embodiment, logic and emotion.
+          Writing efficient, clean code largely benefits from a systematic approach, but also from a portion of
+          creativity. There are always many ways to implement a given functionality.
+          But an elegant, nifty solution can be considered “art”.</p>
+      </div>
+
+      <h2 class="slide-in l">Past careers</h2>
+      <!-- <p>Diversity was always a big part of my life. And so was my professional journey:</p> -->
+
+      <div class="floating-img_container rev">
+        <div class="txt-container slide-in l">
+          <p>As a <b>sound engineer</b>, in more than 60 live concerts and several studio recordings I prove capable
+            of managing highly complex systems, effectively trace errors, all while coordinating multiple people,
+            staying sharp to details and keeping a cool head when things got stressful.</p>
+          <p>In my career as an <b>acoustics engineer</b> I designed and managed over 30 room- and architectural
+            acoustics projects, from offices to high-end studios, communicating requirements and details with clients
+            and partners to meet deadlines, budgets and leading-edge deliverables.</p>
+        </div>
+        <div class="img-container slide-in r">
+          <img src="img/mixing-console.JPG" alt="Picture of a sound mixing console.">
+        </div>
+      </div>
+
+      <div class="floating-img_container">
+        <div class="img-container slide-in l">
+          <img src="img/AcroYoga.jpg" alt="Foto of me teaching AcroYoga.">
+        </div>
+        <div class="txt-container slide-in r">
+          <p>As a self-employed <b>AcroYoga teacher</b>, frequently collaborating with varying co-teachers and
+            (co-)event-organizers, I have a track record of over 3000 students, from privates to big stages, and an
+            increased number of invitations to teach at events and studios around the world.
+            My unique style is renowned for comprehensible systematization, innovative
+            approaches, subtle progressions and precise instructions. See <a href="http://www.FlyingMonkey.eu"
+              target="_blank" rel="noopener noreferrer">www.FlyingMonkey.eu</a></p>
+        </div>
+      </div>
+
+      <div class="slide-in l">
+        <h2>Movement teacher turned web developer?</h2>
+        <p>For one, as a movement teacher I was never interested in big muscles,
+          but I wanted my students/clients to feel good and capable in their body.
+          This is still part of my mission.</p>
+        <p>On the other hand, on many levels we modern humans are more connected today than ever before.
+          And yet, the same time there is more loneliness and disconnection than ever before.
+          Technology is part of this problem. But I believe it can also be part of the solution.</p>
+
+        <p><b>For me web technology is the contemporary and most efficient way to connect people on
+            a large scale and assist them in every-day life to evolve physically and mentally
+            so they can live healthy and empowered lives.</b></p>
+      </div>
+
+      <div class="slide-in r aligncenter">
+        <a href="files/Michael Flohrschuetz.pdf" class="button mobile-clear align-center" download>Download my CV</a>
+      </div>
     </div>
-    <!-- <div class="mobile-clear">
-        <button type="button" class="buttons">Check out some of my code</button>
-        <button class="buttons button__secondary">Secondary Button</button>
-      </div> -->
+    <!-- <div class="slide-in r">
+            <h2>Mito.this</h2>
+            <p>“Mito.this” is first of all a reference to my nickname “Mito”. It also refers to the biological process of
+              mitosis (cell
+              division) as programming often comprises replication of code which then gets more and more specialized. And
+              lastly, Mito.this also refers to the JavaScript keyword “this”, which is a very important concept, but can be
+              quite tricky at times.</p>
+          </div> -->
+
+    </section>
+
+    <hr id="skills">
+
+    <section class="section">
+
+      <h1 class="slide-in l">Skills</h1>
+      <p class="slide-in r">I can build web sites and apps from concept, layout and interactive elements to
+        backend/server-side and
+        databases.</p>
+
+      <div class="columns" id="skillset">
+        <div id="frontend" class="col-l slide-in l">
+          <h3>Frontend</h3>
+          <ul>
+            <li>&#8226 Intuitive interfaces</li>
+            <li>&#8226 UX/UI (Personas, user stories, user flows)</li>
+            <li>&#8226 Responsive design, modals and touch interaction</li>
+            <li>&#8226 Accessible websites / -apps</li>
+            <li>&#8226 Progressive web applications</li>
+            <li>&#8226 Mobile Apps (React Native, Expo, PWA)</li>
+            <li>&#8226 Test- & Behavior-Driven-Development</li>
+            <li>&#8226 Continuous Integration / Delivery</li>
+          </ul>
+        </div>
+        <div id="backend" class="col-r slide-in r">
+          <h3>Backend</h3>
+          <ul>
+            <li>&#8226 NodeJS & Express</li>
+            <li>&#8226 Creation and integration of APIs</li>
+            <li>&#8226 Implementation and integration of Web Services like FaaS</li>
+            <li>&#8226 Relational and non-relational databases</li>
+          </ul>
+        </div>
+      </div>
+
+      <h1 class="slide-in r">Toolbelt</h1>
+      <div class="tools-slider slide-in r">
+        <div class="tools-slide-track">
+          <img src="img/tools/html_logo.png" class="tool" alt="HTML5 logo">
+          <img src="img/tools/css_logo.png" class="tool" alt="CSS logo">
+          <img src="img/tools/javascript.png" class="tool" alt="JavaScript logo">
+          <img src="img/tools/bootstrap_logo.png" class="tool" alt="Bootstrap library logo">
+          <img src="img/tools/jquery.png" class="tool" alt="jQuery logo">
+          <img src="img/tools/git_logo.png" class="tool" alt="Git version control logo">
+          <img src="img/tools/GitHub.png" class="tool" alt="GitHub logo">
+          <img src="img/tools/node_logo.png" class="tool" alt="NodeJS logo">
+          <img src="img/tools/react.svg" class="tool" alt="React library logo">
+          <img src="img/tools/react-native.svg" class="tool" alt="React Native logo">
+          <img src="img/tools/AngularJS.svg" class="tool angular" alt="Angular framework logo">
+          <img src="img/tools/mongodb_logo.png" class="tool" alt="MongoDB logo">
+          <img src="img/tools/AWS.svg" class="tool aws" alt="Amazon AWS logo">
+          <img src="img/tools/firebase_logo.PNG" class="tool" alt="Google Firebase logo">
+          <img src="img/tools/heroku.svg" class="tool" alt="Heroku logo">
+
+          <img src="img/tools/html_logo.png" class="tool" alt="HTML5 logo">
+          <img src="img/tools/css_logo.png" class="tool" alt="CSS logo">
+          <img src="img/tools/javascript.png" class="tool" alt="JavaScript logo">
+          <img src="img/tools/bootstrap_logo.png" class="tool" alt="Bootstrap library logo">
+          <img src="img/tools/jquery.png" class="tool" alt="jQuery logo">
+          <img src="img/tools/git_logo.png" class="tool" alt="Git version control logo">
+          <img src="img/tools/GitHub.png" class="tool" alt="GitHub logo">
+          <img src="img/tools/node_logo.png" class="tool" alt="NodeJS logo">
+          <img src="img/tools/react.svg" class="tool" alt="React library logo">
+          <img src="img/tools/react-native.svg" class="tool" alt="React Native logo">
+          <img src="img/tools/AngularJS.svg" class="tool angular" alt="Angular framework logo">
+          <img src="img/tools/mongodb_logo.png" class="tool" alt="MongoDB logo">
+          <img src="img/tools/AWS.svg" class="tool aws" alt="Amazon AWS logo">
+          <img src="img/tools/firebase_logo.PNG" class="tool" alt="Google Firebase logo">
+          <img src="img/tools/heroku.svg" class="tool" alt="Heroku logo">
+        </div>
+      </div>
+
+      <div id="tools-cards" class="slide-in l padding-top">
+        <div class="tools-cards_col">
+          <h4>Languages</h4>
+          <div class="tools-cards_cards-container">
+            <span class="tech-card">HTML</span>
+            <span class="tech-card">CSS</span>
+            <span class="tech-card">JavaScript</span>
+            <span class="tech-card">TypeScript</span>
+          </div>
+        </div>
+        <div class="tools-cards_col">
+          <h4>Frontend libraries & frameworks</h4>
+          <div class="tools-cards_cards-container">
+            <span class="tech-card">jQuery</span>
+            <span class="tech-card">Bootstrap</span>
+            <span class="tech-card">React</span>
+            <span class="tech-card">React-Redux</span>
+            <span class="tech-card">Angular</span>
+            <span class="tech-card">Angular-Material</span>
+          </div>
+        </div>
+        <div class="tools-cards_col">
+          <h4>Backend and other libraries</h4>
+          <div class="tools-cards_cards-container">
+            <span class="tech-card">NodeJS</span>
+            <span class="tech-card">Express</span>
+            <span class="tech-card">Morgan</span>
+            <span class="tech-card">CORS</span>
+            <span class="tech-card">Axios</span>
+            <span class="tech-card">Parcel</span>
+            <span class="tech-card">PropTypes</span>
+            <span class="tech-card">serverless</span>
+            <span class="tech-card">Recharts</span>
+          </div>
+        </div>
+        <div class="tools-cards_col">
+          <h4>Testing & QA</h4>
+          <div class="tools-cards_cards-container">
+            <span class="tech-card">Postman</span>
+            <span class="tech-card">Jest</span>
+            <span class="tech-card">Enzyme</span>
+            <span class="tech-card">Cucumber</span>
+            <span class="tech-card">Puppeteer</span>
+          </div>
+        </div>
+        <div class="tools-cards_col">
+          <h4>Documentation</h4>
+          <div class="tools-cards_cards-container">
+            <span class="tech-card">JSDoc</span>
+            <span class="tech-card">TypeDoc</span>
+          </div>
+        </div>
+        <div class="tools-cards_col">
+          <h4>Web services & databases</h4>
+          <div class="tools-cards_cards-container">
+            <span class="tech-card">GitHub</span>
+            <span class="tech-card">AWS</span>
+            <span class="tech-card">MongoDB</span>
+            <span class="tech-card">PostgreSQL</span>
+            <span class="tech-card">Google Firestore</span>
+            <span class="tech-card">Heroku</span>
+            <span class="tech-card">Netlify</span>
+          </div>
+        </div>
+        <div class="tools-cards_col">
+          <h4>Mobile Apps</h4>
+          <div class="tools-cards_cards-container">
+            <span class="tech-card">PWA</span>
+            <span class="tech-card">React Native</span>
+            <span class="tech-card">Android Studio</span>
+            <span class="tech-card">Expo</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="slide-in bottom">I understand being a web-developer as a continuous process of learning. So I am always
+        open
+        for new programming
+        languages, frameworks, libraries, approaches, etc.</p>
+    </section>
+
+    <hr id="projects">
+
+    <section class="section">
+      <div class="slide-in r">
+        <h1>Projects</h1>
+        <p>This is a selection of my projects as a web developer.</p>
+        <!-- <p><em>THIS SECTION IS CURRENTLY UNDER DEVELOPMENT. In the meantime the old version can be found <a
+            href="work.html">here</a>.</em></p> -->
+        <p>More details about the features, technologies, etc. of each project can be found in the respective readme
+          file
+          on GitHub.</p>
+        <p>For the study projects created during the Full-stack Web-developer course @CarrerFoundry, I also worked with
+          Kanban boards, user stories, user flows and architectural diagrams.</p>
+      </div>
+      <div class="project-grid">
+        <div class="project-grid__item slide-in s1">
+          <div>
+            <h2>Portfolio website</h2>
+            <div class="screenshot-container_1pic">
+              <img class="screenshot" src="img/Screenshots/Screenshot_Portfolio.png" alt="Portfolio screenshot.">
+            </div>
+          </div>
+          <div class="tech-cards-container">
+            <span class="tech-card">HTML</span>
+            <span class="tech-card">CSS</span>
+            <span class="tech-card">JavaScript</span>
+            <span class="tech-card">Responsive</span>
+            <!-- <span class="tech-card">Accessible</span> -->
+            <span class="tech-card">FaaS (AWS)</span>
+          </div>
+          <p>The website you are currently looking at.</p>
+          <p>For practice reasons I chose to refrain from using any modules, librarys, frameworks or build tools. So
+            every line of code in this project is hand-written.</p>
+          <div class="button-container">
+            <button id="Portfolio-Modal" class="button button__secondary read-more">Read more</button>
+            <a href="https://github.com/MitoMonkey/Portfolio-Website" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-grid__item slide-in s2">
+          <div>
+            <h2>MoveX Angular client</h2>
+            <div class="screenshot-container_1pic">
+              <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-Angular.png"
+                alt="Screenshot of the MoveX Angular client.">
+            </div>
+          </div>
+          <div class="tech-cards-container">
+            <span class="tech-card">TypeScript</span>
+            <span class="tech-card">Angular</span>
+            <span class="tech-card">Angular-Material</span>
+            <span class="tech-card">CSS</span>
+            <span class="tech-card">TypeDoc</span>
+            <span class="tech-card">GitHub-pages</span>
+          </div>
+          <p>MoveX is a library of movements from various styles and traditions, with descriptions/cues and video
+            sources.</p>
+          <p>This is the Angular client - A single-page, responsive web application (SPA), using Material design.</p>
+          <div class="button-container">
+            <button id="MoveX_Angular-Modal" class="button button__secondary read-more">Read more</button>
+            <a href="MoveX_CaseStudy.html" class="button button__secondary">Case Study</a>
+            <a href="https://mitomonkey.github.io/MoveX-Angular-client" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">Live demo</a>
+            <a href="https://github.com/MitoMonkey/MoveX-Angular-client" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-grid__item slide-in s3">
+          <div>
+            <h2>MoveX React client</h2>
+            <div class="screenshot-container_1pic">
+              <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-React.png"
+                alt="Screenshot of the MoveX React client.">
+            </div>
+          </div>
+          <div class="tech-cards-container">
+            <span class="tech-card">JavaScript</span>
+            <span class="tech-card">React</span>
+            <span class="tech-card">React-Bootstrap</span>
+            <span class="tech-card">React-Redux</span>
+            <span class="tech-card">Axios</span>
+            <span class="tech-card">Parcel</span>
+            <span class="tech-card">PropTypes</span>
+            <span class="tech-card">Netlify</span>
+          </div>
+          <p>This is the React-based frontend for MoveX - A single-page, responsive web application (SPA), built with
+            React
+            (including a number of additional modules), following the MVC design pattern.</p>
+          <div class="button-container">
+            <button id="MoveX_React-Modal" class="button button__secondary read-more">Read more</button>
+            <a href="MoveX_CaseStudy.html" class="button button__secondary">Case Study</a>
+            <a href="https://move-x.netlify.app/" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">Live demo</a>
+            <a href="https://github.com/MitoMonkey/MoveX-client" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-grid__item slide-in s4">
+          <div>
+            <h2>MoveX backend (API)</h2>
+            <div class="screenshot-container_1pic">
+              <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-API_2.png"
+                alt="Screenshot of the MoveX endpoints.">
+            </div>
+          </div>
+          <div class="tech-cards-container">
+            <span class="tech-card">JavaScript</span>
+            <span class="tech-card">NodeJS</span>
+            <span class="tech-card">Express</span>
+            <span class="tech-card">Morgan</span>
+            <span class="tech-card">CORS</span>
+            <span class="tech-card">MongoDB</span>
+            <span class="tech-card">Postman</span>
+            <span class="tech-card">Heroku</span>
+            <span class="tech-card">JSDoc</span>
+          </div>
+          <p>This is the REST API and a non-relational database for MoveX.</p>
+          <p>The study goals here were to learn about NodeJS (incl. a variety of packages), databases (SQL and NoSQL)
+            and
+            APIs.</p>
+          <div class="button-container">
+            <button id="MoveX_API-Modal" class="button button__secondary read-more">Read more</button>
+            <a href="MoveX_CaseStudy.html" class="button button__secondary">Case Study</a>
+            <a href="https://github.com/MitoMonkey/MoveX-backend" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-grid__item slide-in s5">
+          <div>
+            <h2>Meet app</h2>
+            <div class="screenshot-container_2pics">
+              <img class="screenshot" src="img/Screenshots/Screenshot_MeetApp-1.png" alt="Meet app screenshot 1.">
+              <img class="screenshot" src="img/Screenshots/Screenshot_MeetApp-2.png" alt="Meet app screenshot 1.">
+            </div>
+          </div>
+          <div class="tech-cards-container">
+            <span class="tech-card">React</span>
+            <span class="tech-card">CRA (CreatReactApp)</span>
+            <span class="tech-card">CSS</span>
+            <span class="tech-card">serverless</span>
+            <span class="tech-card">AWS lambda</span>
+            <span class="tech-card">OAuth</span>
+            <span class="tech-card">Axios</span>
+            <span class="tech-card">Recharts</span>
+            <span class="tech-card">Jest</span>
+            <span class="tech-card">Enzyme</span>
+            <span class="tech-card">Cucumber</span>
+            <span class="tech-card">Puppeteer</span>
+            <span class="tech-card">Atatus</span>
+          </div>
+          <p>This app displays events in different cities which are fetched from a Google Calendar.</p>
+          <p>The study goal was to learn about PWAs, test-driven-development (TDD), serverless functions, OAuth (a
+            mechanism to log into an app with your google account), performance monitoring and how to draw pretty
+            charts.</p>
+          <div class="button-container">
+            <button id="MeetApp-Modal" class="button button__secondary read-more">Read more</button>
+            <a href="https://mitomonkey.github.io/meet/" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">Live demo</a>
+            <a href="https://github.com/MitoMonkey/meet" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-grid__item slide-in s6">
+          <div>
+            <h2>CHATzam</h2>
+            <div class="screenshot-container_3pics">
+              <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_StartScreen.jpg"
+                alt="Screenshot of the CHATzam app start screen.">
+              <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_ChatScreen.jpg"
+                alt="Screenshot of the CHATzam app chat screen.">
+              <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_ActionSheet.jpg"
+                alt="Screenshot of the CHATzam app action sheet.">
+            </div>
+          </div>
+          <div class="tech-cards-container">
+            <span class="tech-card">JavaScript</span>
+            <span class="tech-card">React Native</span>
+            <span class="tech-card">Android Studio</span>
+            <span class="tech-card">Expo</span>
+            <span class="tech-card">Google Firebase</span>
+          </div>
+          <p>A chat app for mobile devices (Android and iOS) created with React Native.</p>
+          <p>The study goals here were to learn how to develop and test cross-platform native apps.</p>
+          <div class="button-container">
+            <button id="CHATzam-Modal" class="button button__secondary read-more">Read more</button>
+            <a href="https://github.com/MitoMonkey/Chat-App" target="_blank" rel="noopener noreferrer"
+              class="button button__secondary">CHATzam on GitHub</a>
+          </div>
+        </div>
+
+        <!-- <div class="project-grid__item">
+                <h2>Pokedéx app</h2>
+                <div class="screenshot-container_2pics">
+                  <img class="screenshot" src="img/Screenshots/Screenshot_Pokedex_main.png"
+                    alt="Pokedex screenshot 1: Main screen.">
+                  <img class="screenshot" src="img/Screenshots/Screenshot_Pokedex_modal.png"
+                    alt="Pokedex screenshot 2: Modal with details of a Pokemon.">
+                </div>
+                <p>An app to show a list of Pokemon from a public API.</p>
+                <p class="no-bottom-padding">Features:</p>
+                <ul class="no-top-gap">
+                  <li>Load Pokemon data from a public external API</li>
+                  <li>Render a button for each Pokemon</li>
+                  <li>Open a modal when button is clicked, to show details about the Pokemon</li>
+                  <li>Filter bar to search Pokemon by name</li>
+                </ul>
+                <p>The study goals were to learn DOM manipulation with JavaScript, jQuery, styling with Bootstrap, and code
+                  optimization with linters and minfiers.</p>
+                <div class="button-container">
+                  <button id="Pokedex-Modal" class="button button__secondary read-more">Read more</button>
+                  <a href="https://mitomonkey.github.io/Pokedex-App/" target="_blank" rel="noopener noreferrer"
+                    class="button button__secondary">Pokedéx live demo</a>
+                  <a href="https://github.com/MitoMonkey/Pokedex-App" target="_blank" rel="noopener noreferrer"
+                    class="button button__secondary">Pokedéx on GitHub</a>
+                </div>
+              </div> -->
+
+      </div>
+    </section>
+
+    <!-- "READ MORE" MODALS FOR EACH PROJECT -->
+
+    <div id="Portfolio-Modal_container" class="modal">
+      <div class="modal-content">
+        <span class="closeModal">&times;</span>
+
+        <h1>Project: Portfolio website</h1>
+        <div class="screenshot-container_1pic">
+          <img class="screenshot" src="img/Screenshots/Screenshot_Portfolio.png" alt="Portfolio screenshot.">
+        </div>
+        <p>This project started as a static website to learn HTML and CSS. But ... it turned into a full-grown portfolio
+          website.</p>
+        <p>For practice reasons I chose to refrain from (re)building it using any modules, librarys, frameworks or build
+          tools, so every line of code here is hand-written.</p>
+        <p class="no-bottom-padding"><b>Technologies:</b></p>
+        <ul class="no-top-gap">
+          <li>Semantic HTML (header, footer, forms, tables, ...)</li>
+          <li>CSS (float, flexbox, grid, variables, animations, media queries, ...)</li>
+          <li>JavaScript</li>
+          <li>Fully responsive</li>
+          <!-- <li>Full accessibility</li> -->
+          <li>AWS lambda, API and SES (for the contact form)</li>
+        </ul>
+        <p>To protect my email address from spam bots I created a AWS API and a AWS lambda function (FaaS, Function as a
+          Service) which is evoked upon submission
+          of the contact form. It sends me an email with the form content through AWS SES (Simple Email Service).
+          For this I used <code>serverless</code> module. So I kind of lied above when saying there is no library in
+          this project. But I didn't in the sense that there is no module/library used for the actual website it self.
+        </p>
+        <div class="aligncenter">
+          <a href="https://github.com/MitoMonkey/Portfolio-Website" target="_blank" rel="noopener noreferrer"
+            class="button button__secondary">Portfolio website on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="MoveX_Angular-Modal_container" class="modal">
+      <div class="modal-content">
+        <span class="closeModal">&times;</span>
+
+        <h1>Project: MoveX Angular Client</h1>
+        <div class="screenshot-container_1pic">
+          <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-Angular.png"
+            alt="Screenshot of the MoveX Angular client.">
+        </div>
+        <p>MoveX is a library of movements from various styles and traditions, with descriptions/cues and video
+          sources.</p>
+        <p>For the MoveX study project I created an API including a non-relational database, as well as two different
+          frontend clients (Angular and React). <b>Read the full <a href="MoveX_CaseStudy.html">case study</a>.</b></p>
+        <p><b>This is the Angular client - A single-page, responsive web application (SPA), using Material design.</b>
+        </p>
+        <p class="no-bottom-padding"><b>Features:</b></p>
+        <ul class="no-top-gap">
+          <li>View a list of all moves</li>
+          <li>See details for each move, style or source</li>
+          <li>User registration and login</li>
+          <li>Update profile (username, password, email, birthday)</li>
+          <li>Users can add to add remove a move to/from their list of favorites</li>
+          <li>Users can delete their account</li>
+        </ul>
+        <p class="no-bottom-padding"><b>Technologies:</b></p>
+        <ul class="no-top-gap">
+          <li>TypeScript</li>
+          <li>Angular</li>
+          <li>Angular-Material</li>
+          <li>CSS</li>
+          <li>TypeDoc for documentation</li>
+          <li>GitHub-pages hosting</li>
+        </ul>
+        <div class="aligncenter">
+          <a href="MoveX_CaseStudy.html" class="button button__secondary">Case Study</a>
+          <a href="https://mitomonkey.github.io/MoveX-Angular-client" target="_blank" rel="noopener noreferrer"
+            class="button button__secondary">MoveX Angular live demo</a>
+          <a href="https://github.com/MitoMonkey/MoveX-Angular-client" target="_blank" rel="noopener noreferrer"
+            class="button button__secondary">MoveX Angular client on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="MoveX_React-Modal_container" class="modal">
+      <div class="modal-content">
+        <span class="closeModal">&times;</span>
+
+        <h1>Project: MoveX React Client</h1>
+        <div class="screenshot-container_1pic">
+          <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-React.png"
+            alt="Screenshot of the MoveX React client.">
+        </div>
+        <p>MoveX is a library of movements from various styles and traditions, with descriptions/cues and video
+          sources.</p>
+        <p>For the MoveX study project I created an API including a non-relational database, as well as two different
+          frontend clients (Angular and React). <b>Read the full <a href="MoveX_CaseStudy.html">case study</a>.</b></p>
+        <p><b>This is the React-based frontend - A single-page, responsive web application (SPA), built with React
+            (including a number of additional modules), following the MVC design pattern.</b></p>
+        <p class="no-bottom-padding"><b>Features:</b></p>
+        <ul class="no-top-gap">
+          <li>View a list of all moves</li>
+          <li>See details for each move, style or source</li>
+          <li>Search moves by name</li>
+          <li>User registration and login</li>
+          <li>Update profile (username, password, email, birthday)</li>
+          <li>Users can add to add remove a move to/from their list of favorites</li>
+          <li>Users can delete their account</li>
+        </ul>
+        <p>Compared to the Angular client, the React version additionally has thorough form validation and a
+          search function.</p>
+        <p class="no-bottom-padding"><b>Technologies:</b></p>
+        <ul class="no-top-gap">
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>React-Bootstrap</li>
+          <li>React-Redux</li>
+          <li>Axios</li>
+          <li>Parcel</li>
+          <li>PropTypes</li>
+          <li>Netlify hosting</li>
+        </ul>
+        <div class="aligncenter">
+          <a href="MoveX_CaseStudy.html" class="button button__secondary">Case Study</a>
+          <a href="https://move-x.netlify.app/" target="_blank" rel="noopener noreferrer"
+            class="button button__secondary">MoveX React live demo</a>
+          <a href="https://github.com/MitoMonkey/MoveX-client" target="_blank" rel="noopener noreferrer"
+            class="button button__secondary">MoveX React client on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="MoveX_API-Modal_container" class="modal">
+      <div class="modal-content">
+        <span class="closeModal">&times;</span>
+        <h1>Project: MoveX backend (API)</h1>
+        <div class="screenshot-container_1pic">
+          <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-API_2.png"
+            alt="Screenshot of the MoveX endpoints.">
+        </div>
+        <p>MoveX is a library of movements from various styles and traditions, with descriptions/cues and video
+          sources.</p>
+        <p>For the MoveX study project I created an API including a non-relational database, as well as two different
+          frontend clients (Angular and React). <b>Read the full <a href="MoveX_CaseStudy.html">case study</a>.</b></p>
+        <p><b>This is the REST API and a non-relational database.</b></p>
+        <p>The study goals here were to learn about NodeJS (incl. a number of packages), databases (SQL and NoSQL) and
+          APIs in general.</p>
+        <p class="no-bottom-padding"><b>Technologies:</b></p>
+        <ul class="no-top-gap">
+          <li>JavaScript</li>
+          <li>node.js (Express, Morgan, bodyParser, mongoose, CORS, Passport,
+            bcrypt)</li>
+          <li>Non-relational DB on MongoDB Atlas</li>
+          <li>Postman (API endpoint testing)</li>
+          <li>JSDoc for documentation</li>
+          <li>App hosted on Heroku</li>
+        </ul>
+        <div class="aligncenter">
+          <a href="MoveX_CaseStudy.html" class="button button__secondary">Case Study</a>
+          <a href="https://github.com/MitoMonkey/MoveX-backend" target="_blank" rel="noopener noreferrer"
+            class="button button__secondary">MoveX backend on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="MeetApp-Modal_container" class="modal">
+      <div class="modal-content">
+        <span class="closeModal">&times;</span>
+        <h1>Meet app</h1>
+        <div class="screenshot-container_2pics">
+          <img class="screenshot" src="img/Screenshots/Screenshot_MeetApp-1.png" alt="Meet app screenshot 1.">
+          <img class="screenshot" src="img/Screenshots/Screenshot_MeetApp-2.png" alt="Meet app screenshot 1.">
+        </div>
+        <p>This app displays events in different cities which are fetched from a mock-data Google Calendar.</p>
+        <p>The study goal was to learn about PWAs, test-driven-development (TDD), serverless functions (FaaS), OAuth (a
+          mechanism to log into an app with your google account), performance monitoring and how to draw pretty
+          charts.</p>
+        <p>PWA (progressive web application) means it is responsive, available offline, cross-platform and can be
+          added to the home screen.</p>
+        <p>The FaaS (function as a service) is a third party service (in this case on an Amazon server) that acts as a
+          middleman between the user and the Google Calendar API.
+          This keeps the credentials of the Google Calender secret (not accessible to the user) and makes the
+          authorization process safe and convenient.</p>
+        <p class="no-bottom-padding"><b>Features:</b></p>
+        <ul class="no-top-gap">
+          <li>Show a list of events</li>
+          <li>Show/hide event details</li>
+          <li>Filter by city name</li>
+          <li>Choose number of events to display</li>
+          <li>Chart 1: Number of upcoming events per city</li>
+          <li>Chart 2: Popularity of topics</li>
+        </ul>
+        <p class="no-bottom-padding"><b>Technologies:</b></p>
+        <ul class="no-top-gap">
+          <li>React</li>
+          <li>CRA (CreatReactApp)</li>
+          <li>CSS</li>
+          <li>serverless</li>
+          <li>AWS lambda</li>
+          <li>OAuth (Google Cloud Console)</li>
+          <li>Axios</li>
+          <li>Recharts</li>
+          <li>Jest (Enzyme, Cucumber, Puppeteer)</li>
+          <li>Atatus (performance monitoring)</li>
+          <li>GitHub-pages hosting</li>
+        </ul>
+        <div class="aligncenter">
+          <a href="https://mitomonkey.github.io/meet/" target="_blank" rel="noopener noreferrer"
+            class="button button__secondary">MeetApp live demo</a>
+          <a href="https://github.com/MitoMonkey/meet" target="_blank" rel="noopener noreferrer"
+            class="button button__secondary">MeetApp on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="CHATzam-Modal_container" class="modal">
+      <div class="modal-content">
+        <span class="closeModal">&times;</span>
+        <h1>Project: CHATzam</h1>
+        <div class="screenshot-container_3pics">
+          <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_StartScreen.jpg"
+            alt="Screenshot of the CHATzam app start screen.">
+          <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_ChatScreen.jpg"
+            alt="Screenshot of the CHATzam app chat screen.">
+          <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_ActionSheet.jpg"
+            alt="Screenshot of the CHATzam app action sheet.">
+        </div>
+        <p>A chat app for mobile devices (Android and iOS) created with React Native.</p>
+        <p>The study goals here were to learn how to develop and test cross-platform native apps.</p>
+        <p>A Google Firestore database was used to store and sync the messages between devices.</p>
+        <p class="no-bottom-padding"><b>Features:</b></p>
+        <ul class="no-top-gap">
+          <li>Enter username</li>
+          <li>Choose background color</li>
+          <li>Send and receive messages</li>
+          <li>Share pictures from the devices gallery</li>
+          <li>Take and share photos</li>
+          <li>Share location</li>
+          <li>See past messages even while offline</li>
+        </ul>
+        <p class="no-bottom-padding"><b>Technologies:</b></p>
+        <ul class="no-top-gap">
+          <li>JavaScript</li>
+          <li>React Native</li>
+          <li>Android Studio</li>
+          <li>Expo</li>
+          <li>Google Firebase</li>
+        </ul>
+        <p>As this is a mobile app in development stage, there is no live demo available. See GitHub readme for
+          instructions to use/test it.</p>
+        <div class="aligncenter">
+          <a href="https://github.com/MitoMonkey/Chat-App" target="_blank" rel="noopener noreferrer"
+            class="button button__secondary">CHATzam on GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
   </main>
 
   <footer class="page-footer">
-    <p>Connect with me</p>
+    <!-- <p class="padding-bottom padding-top" style="margin: 0;">Let's connect!</p> -->
+    <h2 class="padding-bottom padding-top" style="margin: 0;">Let's connect!</h2>
     <div class="social-media">
       <a class="circle-link" href="tel:+491631631858" target="_blank" rel="noopener noreferrer">
         <img src="img/Icons/Phone_icon.svg" class="icon" alt="Phone symbol"></a>
       <a class="circle-link" href="mailto:Michael.Flohrschuetz@gmail.com?subject=WebDev%20contact" target="_blank"
         rel="noopener noreferrer">
-        <img src="img/Icons/Email_icon.svg" class="icon" alt="Email symbol"></a>
+        <img src="img/Icons/email_icon.svg" class="icon" alt="Email symbol"></a>
       <a class="circle-link" href="https://t.me/MitoFlyingMonkey" target="_blank" rel="noopener noreferrer">
         <img src="img/Icons/Telegram_logo.svg" class="icon" alt="Telegram logo"></a>
       <a class="circle-link" href="https://wa.me/491631631858" target="_blank" rel="noopener noreferrer">
@@ -75,18 +848,24 @@
         <img src="img/Icons/Skype_logo.svg" class="icon" alt="Skype logo"></a>
       <a class="circle-link" href="https://github.com/MitoMonkey" target="_blank" rel="noopener noreferrer">
         <img src="img/Icons/github_logo.svg" class="icon" alt="Github logo"></a>
+      <a class="circle-link" href="https://stackoverflow.com/cv/mitothis" target="_blank" rel="noopener noreferrer">
+        <img src="img/Icons/stackoverflow_logo.png" class="icon" alt="stackoverflow logo"></a>
       <a class="circle-link" href="https://www.linkedin.com/in/michael-flohrschuetz" target="_blank"
         rel="noopener noreferrer"><img src="img/Icons/linkedin_logo.svg" class="icon" alt="LinkedIn logo"></a>
       <a class="circle-link" href="https://www.xing.com/profile/Michael_Flohrschuetz2" target="_blank"
         rel="noopener noreferrer"><img src="img/Icons/Xing_logo.svg" class="icon" alt="Xing logo"></a>
       <a class="circle-link" href="https://twitter.com/Mito_this" target="_blank" rel="noopener noreferrer"><img
           src="img/Icons/Twitter_logo.svg" class="icon" alt="Twitter logo"></a>
-      <a class="circle-link" href="https://medium.com/@michael.flohrschuetz" target="_blank"
-        rel="noopener noreferrer"><img src="img/Icons/Medium_logo.svg" class="icon" alt="Medium logo"></a>
+      <!-- <a class="circle-link" href="https://medium.com/@michael.flohrschuetz" target="_blank"
+        rel="noopener noreferrer"><img src="img/Icons/Medium_logo.svg" class="icon" alt="Medium logo"></a> -->
     </div>
+    <a href="/files/Impressum.pdf" class="impressum" download>Impressum (PDF download)</a>
   </footer>
 
   <!-- <script src="js/tota11y.min.js"></script> -->
+  <script src="js/animations.js"></script>
+  <script src="js/project-modal.js"></script>
+  <script src="js/hamburger-menu.js"></script>
 </body>
 
 </html>
