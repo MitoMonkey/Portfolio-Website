@@ -15,7 +15,7 @@
   <meta property="og:image:alt" content="Preview screenshot of the website." />
 
   <link rel="stylesheet" type="text/css" href="./css/normalize.min.css">
-  
+
   <link rel="stylesheet" type="text/css" href="css/style.production.css">
   <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
 
@@ -23,39 +23,8 @@
 </head>
 
 <body>
-  <header class="page-header">
-    <div class="page-header__item">
-      <a href="index.html" class="page-header__logo-container"><img src="./img/cell-division.png"
-          class="page-header__logo" alt="Logo, a cell dividing in mitosis"></a>
-      <!-- <a href="index.html" class="page-header__heading">Mito.this</a> -->
-    </div>
-    <nav class="main-navigation page-header__item">
-      <ul role="menubar" class="navigation-list circleBehind">
-        <li role="presentation">
-          <!-- prevents screen readers from reading out that its a list -->
-          <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
-        </li>
-        <li role="presentation">
-          <a href="#about" role="menuitem" class="navigation-list__item">About me</a>
-        </li>
-        <li role="presentation">
-          <a href="#skills" role="menuitem" class="navigation-list__item">Skills</a>
-        </li>
-        <li role="presentation">
-          <a href="#projects" role="menuitem" class="navigation-list__item">Projects</a>
-        </li>
-        <li role="presentation">
-          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-        </li>
-      </ul>
-      <!-- hamburger nav for small screens -->
-      <div class="hamburger">
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-        <span class="hamburger-bar"></span>
-      </div>
-    </nav>
-  </header>
+  <script type="module" src="./js/page-header.js"></script>
+  <page-header></page-header>
 
   <main>
     <section class="section" id="hero">
@@ -73,7 +42,8 @@
             bodywork.</p>
           <p><b>I am enthusiastic about crafting innovative tools to improve physical health, capability and
               awareness.</b></p>
-          <p>My main expertise is in <b>JavaScript</b>, its libraries and frameworks (particularly React and React Native). I
+          <p>My main expertise is in <b>JavaScript</b>, its libraries and frameworks (particularly React and React
+            Native). I
             love to keep learning and evolving.</p>
         </div>
       </div>
@@ -85,9 +55,12 @@
       </div>
 
       <div class="cleared padding-top slide-in bottom init">
-        <p>Currently I work for <b><a href="https://www.teamfit.eu" target="_blank" rel="noopener noreferrer">Teamfit</a></b>, a React Native based mobile App.</p>
-        <p>For many years now and through various careers, my mission is to support people to live <b>healthy, mobile, empowered and embodied lives.</b></p>
-          <p>Beyond the individual, I also care a lot about <b>community/connection</b> and <b>ecological sustainability</b>.
+        <p>Currently I work for <b><a href="https://www.teamfit.eu" target="_blank"
+              rel="noopener noreferrer">Teamfit</a></b>, a React Native based mobile App.</p>
+        <p>For many years now and through various careers, my mission is to support people to live <b>healthy, mobile,
+            empowered and embodied lives.</b></p>
+        <p>Beyond the individual, I also care a lot about <b>community/connection</b> and <b>ecological
+            sustainability</b>.
         </p>
       </div>
     </section>
