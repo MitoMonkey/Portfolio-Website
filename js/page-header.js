@@ -2,6 +2,7 @@ class PageHeader extends HTMLElement {
 
     constructor() {
         super();
+        this.page = "index";
         this.innerHTML = `<header class="page-header">
             <div class="page-header__item">
                 <a href="index.html" class="page-header__logo-container"><img src="./img/cell-division.png"
@@ -36,6 +37,14 @@ class PageHeader extends HTMLElement {
             </nav>
         </header>`;
 
+
+
+    }
+    static get observedAttributes() {
+        return ['page'];
+    }
+
+    connectedCallback() {
         const hamburger = document.querySelector('.hamburger');
         const nav = document.querySelector('.navigation-list');
 
@@ -44,7 +53,6 @@ class PageHeader extends HTMLElement {
             hamburger.classList.toggle("active");
             nav.classList.toggle("active");
         });
-
 
         const navLinks = document.querySelectorAll(".navigation-list__item");
         navLinks.forEach(n => {
