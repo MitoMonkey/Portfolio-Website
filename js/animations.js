@@ -2,7 +2,6 @@
 /* ---------- SCROLL BEHAVIOUR ---------- */
 /* const boxes = document.querySelectorAll('.scroll-box'); */
 const slider = document.querySelectorAll('.slide-in');
-const header = document.querySelector('.page-header');
 const scroll_cta = document.getElementById("scroll_calltoaaction");
 
 window.addEventListener('scroll', () => {
@@ -55,13 +54,6 @@ window.addEventListener('scroll', () => {
             box.classList.add('show');
         } */
     })
-
-    /* HEADER ANIMATION */
-    if (window.scrollY > header.offsetHeight) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
 });
 
 
