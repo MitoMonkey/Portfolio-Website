@@ -2,7 +2,6 @@ class PageHeader extends HTMLElement {
 
     constructor() {
         super();
-        this.page = "";
         this.innerHTML = `<header class="page-header">
             <div class="page-header__item">
                 <a href="index.html" class="page-header__logo-container"><img src="./img/cell-division.png"
@@ -13,19 +12,19 @@ class PageHeader extends HTMLElement {
                 <ul role="menubar" class="navigation-list circleBehind">
                     <li role="presentation">
                         <!-- prevents screen readers from reading out that its a list -->
-                        <a href="index.html" id="index" role="menuitem" class="navigation-list__item">Home</a>
+                        <a href="./index.html" id="nav_index.html" role="menuitem" class="navigation-list__item">Home</a>
                     </li>
                     <li role="presentation">
-                        <a href="index.html#about" id="about" role="menuitem" class="navigation-list__item">About me</a>
+                        <a href="./index.html#about" id="nav_about" role="menuitem" class="navigation-list__item">About me</a>
                     </li>
                     <li role="presentation">
-                        <a href="index.html#skills" id="skills" role="menuitem" class="navigation-list__item">Skills</a>
+                        <a href="./index.html#skills" id="nav_skills" role="menuitem" class="navigation-list__item">Skills</a>
                     </li>
                     <li role="presentation">
-                        <a href="index.html#projects" id="projects" role="menuitem" class="navigation-list__item">Projects</a>
+                        <a href="./index.html#projects" id="nav_projects" role="menuitem" class="navigation-list__item">Projects</a>
                     </li>
                     <li role="presentation">
-                        <a href="contact.html" id="contact" role="menuitem" class="navigation-list__item">Contact</a>
+                        <a href="./contact.html" id="nav_contact.html" role="menuitem" class="navigation-list__item">Contact</a>
                     </li>
                 </ul>
                 <!-- hamburger nav for small screens -->
@@ -36,31 +35,34 @@ class PageHeader extends HTMLElement {
                 </div>
             </nav>
         </header>`;
-    }
 
-    static observedAttributes = ['page'];
-
-    attributeChangedCallback(name, oldVal, newVal) {
-        if (oldVal !== newVal) {
-            this.page = newVal;
+        // set the correct current navigation-list__item to be active
+        if (window.location.hash) {
+            let activeSection = document.getElementById('nav_' + window.location.hash.slice(1));
+            if (activeSection) {
+                activeSection.classList.toggle('navigation-list__item--active');
+            }
+        } else {
+            let activeDocument = document.getElementById('nav_' + window.location.pathname.slice(1));
+            if (activeDocument) {
+                activeDocument.classList.toggle('navigation-list__item--active');
+            }
         }
     }
-    /* adoptedCallback() {
-        // Element ist in ein anderes Dokument umgezogen
-    } */
 
     connectedCallback() {
+        const header = document.querySelector('.page-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > header.offsetHeight) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
         const hamburger = document.querySelector('.hamburger');
         const nav = document.querySelector('.navigation-list');
         const navLinks = document.querySelectorAll(".navigation-list__item");
-
-        let activeElement;
-        if (this.page === 'index' && window.location.hash) {
-            activeElement = window.location.hash.slice(1);
-        } else {
-            activeElement = this.page;
-        }
-        document.getElementById(activeElement).classList.toggle('navigation-list__item--active');
 
         /* show/hide nav list when user clicks on the hamburger */
         hamburger.addEventListener('click', function (e) {
@@ -80,25 +82,10 @@ class PageHeader extends HTMLElement {
                 });
                 /* remove underline of the nav-list-item that is clicked (important for nav links that are just page jumps) */
                 n.classList.add('navigation-list__item--active');
+                //document.location = n.href;
             })
         });
-
-        const header = document.querySelector('.page-header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > header.offsetHeight) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
     }
-
-    /* disconnectedCallback() {
-        // reset (=add) underline of all nav items
-        navLinks.forEach(item => {
-            if (item.classList.contains('navigation-list__item--active')) item.classList.remove('navigation-list__item--active');
-        });
-    } */
 }
 // register <page-header> web component with the PageHeader class
 customElements.define('page-header', PageHeader);
