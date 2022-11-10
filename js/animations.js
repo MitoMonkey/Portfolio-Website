@@ -1,12 +1,12 @@
 
-/* ---------- SCROLL BEHAVIOUR ---------- */
+/* ---------- SCROLL BEHAVIOR ---------- */
 /* const boxes = document.querySelectorAll('.scroll-box'); */
 const slider = document.querySelectorAll('.slide-in');
 const scroll_cta = document.getElementById("scroll_calltoaaction");
 
 window.addEventListener('scroll', () => {
 
-    /* hide the "scoll to read more" call-to-action as soon as the user starts to scroll */
+    /* hide the "scroll to read more" call-to-action as soon as the user starts to scroll */
     if (scroll_cta) {
         if (!scroll_cta.classList.contains('hide')) {
             scroll_cta.classList.remove('show');
