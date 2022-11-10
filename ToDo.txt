@@ -1,3 +1,1 @@
-- resize/compress images
 - add "Web Components" to projects/portfolio website
-- implement footer component
