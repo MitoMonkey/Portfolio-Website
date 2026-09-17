@@ -1,0 +1,22 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      clean-slate:
+        description: Delete EVERYTHING in the server dir before uploading
+        type: boolean
+        default: false
+
+jobs:
+  deploy:
+    uses: MitoMonkey/site-deploy/.github/workflows/ftp-deploy.yml@main
+    secrets: inherit
+    with:
+      clean-slate: ${{ inputs.clean-slate || false }}
+      # contact-form-api is deployed to AWS via serverless, not to the webspace.
+      exclude: |
+        contact-form-api/**
+        ToDo.txt

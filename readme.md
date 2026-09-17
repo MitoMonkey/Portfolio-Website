@@ -11,7 +11,7 @@ This project started as a static website to learn HTML and CSS, but turned into 
 ## Built with
 For practice reasons I chose to refrain from rebuilding it using libraries or build tools, so every line of code here is hand-written HTML, CSS and JavaScript.
 
-For hosting, I simply upload the files via FTP. I plan to integrate a GitHub action to automate this process. 
+For hosting, every push to `main` is uploaded to the webspace via FTPS by `.github/workflows/deploy.yml` (shared workflow in the `site-deploy` repo). `contact-form-api/` is excluded, it is deployed to AWS separately.
 
 ### Contact form
 To protect my email address from spam bots I created a AWS API and a AWS lamda function which is evoked upon submission of the contact form. It sends me an email with the form content through AWS SES. 
