@@ -3,11 +3,15 @@ then http://autoprefixer.github.io/ */
 
 @font-face {
   font-family: gloria;
-  src: url(../font/Glory-Regular.ttf);
+  src: url(../font/Glory-Regular.woff2) format("woff2"),
+    url(../font/Glory-Regular.ttf) format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: gloria-bold;
-  src: url(../font/Glory-SemiBold.ttf);
+  src: url(../font/Glory-SemiBold.woff2) format("woff2"),
+    url(../font/Glory-SemiBold.ttf) format("truetype");
+  font-display: swap;
 }
 
 :root {
@@ -114,7 +118,14 @@ main {
 
 /* ----- GENERAL ELEMENTS ----- */
 
-h1 {
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* .hN-style: visual level of a heading whose semantic level differs */
+h1,
+.h1-style {
   font-size: 36px;
   font-weight: var(--heading-font-weight);
   font-variant: small-caps;
@@ -122,7 +133,8 @@ h1 {
   margin: var(--spacing);
   margin-top: 65px;
 }
-h2 {
+h2,
+.h2-style {
   font-size: 28px;
   font-weight: var(--heading-font-weight);
 }
@@ -130,11 +142,21 @@ h3 {
   font-size: 22px;
   font-weight: var(--heading-font-weight);
 }
+.h2-style {
+  margin: 0.83em 0;
+}
+.h4-style {
+  font-size: 1em;
+  font-weight: var(--heading-font-weight);
+  margin: 1.33em 0;
+}
 @media all and (min-width: 1600px) {
-  h1 {
+  h1,
+  .h1-style {
     font-size: 48px;
   }
-  h2 {
+  h2,
+  .h2-style {
     font-size: 36px;
   }
   h3 {
@@ -471,7 +493,8 @@ hr {
 ul {
   overflow: hidden;
 }
-.section h1 {
+.section h1,
+.section .h1-style {
   text-align: center;
   margin-top: var(--spacing);
 }
@@ -606,7 +629,7 @@ ul {
   border-radius: 20px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.34);
 }
-#tools-cards h4 {
+#tools-cards h3 {
   margin: var(--spacing_s);
 }
 @media all and (max-width: 660px) {
@@ -615,7 +638,7 @@ ul {
     width: 100%;
     margin: 5px;
   }
-  #tools-cards h4 {
+  #tools-cards h3 {
     margin-top: 0;
   }
 }
@@ -701,7 +724,7 @@ ul {
     width: 100%;
   }
 }
-.project-grid__item h2,
+.project-grid__item h3,
 .project-grid__item p {
   text-align: center;
   margin: 0;
@@ -883,7 +906,8 @@ ul {
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
   text-align: left;
 }
-.modal h1 {
+.modal h1,
+.modal .h1-style {
   margin: 0 35px 10px 35px;
 }
 /* The Close Button */
@@ -911,7 +935,8 @@ ul {
   }
 }
 @media all and (max-width: 500px) {
-  .modal h1 {
+  .modal h1,
+  .modal .h1-style {
     margin: 0 20px;
   }
 }
@@ -1117,7 +1142,7 @@ form button {
   max-width: 500px;
   padding: var(--spacing);
 }
-.takeaways h4 {
+.takeaways h3 {
   margin: 0 auto;
 }
 .takeaways ul {

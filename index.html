@@ -2,24 +2,51 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Michael Flohrschuetz Portfolio</title>
-  <link rel="shortcut icon" href="./img/cell-division.png" type="image/png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Michael Flohrschütz – Mobile &amp; Web Developer (React Native, TypeScript)</title>
+  <meta name="description" content="Portfolio of Michael Flohrschütz, mobile &amp; web developer from Munich with 4+ years building a cross-platform React Native app and its Firebase backend. TypeScript, React, Node.js." />
+  <link rel="canonical" href="https://michaelflohrschuetz.com/" />
+  <meta name="theme-color" content="#009688" />
 
-  <meta property="og:title" content="Michael Flohrschuetz full-stack JavaScript web-developer" />
-  <meta property="og:description"
-    content="I am enthusiastic about crafting innovative tools to improve physical health, capability and awareness." />
+  <meta property="og:title" content="Michael Flohrschütz – Mobile &amp; Web Developer (React Native, TypeScript)" />
+  <meta property="og:description" content="Portfolio of Michael Flohrschütz, mobile &amp; web developer from Munich with 4+ years building a cross-platform React Native app and its Firebase backend. TypeScript, React, Node.js." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://MichaelFlohrschuetz.com" />
+  <meta property="og:url" content="https://michaelflohrschuetz.com/" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:image" content="https://michaelflohrschuetz.com/img/Screenshots/Screenshot_Portfolio.png" />
   <meta property="og:image:alt" content="Preview screenshot of the website." />
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <link rel="stylesheet" type="text/css" href="./css/normalize.min.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Michael Flohrschütz",
+      "jobTitle": "Mobile & Web Developer",
+      "url": "https://michaelflohrschuetz.com",
+      "sameAs": [
+        "https://github.com/MitoMonkey",
+        "https://www.linkedin.com/in/michael-flohrschuetz/"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Eresing",
+        "addressCountry": "DE"
+      },
+      "knowsAbout": ["TypeScript", "React Native", "React", "Firebase", "Node.js"]
+    }
+  </script>
 
-  <link rel="stylesheet" type="text/css" href="css/style.production.css">
-  <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
+  <link rel="icon" type="image/png" href="./img/cell-division.png" />
+  <link rel="apple-touch-icon" href="./img/cell-division.png" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="./font/Glory-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./font/Glory-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" as="image" href="img/Michael_Profile.jpg" />
+
+  <link rel="stylesheet" type="text/css" href="./css/normalize.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.production.css" />
 </head>
 
 <body>
@@ -32,7 +59,7 @@
 
       <div class="columns">
         <div class="col-l slide-in l init">
-          <img src="img/Michael_Profile.jpg" id="profile"
+          <img src="img/Michael_Profile.jpg" width="786" height="786" id="profile"
             alt="Michael's profile picture. A sporty guy with a charming smile and a big nose.">
         </div>
 
@@ -71,7 +98,7 @@
 
     <div class="section" id="about-me">
       <div>
-        <h1>About me</h1>
+        <h2 class="h1-style">About me</h2>
         <div class="floating-img_container rev">
           <div class="txt-container slide-in l">
             <p>Born and raised in Munich, Germany, I always had an urge to travel and explore as well as broad
@@ -93,13 +120,13 @@
               see respect, support, sincere communication and a clear common goal/mission.</p>
           </div>
           <div class="img-container slide-in r">
-            <img src="img/Waterfall_2.jpeg" alt="Me on a large waterfall">
+            <img src="img/Waterfall_2.jpeg" width="768" height="1024" loading="lazy" decoding="async" alt="Me on a large waterfall">
           </div>
         </div>
 
       </div>
       <div class="slide-in r">
-        <h2>Why I am a web developer</h2>
+        <h3 class="h2-style">Why I am a web developer</h3>
         <p><b>Developing code allows me to dive into a state of flow and enthusiasm. It sparks my curiosity and
             satisfies my joy in solving problems and crafting useful, innovative things.</b></p>
         <p>Habitually I analyze how things could be optimized in functionality and usability, from software to movement
@@ -111,7 +138,7 @@
           But an elegant, nifty solution can be considered “art”.</p>
       </div>
 
-      <h2 class="slide-in l">Past careers</h2>
+      <h3 class="h2-style slide-in l">Past careers</h3>
       <!-- <p>Diversity was always a big part of my life. And so was my professional journey:</p> -->
 
       <div class="floating-img_container rev">
@@ -124,13 +151,13 @@
             and partners to meet deadlines, budgets and leading-edge deliverables.</p>
         </div>
         <div class="img-container slide-in r">
-          <img src="img/mixing-console.JPG" alt="Picture of a sound mixing console.">
+          <img src="img/mixing-console.JPG" width="1155" height="768" loading="lazy" decoding="async" alt="Picture of a sound mixing console.">
         </div>
       </div>
 
       <div class="floating-img_container">
         <div class="img-container slide-in l">
-          <img src="img/AcroYoga.jpg" alt="Foto of me teaching AcroYoga.">
+          <img src="img/AcroYoga.jpg" width="1152" height="768" loading="lazy" decoding="async" alt="Foto of me teaching AcroYoga.">
         </div>
         <div class="txt-container slide-in r">
           <p>As a self-employed <b>AcroYoga teacher</b>, frequently collaborating with varying co-teachers and
@@ -143,7 +170,7 @@
       </div>
 
       <div class="slide-in l">
-        <h2>Movement teacher turned web developer?</h2>
+        <h3 class="h2-style">Movement teacher turned web developer?</h3>
         <p>For one, as a movement teacher I was never interested in big muscles,
           but I wanted my students/clients to feel good and capable in their body.
           This is still part of my mission.</p>
@@ -175,7 +202,7 @@
 
     <section class="section">
 
-      <h1 class="slide-in l">Skills</h1>
+      <h2 class="h1-style slide-in l">Skills</h2>
       <p class="slide-in r">I can build web sites and apps from concept, layout and interactive elements to
         backend/server-side and
         databases.</p>
@@ -206,7 +233,7 @@
         </div>
       </div>
 
-      <h1 class="slide-in r">Toolbelt</h1>
+      <h2 class="h1-style slide-in r">Toolbelt</h2>
       <div class="tools-slider slide-in r">
         <div class="tools-slide-track">
           <img src="img/tools/html_logo.png" class="tool" alt="HTML5 logo">
@@ -245,7 +272,7 @@
 
       <div id="tools-cards" class="slide-in l padding-top">
         <div class="tools-cards_col">
-          <h4>Languages</h4>
+          <h3 class="h4-style">Languages</h3>
           <div class="tools-cards_cards-container">
             <span class="tech-card">HTML</span>
             <span class="tech-card">CSS</span>
@@ -254,7 +281,7 @@
           </div>
         </div>
         <div class="tools-cards_col">
-          <h4>Frontend libraries & frameworks</h4>
+          <h3 class="h4-style">Frontend libraries & frameworks</h3>
           <div class="tools-cards_cards-container">
             <span class="tech-card">jQuery</span>
             <span class="tech-card">Bootstrap</span>
@@ -265,7 +292,7 @@
           </div>
         </div>
         <div class="tools-cards_col">
-          <h4>Backend and other libraries</h4>
+          <h3 class="h4-style">Backend and other libraries</h3>
           <div class="tools-cards_cards-container">
             <span class="tech-card">NodeJS</span>
             <span class="tech-card">Express</span>
@@ -279,7 +306,7 @@
           </div>
         </div>
         <div class="tools-cards_col">
-          <h4>Testing & QA</h4>
+          <h3 class="h4-style">Testing & QA</h3>
           <div class="tools-cards_cards-container">
             <span class="tech-card">Postman</span>
             <span class="tech-card">Jest</span>
@@ -289,14 +316,14 @@
           </div>
         </div>
         <div class="tools-cards_col">
-          <h4>Documentation</h4>
+          <h3 class="h4-style">Documentation</h3>
           <div class="tools-cards_cards-container">
             <span class="tech-card">JSDoc</span>
             <span class="tech-card">TypeDoc</span>
           </div>
         </div>
         <div class="tools-cards_col">
-          <h4>Web services & databases</h4>
+          <h3 class="h4-style">Web services & databases</h3>
           <div class="tools-cards_cards-container">
             <span class="tech-card">GitHub</span>
             <span class="tech-card">AWS</span>
@@ -308,7 +335,7 @@
           </div>
         </div>
         <div class="tools-cards_col">
-          <h4>Mobile Apps</h4>
+          <h3 class="h4-style">Mobile Apps</h3>
           <div class="tools-cards_cards-container">
             <span class="tech-card">PWA</span>
             <span class="tech-card">React Native</span>
@@ -328,7 +355,7 @@
 
     <section class="section">
       <div class="slide-in r">
-        <h1>Projects</h1>
+        <h2 class="h1-style">Projects</h2>
         <p>This is a selection of my projects as a web developer.</p>
         <!-- <p><em>THIS SECTION IS CURRENTLY UNDER DEVELOPMENT. In the meantime the old version can be found <a
             href="work.html">here</a>.</em></p> -->
@@ -341,9 +368,9 @@
       <div class="project-grid">
         <div class="project-grid__item slide-in s1">
           <div>
-            <h2>Portfolio website</h2>
+            <h3 class="h2-style">Portfolio website</h3>
             <div class="screenshot-container_1pic">
-              <img class="screenshot" src="img/Screenshots/Screenshot_Portfolio.png" alt="Portfolio screenshot.">
+              <img class="screenshot" src="img/Screenshots/Screenshot_Portfolio.png" width="1200" height="637" loading="lazy" decoding="async" alt="Portfolio screenshot.">
             </div>
           </div>
           <div class="tech-cards-container">
@@ -366,9 +393,9 @@
 
         <div class="project-grid__item slide-in s2">
           <div>
-            <h2>MoveX Angular client</h2>
+            <h3 class="h2-style">MoveX Angular client</h3>
             <div class="screenshot-container_1pic">
-              <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-Angular.jpg"
+              <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-Angular.jpg" width="1366" height="689" loading="lazy" decoding="async"
                 alt="Screenshot of the MoveX Angular client.">
             </div>
           </div>
@@ -395,9 +422,9 @@
 
         <div class="project-grid__item slide-in s3">
           <div>
-            <h2>MoveX React client</h2>
+            <h3 class="h2-style">MoveX React client</h3>
             <div class="screenshot-container_1pic">
-              <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-React.jpg"
+              <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-React.jpg" width="1366" height="742" loading="lazy" decoding="async"
                 alt="Screenshot of the MoveX React client.">
             </div>
           </div>
@@ -426,9 +453,9 @@
 
         <div class="project-grid__item slide-in s4">
           <div>
-            <h2>MoveX backend (API)</h2>
+            <h3 class="h2-style">MoveX backend (API)</h3>
             <div class="screenshot-container_1pic">
-              <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-API_2.png"
+              <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-API_2.png" width="1096" height="768" loading="lazy" decoding="async"
                 alt="Screenshot of the MoveX endpoints.">
             </div>
           </div>
@@ -457,10 +484,10 @@
 
         <div class="project-grid__item slide-in s5">
           <div>
-            <h2>Meet app</h2>
+            <h3 class="h2-style">Meet app</h3>
             <div class="screenshot-container_2pics">
-              <img class="screenshot" src="img/Screenshots/Screenshot_MeetApp-1.png" alt="Meet app screenshot 1.">
-              <img class="screenshot" src="img/Screenshots/Screenshot_MeetApp-2.png" alt="Meet app screenshot 1.">
+              <img class="screenshot" src="img/Screenshots/Screenshot_MeetApp-1.png" width="768" height="924" loading="lazy" decoding="async" alt="Meet app screenshot 1.">
+              <img class="screenshot" src="img/Screenshots/Screenshot_MeetApp-2.png" width="768" height="924" loading="lazy" decoding="async" alt="Meet app screenshot 1.">
             </div>
           </div>
           <div class="tech-cards-container">
@@ -493,13 +520,13 @@
 
         <div class="project-grid__item slide-in s6">
           <div>
-            <h2>CHATzam</h2>
+            <h3 class="h2-style">CHATzam</h3>
             <div class="screenshot-container_3pics">
-              <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_StartScreen.jpg"
+              <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_StartScreen.jpg" width="647" height="1366" loading="lazy" decoding="async"
                 alt="Screenshot of the CHATzam app start screen.">
-              <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_ChatScreen.jpg"
+              <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_ChatScreen.jpg" width="647" height="1366" loading="lazy" decoding="async"
                 alt="Screenshot of the CHATzam app chat screen.">
-              <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_ActionSheet.jpg"
+              <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_ActionSheet.jpg" width="647" height="1366" loading="lazy" decoding="async"
                 alt="Screenshot of the CHATzam app action sheet.">
             </div>
           </div>
@@ -555,9 +582,9 @@
       <div class="modal-content">
         <span class="closeModal">&times;</span>
 
-        <h1>Project: Portfolio website</h1>
+        <h2 class="h1-style">Project: Portfolio website</h2>
         <div class="screenshot-container_1pic">
-          <img class="screenshot" src="img/Screenshots/Screenshot_Portfolio.png" alt="Portfolio screenshot.">
+          <img class="screenshot" src="img/Screenshots/Screenshot_Portfolio.png" width="1200" height="637" loading="lazy" decoding="async" alt="Portfolio screenshot.">
         </div>
         <p>This project started as a static website to learn HTML and CSS. But ... it turned into a full-grown portfolio
           website.</p>
@@ -591,9 +618,9 @@
       <div class="modal-content">
         <span class="closeModal">&times;</span>
 
-        <h1>Project: MoveX Angular Client</h1>
+        <h2 class="h1-style">Project: MoveX Angular Client</h2>
         <div class="screenshot-container_1pic">
-          <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-Angular.jpg"
+          <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-Angular.jpg" width="1366" height="689" loading="lazy" decoding="async"
             alt="Screenshot of the MoveX Angular client.">
         </div>
         <p>MoveX is a library of movements from various styles and traditions, with descriptions/cues and video
@@ -634,9 +661,9 @@
       <div class="modal-content">
         <span class="closeModal">&times;</span>
 
-        <h1>Project: MoveX React Client</h1>
+        <h2 class="h1-style">Project: MoveX React Client</h2>
         <div class="screenshot-container_1pic">
-          <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-React.jpg"
+          <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-React.jpg" width="1366" height="742" loading="lazy" decoding="async"
             alt="Screenshot of the MoveX React client.">
         </div>
         <p>MoveX is a library of movements from various styles and traditions, with descriptions/cues and video
@@ -681,9 +708,9 @@
     <div id="MoveX_API-Modal_container" class="modal">
       <div class="modal-content">
         <span class="closeModal">&times;</span>
-        <h1>Project: MoveX backend (API)</h1>
+        <h2 class="h1-style">Project: MoveX backend (API)</h2>
         <div class="screenshot-container_1pic">
-          <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-API_2.png"
+          <img class="screenshot" src="img/Screenshots/Screenshot_MoveX-API_2.png" width="1096" height="768" loading="lazy" decoding="async"
             alt="Screenshot of the MoveX endpoints.">
         </div>
         <p>MoveX is a library of movements from various styles and traditions, with descriptions/cues and video
@@ -714,10 +741,10 @@
     <div id="MeetApp-Modal_container" class="modal">
       <div class="modal-content">
         <span class="closeModal">&times;</span>
-        <h1>Meet app</h1>
+        <h2 class="h1-style">Meet app</h2>
         <div class="screenshot-container_2pics">
-          <img class="screenshot" src="img/Screenshots/Screenshot_MeetApp-1.png" alt="Meet app screenshot 1.">
-          <img class="screenshot" src="img/Screenshots/Screenshot_MeetApp-2.png" alt="Meet app screenshot 1.">
+          <img class="screenshot" src="img/Screenshots/Screenshot_MeetApp-1.png" width="768" height="924" loading="lazy" decoding="async" alt="Meet app screenshot 1.">
+          <img class="screenshot" src="img/Screenshots/Screenshot_MeetApp-2.png" width="768" height="924" loading="lazy" decoding="async" alt="Meet app screenshot 1.">
         </div>
         <p>This app displays events in different cities which are fetched from a mock-data Google Calendar.</p>
         <p>The study goal was to learn about PWAs, test-driven-development (TDD), serverless functions (FaaS), OAuth (a
@@ -764,13 +791,13 @@
     <div id="CHATzam-Modal_container" class="modal">
       <div class="modal-content">
         <span class="closeModal">&times;</span>
-        <h1>Project: CHATzam</h1>
+        <h2 class="h1-style">Project: CHATzam</h2>
         <div class="screenshot-container_3pics">
-          <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_StartScreen.jpg"
+          <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_StartScreen.jpg" width="647" height="1366" loading="lazy" decoding="async"
             alt="Screenshot of the CHATzam app start screen.">
-          <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_ChatScreen.jpg"
+          <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_ChatScreen.jpg" width="647" height="1366" loading="lazy" decoding="async"
             alt="Screenshot of the CHATzam app chat screen.">
-          <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_ActionSheet.jpg"
+          <img class="screenshot" src="img/Screenshots/Screenshot_CHATzam_ActionSheet.jpg" width="647" height="1366" loading="lazy" decoding="async"
             alt="Screenshot of the CHATzam app action sheet.">
         </div>
         <p>A chat app for mobile devices (Android and iOS) created with React Native.</p>
@@ -809,10 +836,8 @@
   <script type="module" src="./js/page-footer.js"></script>
   <page-footer></page-footer>
 
-  <!-- <script src="js/tota11y.min.js"></script> -->
   <script src="js/animations.js"></script>
   <script src="js/project-modal.js"></script>
-  <!-- <script src="js/hamburger-menu.js"></script> -->
 </body>
 
 </html>

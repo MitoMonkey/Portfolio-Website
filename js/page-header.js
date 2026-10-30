@@ -4,7 +4,7 @@ class PageHeader extends HTMLElement {
         super();
         this.innerHTML = `<header class="page-header">
             <div class="page-header__item">
-                <a href="index.html" class="page-header__logo-container"><img src="./img/cell-division.png"
+                <a href="index.html" class="page-header__logo-container"><img src="./img/cell-division.png" width="512" height="512"
                     class="page-header__logo" alt="Logo, a cell dividing in mitosis"></a>
                 <!-- <a href="index.html" class="page-header__heading">Mito.this</a> -->
             </div>
