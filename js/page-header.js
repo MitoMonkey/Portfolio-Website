@@ -21,6 +21,9 @@ class PageHeader extends HTMLElement {
                         <a href="./index.html#skills" id="nav_skills" role="menuitem" class="navigation-list__item">Skills</a>
                     </li>
                     <li role="presentation">
+                        <a href="./index.html#experience" id="nav_experience" role="menuitem" class="navigation-list__item">Experience</a>
+                    </li>
+                    <li role="presentation">
                         <a href="./index.html#projects" id="nav_projects" role="menuitem" class="navigation-list__item">Projects</a>
                     </li>
                     <li role="presentation">

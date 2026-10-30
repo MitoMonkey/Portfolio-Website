@@ -1156,3 +1156,25 @@ form button {
   height: 1px;
   overflow: hidden;
 }
+
+/* Collapsed block for the older study projects */
+.earlier-projects {
+  margin-top: var(--spacing_l);
+}
+.earlier-projects summary {
+  cursor: pointer;
+  font-family: gloria-bold;
+  font-size: 1.3em;
+  color: var(--secondary-color);
+  padding: var(--spacing) 0;
+}
+.earlier-projects[open] summary {
+  margin-bottom: var(--spacing);
+}
+
+/* Experience bullet lists read better left-aligned inside the centered section */
+.experience ul {
+  display: inline-block;
+  text-align: left;
+  max-width: 900px;
+}
