@@ -16,7 +16,5 @@ jobs:
     secrets: inherit
     with:
       clean-slate: ${{ inputs.clean-slate || false }}
-      # contact-form-api is deployed to AWS via serverless, not to the webspace.
       exclude: |
-        contact-form-api/**
         ToDo.txt

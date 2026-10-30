@@ -70,73 +70,36 @@
           </p> -->
         </div>
         <div class="contact-col-r slide-in r init">
-          <form id="contact-form">
+          <form id="contact-form" novalidate>
             <div class="input-wrapper">
-              <label class="standard-label" for="contact-form__name"
-                >Name:
-              </label>
-              <input type="name" id="contact-form__name" required disabled />
+              <label class="standard-label" for="contact-form__name">Name: </label>
+              <input type="text" id="contact-form__name" name="name" autocomplete="name" required />
             </div>
-
             <div class="input-wrapper">
-              <label class="standard-label" for="contact-form__email"
-                >Email:
-              </label>
-              <input type="email" id="contact-form__email" required disabled />
+              <label class="standard-label" for="contact-form__email">Email: </label>
+              <input type="email" id="contact-form__email" name="email" autocomplete="email" required />
             </div>
-
             <div class="input-wrapper">
-              <label class="standard-label" for="contact-form__msg"
-                >Message:
-              </label>
-              <textarea
-                maxlength="500"
-                rows="5"
-                id="contact-form__msg"
-                required
-                disabled
-              ></textarea>
+              <label class="standard-label" for="contact-form__msg">Message: </label>
+              <textarea maxlength="2000" rows="5" id="contact-form__msg" name="message" required></textarea>
             </div>
-
-            <!-- <button
-              class="button__secondary"
-              type="submit"
-              id="contact-form__submit"
-              form="contact-form"
-              disabled
-            >
-              Send message
-            </button> -->
-            <a
-              href="mailto:Michael.Flohrschuetz@gmail.com?subject=WebDev%20contact"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="button button__secondary"
-            >
-              AWS changed something that broke this form.<br />I didn't take
-              time yet to fix it. Please just send me an email in the meantime.
-            </a>
-
-            <!-- <button class="button__secondary g-recaptcha" data-sitekey="6Lebz2IdAAAAAGDCIuPL3Z61q93RkvNcYvoToCoB"
-        data-callback='CALLBACK-FUNCTION' data-action='submit'>Send message</button> -->
-            <!-- data-badge="inline" -->
-
-            <p id="contact-form__success" style="display: none">
+            <!-- Honeypot: hidden from humans, filled in by bots. -->
+            <div class="input-wrapper honeypot" aria-hidden="true">
+              <label for="contact-form__website">Website</label>
+              <input type="text" id="contact-form__website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+            <button class="button__secondary" type="submit" id="contact-form__submit">Send message</button>
+            <p id="contact-form__success" style="display: none" role="status">
               Thanks for reaching out. I'll be in touch ASAP.
             </p>
-            <p id="contact-form__sending" style="display: none">Sending...</p>
-            <p id="contact-form__error" style="display: none">ERROR</p>
+            <p id="contact-form__sending" style="display: none" role="status">Sending...</p>
+            <p id="contact-form__error" style="display: none" role="alert"></p>
           </form>
 
           <div>
             <p>
               Or through your email client:
-              <a
-                href="mailto:Michael.Flohrschuetz@gmail.com?subject=WebDev%20contact"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Michael.Flohrschuetz@gmail.com</a
-              >
+              <a data-contact="email" data-contact-text href="#">(enable JavaScript to see the address)</a>
             </p>
           </div>
         </div>
@@ -149,6 +112,7 @@
     <!-- <script src="js/tota11y.min.js"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
     <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    <script type="module" src="./js/contact-links.js"></script>
     <script src="js/contact-form.js"></script>
     <script src="js/animations.js"></script>
   </body>

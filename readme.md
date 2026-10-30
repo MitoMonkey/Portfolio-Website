@@ -14,24 +14,10 @@ For practice reasons I chose to refrain from rebuilding it using libraries or bu
 For hosting, every push to `main` is uploaded to the webspace via FTPS by `.github/workflows/deploy.yml` (shared workflow in the `site-deploy` repo). `contact-form-api/` is excluded, it is deployed to AWS separately.
 
 ### Contact form
-To protect my email address from spam bots I created a AWS API and a AWS lamda function which is evoked upon submission of the contact form. It sends me an email with the form content through AWS SES. 
-For this I used serverless module. So I kind of lied above when saying there is no library in this project. But I didn't in the sense that there is no library used for the actual website it self.
+The form posts JSON to `contact.php` on the same webspace, which forwards the message via PHP `mail()`
+(sender is an address on the site's own domain, the visitor's address goes into `Reply-To`).
+Spam protection without external services: a honeypot field, a minimum fill time and a per-IP rate limit.
 
-Note: Since I want to receive the email in my google mail inbox, I had to use a second email address as the sender address, because google mail hides emails sent and received by the same account.
-
-#### Usage:
-1. Install serverless library: `npm install -g serverless`
-2. Get credentials from [AWS Management Console](https://aws.amazon.com/console/)
-3. Configure serverless `serverless config credentials --provider aws --key ACCESS_KEY_ID --secret SECRET_ACCESS_KEY`
-4. Create `secrets.json` in the contact-form-api folder containing this info:
-    ```
-    {
-    "NODE_ENV": "dev",
-    "RECIPIENT": "YOUR_EMAIL-ADRESS_1",
-    "SENDER": "YOUR_EMAIL-ADRESS_2",
-    "DOMAIN": "http://YOUR_DOMAIN",
-    "DOMAIN_WWW": "https://www.YOUR_DOMAIN"
-    }
-    ```
-5. Navigate terminal into contact-form-api folder, then run `serverless deploy`
-6. Replace AWS lambda URL in contact-form.js
+The email address and phone number are not present in the HTML source. `js/contact-links.js` assembles them
+at runtime and fills every element with a `data-contact` attribute, so harvesting bots that do not run
+JavaScript never see them.

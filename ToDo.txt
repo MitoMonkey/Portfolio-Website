@@ -1,2 +1,1 @@
-- fix AWS ses+lambda(+serverless) for contact form
 - add "Web Components" to projects/portfolio website

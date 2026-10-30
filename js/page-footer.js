@@ -1,3 +1,5 @@
+import { fillContactLinks } from "./contact-links.js";
+
 class Footer extends HTMLElement {
 
   constructor() {
@@ -6,14 +8,13 @@ class Footer extends HTMLElement {
     <!-- <p class="padding-bottom padding-top" style="margin: 0;">Let's connect!</p> -->
     <h2 class="padding-bottom padding-top" style="margin: 0;">Let's connect!</h2>
     <div class="social-media">
-      <a class="circle-link" href="tel:+491631631858" target="_blank" rel="noopener noreferrer">
+      <a class="circle-link" data-contact="phone" href="#">
         <img src="img/Icons/Phone_icon.svg" class="icon" alt="Phone symbol"></a>
-      <a class="circle-link" href="mailto:Michael.Flohrschuetz@gmail.com?subject=WebDev%20contact" target="_blank"
-        rel="noopener noreferrer">
+      <a class="circle-link" data-contact="email" href="#">
         <img src="img/Icons/email_icon.svg" class="icon" alt="Email symbol"></a>
       <a class="circle-link" href="https://t.me/MitoFlyingMonkey" target="_blank" rel="noopener noreferrer">
         <img src="img/Icons/Telegram_logo.svg" class="icon" alt="Telegram logo"></a>
-      <a class="circle-link" href="https://wa.me/491631631858" target="_blank" rel="noopener noreferrer">
+      <a class="circle-link" data-contact="whatsapp" href="#" target="_blank" rel="noopener noreferrer">
         <img src="img/Icons/Whatsapp_logo.svg" class="icon" alt="Whatsapp logo"></a>
       <!--<a class="circle-link" href="skype:flyingmonkey_6" target="_blank" rel="noopener noreferrer">
         <img src="img/Icons/Skype_logo.svg" class="icon" alt="Skype logo"></a>-->
@@ -32,6 +33,10 @@ class Footer extends HTMLElement {
     </div>
     <a href="/files/Impressum.pdf" class="impressum" download>Impressum (PDF download)</a>
   </footer>`;
+  }
+
+  connectedCallback() {
+    fillContactLinks(this);
   }
 }
 // register custom web component
